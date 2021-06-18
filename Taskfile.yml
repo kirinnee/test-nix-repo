@@ -1,0 +1,14 @@
+version: '3'
+
+tasks:
+  build: nix-build
+
+  fmt: nixpkgs-fmt .
+
+  build:node: ./scripts/generate-node.sh
+
+  get:go:sha: ./scripts/go-sha.sh {{.CLI_ARGS}}
+
+  get:go:vendor:sha: ./scripts/golang-vendor.sh {{.CLI_ARGS}}
+
+  clean: rm -rf result*

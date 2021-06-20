@@ -18,9 +18,11 @@ jobs:
           name: kirinnee-sample-binary-cache
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
       - name: Install Environment
-        run: nix-env -i
+        run: nix-env -i -f ./env.nix
       - name: Pre-commit Checks
-        run: nix-env
+        run: |
+          pre-commit install --install-hooks
+          pre-commit run --all
 
       - name: Esnure builds
         run: nix-build

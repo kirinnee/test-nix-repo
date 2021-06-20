@@ -3,7 +3,7 @@ let
 
   # Node
   npm = (with import ./node/default.nix { inherit nixpkgs; }; {
-    inherit cyanprint;
+    inherit cyanprint speed-test;
   });
 
   # Shell

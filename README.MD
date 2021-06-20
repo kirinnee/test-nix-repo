@@ -4,13 +4,13 @@ AtomiCloud's NIX registry for binaries that don't exist on `nixpkgs`.
 
 ## Binaries
 
--  `gitlint` - gitlint 0.15.1
--  `cyanprint` - cyan 0.13.1
+- `gitlint` - gitlint 0.15.1
+- `cyanprint` - cyan 0.13.1
 - `pls` - go task 3.4.2 alias
--   `please` - pls alias
--   `plz` - pls alias
+- `please` - pls alias
+- `plz` - pls alias
 - `narwhal` - narwhal 0.4.1
--  `narwhal_0_3_11` - narwhal 0.3.11
+- `narwhal_0_3_11` - narwhal 0.3.11
 
 ### Unstable Channel
 

@@ -38,7 +38,6 @@ let
       let n = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/bad3ccd099ebe9a8aa017bda8500ab02787d90aa.tar.gz") { }; in
       with n;
       [
-        yq-go
         nodePackages.prettier
       ]
     );

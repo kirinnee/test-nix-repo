@@ -15,14 +15,16 @@ This page will document the types and scopes used.
 
 ## Types
 
-| Type              | Description                                                  |
-| ----------------- | ------------------------------------------------------------ |
-| [fix](#fix)       | Fixed a bug within the repository                            |
-| [new](#new)       | Added new package to the repository                          |
-| [update](#update) | Update a package in the repository                           |
-| [docs](#docs)     | Add documentation                                            |
-| [ci](#ci)         | Changes to CI                                                |
-| [chore](#chore)   | Tedious things, such as fixing typo or changing line endings |
+| Type                | Description                                                      |
+| ------------------- | ---------------------------------------------------------------- |
+| [fix](#fix)         | Fixed a bug within the repository                                |
+| [new](#new)         | Added new package to the repository                              |
+| [update](#update)   | Update a package in the repository                               |
+| [docs](#docs)       | Add documentation                                                |
+| [ci](#ci)           | Changes to CI                                                    |
+| [chore](#chore)     | Tedious things, such as fixing typo or changing line endings     |
+| [config](#config)   | Configuration changes, such as build scripts or Taskfile.dev etc |
+| [release](#release) | The commit that performs the release.                            |
 
 ### fix
 
@@ -106,7 +108,7 @@ Add documentation
 Natural language
 
 ```
-When this commit is applied, it will document `<title>`
+When this commit is applied, it will add documention on `<title>`
 ```
 
 Scopes:
@@ -127,9 +129,27 @@ Scopes:
 | `precommit` | change to precommit configurations | `nil` |
 | `build`     | change to Building during CI       | `nil` |
 
+### config
+
+Configuration changes, such as build scripts, rc files or Taskfile.dev etc
+
+Scopes:
+
+| Scope   | Description                                        | Bump  |
+| ------- | -------------------------------------------------- | ----- |
+| `lint`  | Add, update or remove linters                      | `nil` |
+| `fmt`   | Add, update or change formatters                   | `nil` |
+| `build` | Add, update or change build pipelines (generators) | `nil` |
+| `nix`   | Add, update or change nix shell                    | `nil` |
+| `env`   | Add, update or change environment                  | `nil` |
+
 ### chore
 
 As the name suggests, tedious things that need to be done, such as fixing typo or changing line endings
+
+### release
+
+The commit that performs the release. This is automatically performed by CI systems.
 
 ## Overall Scopes
 

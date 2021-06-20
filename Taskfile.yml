@@ -93,8 +93,3 @@ tasks:
     cmds:
       - node2nix -i ./node/node-packages.json -e ./node/node-env.nix -o ./node/node-packages.nix -c ./node/composition.nix
       - task: fmt:nix
-
-  gen:releaserc:
-    desc: Generate .releaserc for semantic release
-    cmds:
-      - yq eval 'del(.keywords)' -j ./config/releaserc.yaml > .releaserc

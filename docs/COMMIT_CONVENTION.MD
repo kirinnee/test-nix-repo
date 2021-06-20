@@ -36,9 +36,9 @@ Natural language:
 When this commit is applied, it will **fix** `<title>`
 ```
 
-| Scope    | Description                                                        |  Bump   |
-| -------- | ------------------------------------------------------------------ | :-----: |
-| `drv`    | A bug within Nix derivations                                       | `patch` |
+| Scope    | Description      |  Bump   |
+| -------- | ----------------------------- | :-----: |
+| `drv`    | A bug within Nix derivations | `patch` |
 | `config` | A bug within configurations, such as scripts, rc files or ci files |  `nil`  |
 
 ### new

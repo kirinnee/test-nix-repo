@@ -5,22 +5,22 @@ keywords: &keywords
 
 presetConfig: &preset
   types:
-    - type: fix
-      section: Bug Fixes
-    - type: new
-      section: New Packages
-    - type: update
-      section: Updated Packages
-    - type: docs
-      section: Documentation Update
-    - type: ci
-      hidden: true
-    - type: config
-      hidden: true
-    - type: chore
-      hidden: true
-    - type: release
-      hidden: true
+  - type: fix
+    section: Bug Fixes
+  - type: new
+    section: New Packages
+  - type: update
+    section: Updated Packages
+  - type: docs
+    section: Documentation Update
+  - type: ci
+    hidden: true
+  - type: config
+    hidden: true
+  - type: chore
+    hidden: true
+  - type: release
+    hidden: true
 
 branches:
   - main

@@ -15,18 +15,26 @@ repos:
     hooks:
       - id: shfmt
       - id: shellcheck
-  - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v2.3.1
-    hooks:
-      - id: prettier
-        files: ^.*\.(yaml|yml|MD|md)$
-        language_version: system
   - repo: local
     hooks:
       - id: generate-npm-pkgs
         name: Generate Nodejs NIX Packages
         entry: pls gen:node
         files: ^node/node-packages\.json$
+        pass_filenames: false
+        language: system
+
+      - id: yaml-fmt
+        name: Format YAML with prettier
+        entry: pls fmt:yaml
+        files: ^.*\.(yaml|yml)$
+        pass_filenames: false
+        language: system
+
+      - id: md-fmt
+        name: Format Markdown with prettier
+        entry: pls fmt:md
+        files: ^.*\.(MD|md)$
         pass_filenames: false
         language: system
 

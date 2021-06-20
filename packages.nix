@@ -36,7 +36,6 @@ let pkgs = {
     with n;
     [
       nodePackages.prettier
-      nodejs
     ]
   );
 }; in

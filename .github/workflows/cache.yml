@@ -1,4 +1,4 @@
-name: "Cache on Cachix"
+name: "Checks and Cache"
 on:
   pull_request:
 jobs:
@@ -17,4 +17,10 @@ jobs:
         with:
           name: kirinnee-sample-binary-cache
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
-      - run: nix-build
+      - name: Install Environment
+        run: nix-env -i
+      - name: Pre-commit Checks
+        run: nix-env
+
+      - name: Esnure builds
+        run: nix-build

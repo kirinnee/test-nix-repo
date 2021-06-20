@@ -5,7 +5,7 @@ on:
       - closed
 
 env:
-  READY: 'true'
+  READY: "true"
 
 jobs:
   deploy:
@@ -18,17 +18,17 @@ jobs:
         uses: TriPSs/conventional-changelog-action@v3
         with:
           github-token: ${{ secrets.ADMIN_GITHUB_TOKEN }}
-          git-message: 'release: {version}'
-          git-user-name: 'Ernest Ng'
-          git-user-email: 'ernest@eng.atomi.cloud'
-          tag-prefix: 'v'
-          output-file: 'CHANGELOG.MD'
-          release-count: '0'
-          version-file: './version.yaml'
-          version-path: 'version'
-          skip-on-empty: 'true'
-          skip-version-file: 'false'
-          skip-commit: 'false'
+          git-message: "release: {version}"
+          git-user-name: "Ernest Ng"
+          git-user-email: "ernest@eng.atomi.cloud"
+          tag-prefix: "v"
+          output-file: "CHANGELOG.MD"
+          release-count: "0"
+          version-file: "./version.yaml"
+          version-path: "version"
+          skip-on-empty: "true"
+          skip-version-file: "false"
+          skip-commit: "false"
       - name: Create Release
         uses: actions/create-release@v1
         if: ${{ steps.changelog.outputs.skipped == 'false' }}

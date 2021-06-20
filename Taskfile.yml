@@ -1,29 +1,55 @@
-version: '3'
+version: "3"
 
 tasks:
-  build: nix-build
+  build:
+    desc: build all derivations within `default.nix`
+    cmds:
+      - nix-build
 
-  clean: rm -rf result*
+  clean:
+    desc: remove all artifacts from `build`
+    cmds:
+      - rm -rf result*
 
   test:
+    desc: build and remove all build artifacts. Test whether all `nix` code is well-format and 'compilable'
     cmds:
       - task: build
       - task: clean
 
   fmt:
+    desc: Run all formatting supported.
+    summary: |
+      Runs all formatting supported.
+
+      1. Runs fmt:md, which formats all Markdown using prettier
+      2. Runs fmt:yaml, which formats all YAML using prettier
+      3. Runs fmt:nix, which formats all Nix files with nixpkgs-fmt
     cmds:
-      - task: fmt:nix
       - task: fmt:md
+      - task: fmt:yaml
+      - task: fmt:nix
 
-  fmt:nix: nixpkgs-fmt .
+  fmt:md:
+    desc: formats Markdown with prettier
+    cmds:
+      - prettier -w **/*.MD
 
-  fmt:md: fd --glob '**/*.MD' | xargs -I %s  sh -c 'echo %s'
+  fmt:yaml:
+    desc: formats YAML with prettier
+    cmds:
+      - prettier -w **/*.yaml
+      - prettier -w **/*.yml
+
+  fmt:nix:
+    desc: formats Nix files
+    cmds:
+      - nixpkgs-fmt .
 
   build:node:
     cmds:
       - node2nix -i ./node/node-packages.json -e ./node/node-env.nix -o ./node/node-packages.nix -c ./node/composition.nix
       - task: fmt:nix
-
 
   get:go:sha: ./scripts/go-sha.sh {{.CLI_ARGS}}
 

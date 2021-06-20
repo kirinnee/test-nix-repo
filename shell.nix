@@ -16,7 +16,6 @@ let
         pls
         please
         plz
-        markdown-table-prettify
       ]
     );
     "nix 21.05 16th June 2021" = (
@@ -41,7 +40,6 @@ let
       [
         yq-go
         nodePackages.prettier
-        fd
       ]
     );
   };

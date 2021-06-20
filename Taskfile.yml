@@ -2,7 +2,7 @@ version: "3"
 
 tasks:
   build:
-    desc: build all derivations within `default.nix`
+    desc: Build all derivations within `default.nix`
     cmds:
       - nix-build
 
@@ -12,7 +12,7 @@ tasks:
       - rm -rf result*
 
   test:
-    desc: build and remove all build artifacts. Test whether all `nix` code is well-format and 'compilable'
+    desc: Build and remove all build artifacts. Test whether all `nix` code is well-format and 'compilable'
     cmds:
       - task: build
       - task: clean
@@ -31,28 +31,70 @@ tasks:
       - task: fmt:nix
 
   fmt:md:
-    desc: formats Markdown with prettier
+    desc: Formats Markdown with prettier
     cmds:
-      - prettier -w **/*.MD
+      - prettier -w "**/*.MD"
 
   fmt:yaml:
-    desc: formats YAML with prettier
+    desc: Formats YAML with prettier
     cmds:
-      - prettier -w **/*.yaml
-      - prettier -w **/*.yml
+      - prettier -w "**/*.yaml"
+      - prettier -w "**/*.yml"
 
   fmt:nix:
-    desc: formats Nix files
+    desc: Formats Nix files
     cmds:
       - nixpkgs-fmt .
 
-  build:node:
+  get:go:sha:
+    desc: Calculate SHA of Go module using the GitHub information
+    summary: |
+      Calculate SHA of Go module using the GitHub information
+
+      Usage:
+      pls get:go:sha -- <nix-identifier> <path to nix file in golang>
+
+      example:
+      1. In default.nix
+         { narwhal = import golang/narwhal/default.nix ... }
+
+         command to run: pls get:go:sha -- narwhal narwhal/default
+
+      2. In default.nix
+         { narwhal_0_3_11 = import ./golang/narwhal/0.3.11.nix ...}
+
+         command to run: pls get:go:sha -- narwhal_0_3_11 narwhal/0.3.11
+    cmds:
+      - ./scripts/go-sha.sh {{.CLI_ARGS}}
+
+  get:go:vendor:sha:
+    desc: Calculate SHA of Go module's vendor (depedency/go.sum)'s packages
+    summary: |
+      Calculate SHA of Go module using the GitHub information
+
+      Usage:
+      pls get:go:vendor:sha -- <nix-identifier> <path to nix file in golang>
+
+      example:
+      1. In default.nix
+         { narwhal = import golang/narwhal/default.nix ... }
+
+         command to run: pls get:go:vendor:sha -- narwhal narwhal/default
+
+      2. In default.nix
+         { narwhal_0_3_11 = import ./golang/narwhal/0.3.11.nix ...}
+
+         command to run: pls get:go:vendor:sha -- narwhal_0_3_11 narwhal/0.3.11
+    cmds:
+      - ./scripts/golang-vendor.sh {{.CLI_ARGS}}
+
+  gen:node:
+    desc: Generates Node package Nix files as CLI binaries
     cmds:
       - node2nix -i ./node/node-packages.json -e ./node/node-env.nix -o ./node/node-packages.nix -c ./node/composition.nix
       - task: fmt:nix
 
-  get:go:sha: ./scripts/go-sha.sh {{.CLI_ARGS}}
-
-  get:go:vendor:sha: ./scripts/golang-vendor.sh {{.CLI_ARGS}}
-
-  gen:releaserc: yq eval 'del(.keywords)' -j ./config/releaserc.yaml > .releaserc
+  gen:releaserc:
+    desc: Generate .releaserc for semantic release
+    cmds:
+      - yq eval 'del(.keywords)' -j ./config/releaserc.yaml > .releaserc

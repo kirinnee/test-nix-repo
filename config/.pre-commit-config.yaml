@@ -24,7 +24,7 @@ repos:
     hooks:
       - id: generate-npm-pkgs
         name: Generate Nodejs NIX Packages
-        entry: pls build:node
+        entry: pls gen:node
         files: ^node/node-packages\.json$
         pass_filenames: false
         language: system

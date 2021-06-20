@@ -135,13 +135,14 @@ Configuration changes, such as build scripts, rc files or Taskfile.dev etc
 
 Scopes:
 
-| Scope   | Description                                        | Bump  |
-| ------- | -------------------------------------------------- | ----- |
-| `lint`  | Add, update or remove linters                      | `nil` |
-| `fmt`   | Add, update or change formatters                   | `nil` |
-| `build` | Add, update or change build pipelines (generators) | `nil` |
-| `nix`   | Add, update or change nix shell                    | `nil` |
-| `env`   | Add, update or change environment                  | `nil` |
+| Scope    | Description                                        | Bump  |
+| -------- | -------------------------------------------------- | ----- |
+| `lint`   | Add, update or remove linters                      | `nil` |
+| `fmt`    | Add, update or change formatters                   | `nil` |
+| `build`  | Add, update or change build pipelines (generators) | `nil` |
+| `nix`    | Add, update or change nix shell                    | `nil` |
+| `env`    | Add, update or change environment                  | `nil` |
+| `ignore` | Add, update or change ignore configurations        | `nil` |
 
 ### chore
 

@@ -1,0 +1,16 @@
+keywords: &keywords
+ - BREAKING CHANGE
+ - BREAKING CHANGES
+ - BREAKING
+
+
+branches:
+  - main
+plugins:
+  -
+    - "@semantic-release/commit-analyzer"
+    - parserOpts:
+        noteKeywords:
+          *keywords
+        releaseRules:
+          - type: docs

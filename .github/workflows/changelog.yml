@@ -3,10 +3,14 @@ on:
   pull_request:
     types:
       - closed
+
+env:
+  READY: 'true'
+
 jobs:
   deploy:
     runs-on: ubuntu-20.04
-    if: ${{ github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'main' }}
+    if: ${{ env.READY == 'true' && github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'main' }}
     steps:
       - name: Check out Code
         uses: actions/checkout@v2
@@ -14,7 +18,7 @@ jobs:
         uses: TriPSs/conventional-changelog-action@v3
         with:
           github-token: ${{ secrets.ADMIN_GITHUB_TOKEN }}
-          git-message: 'chore(release): {version}'
+          git-message: 'release: {version}'
           git-user-name: 'Ernest Ng'
           git-user-email: 'ernest@eng.atomi.cloud'
           tag-prefix: 'v'

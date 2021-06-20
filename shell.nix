@@ -16,6 +16,7 @@ let
         pls
         please
         plz
+        markdown-table-prettify
       ]
     );
     "nix 21.05 16th June 2021" = (
@@ -34,11 +35,21 @@ let
         coreutils
       ]
     );
+    "nix 21.05 18th June 2021" = (
+      let n = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/bad3ccd099ebe9a8aa017bda8500ab02787d90aa.tar.gz") { }; in
+      with n;
+      [
+        yq-go
+        nodePackages.prettier
+        fd
+      ]
+    );
   };
 in
 nixpkgs.mkShell {
   buildInputs =
     pkgs.latest ++
     pkgs.self ++
-    pkgs."nix 21.05 16th June 2021";
+    pkgs."nix 21.05 16th June 2021" ++
+    pkgs."nix 21.05 18th June 2021";
 }

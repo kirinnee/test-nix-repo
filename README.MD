@@ -1,4 +1,5 @@
-# Atomi NIX Channel
+# Atomi Nix Registry
+AtomiCloud's NIX registry for binaries that don't exist on `nixpkgs`.
 
 
 ## Binaries
@@ -58,28 +59,27 @@ replace 0.0.1 with the version of the **Atomi's NIX Repository**.
 To add AtomiNIX Fixed Channel
 
 ```bash
-nix-channel --add https://github.com/kirinnee/test-nix-repo/archive/0.0.1.tar.gz atomi-0_0_1
+nix-channel --add https://github.com/kirinnee/test-nix-repo/archive/v0.1.0.tar.gz atomi-0_1_0
 nix-channel --update
 ```
 
-and run
-```
-nix-channel --update
-```
-
-to retrieve the latest packages
-
-Install packages with `nix-env -iA atomi-u.<package-name-here>`
+Install packages with `nix-env -iA atomi-0_1_0.<package-name-here>`
 
 For example, to install `gitlint`:
 ```bash
-nix-env -iA atomi-u.gitlint
+nix-env -iA atomi-0_1_0.gitlint
 ```
 
 ##### In `nix` files
 ```nix
-let atomiPkgs = import (fetchTarball "https://github.com/kirinnee/test-nix-repo/archive/main.tar.gz") { }; in
+let atomi-v0_1_0 = import (fetchTarball "https://github.com/kirinnee/test-nix-repo/archive/v0.1.0.tar.gz") { }; in
 
 # using gitlint
-let gl = atomiPkgs.gitlint
+let gl = atomi-v0_1_0.gitlint
 ```
+
+
+
+
+
+# Change Log

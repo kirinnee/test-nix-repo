@@ -3,17 +3,30 @@ version: '3'
 tasks:
   build: nix-build
 
-  fmt: nixpkgs-fmt .
-
-  build:node: ./scripts/generate-node.sh
-
-  get:go:sha: ./scripts/go-sha.sh {{.CLI_ARGS}}
-
-  get:go:vendor:sha: ./scripts/golang-vendor.sh {{.CLI_ARGS}}
-
   clean: rm -rf result*
 
   test:
     cmds:
       - task: build
       - task: clean
+
+  fmt:
+    cmds:
+      - task: fmt:nix
+      - task: fmt:md
+
+  fmt:nix: nixpkgs-fmt .
+
+  fmt:md: fd --glob '**/*.MD' | xargs -I %s  sh -c 'echo %s'
+
+  build:node:
+    cmds:
+      - node2nix -i ./node/node-packages.json -e ./node/node-env.nix -o ./node/node-packages.nix -c ./node/composition.nix
+      - task: fmt:nix
+
+
+  get:go:sha: ./scripts/go-sha.sh {{.CLI_ARGS}}
+
+  get:go:vendor:sha: ./scripts/golang-vendor.sh {{.CLI_ARGS}}
+
+  gen:releaserc: yq eval 'del(.keywords)' -j ./config/releaserc.yaml > .releaserc

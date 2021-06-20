@@ -3,7 +3,7 @@ let
 
   # Node
   npm = (with import ./node/default.nix { inherit nixpkgs; }; {
-    inherit cyanprint speed-test;
+    inherit cyanprint semantic-release-cli markdown-table-prettify;
   });
 
   # Shell

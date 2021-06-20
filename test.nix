@@ -1,5 +1,5 @@
 let
-  pkgs = import (fetchTarball "https://github.com/kirinnee/test-nix-repo/archive/v0.2.0.tar.gz");
+  pkgs = import (fetchTarball "https://github.com/kirinnee/test-nix-repo/archive/v0.3.0.tar.gz");
   n = import <nixpkgs> { };
 in
 with n;

@@ -31,7 +31,7 @@ repos:
     pass_filenames: false
   - id: build-nix
     name: Build NIX Packages
-    entry: pls build
+    entry: pls test
     files: ^.*\.nix$
     language: system
     pass_filenames: false

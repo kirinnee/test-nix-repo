@@ -1,5 +1,6 @@
 name: "Cache on Cachix"
-on: push
+on:
+  pull_request:
 jobs:
   cache:
     runs-on: ubuntu-latest

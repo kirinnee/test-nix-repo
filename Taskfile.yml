@@ -12,3 +12,8 @@ tasks:
   get:go:vendor:sha: ./scripts/golang-vendor.sh {{.CLI_ARGS}}
 
   clean: rm -rf result*
+
+  test:
+    cmds:
+      - task: build
+      - task: clean

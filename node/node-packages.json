@@ -1,4 +1,5 @@
 [
   "cyanprint",
-  "speed-test"
+  "semantic-release-cli",
+  "markdown-table-prettify"
 ]

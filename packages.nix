@@ -3,7 +3,6 @@ let pkgs = {
   latest = (
     with nixpkgs;
     [
-      cachix
     ]
   );
   self = (

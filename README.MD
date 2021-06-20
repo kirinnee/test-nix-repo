@@ -41,9 +41,45 @@ nix-env -iA atomi-u.gitlint
 
 ##### In `nix` files
 ```nix
-let atomiPkgs = import (fetchTarball "https://github.com/kirinnee/test-nix-repo/archive/main.tar.gz") { };
+let atomiPkgs = import (fetchTarball "https://github.com/kirinnee/test-nix-repo/archive/main.tar.gz") { }; in
 
+# using gitlint
+let gl = atomiPkgs.gitlint
 ```
 
 
 ### Channel Pinning
+This allow for stable builds due to pinning your packages to 1 **Atomi's NIX repository's tag**.
+In the release section of GitHub, you will be able to view the releases. For the instructions below,
+replace 0.0.1 with the version of the **Atomi's NIX Repository**.
+
+
+##### In nix-env
+To add AtomiNIX Fixed Channel
+
+```bash
+nix-channel --add https://github.com/kirinnee/test-nix-repo/archive/0.0.1.tar.gz atomi-0_0_1
+nix-channel --update
+```
+
+and run
+```
+nix-channel --update
+```
+
+to retrieve the latest packages
+
+Install packages with `nix-env -iA atomi-u.<package-name-here>`
+
+For example, to install `gitlint`:
+```bash
+nix-env -iA atomi-u.gitlint
+```
+
+##### In `nix` files
+```nix
+let atomiPkgs = import (fetchTarball "https://github.com/kirinnee/test-nix-repo/archive/main.tar.gz") { }; in
+
+# using gitlint
+let gl = atomiPkgs.gitlint
+```

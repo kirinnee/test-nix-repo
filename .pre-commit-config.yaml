@@ -20,6 +20,7 @@ repos:
     hooks:
       - id: prettier
         files: ^.*\.(yaml|yml|MD|md)$
+        language_version: system
   - repo: local
     hooks:
       - id: generate-npm-pkgs

@@ -57,7 +57,7 @@ plugins:
         - type: config
           release: false
         - type: remove
-          relase: major
+          release: major
       presetConfig: *preset
   - - "@semantic-release/release-notes-generator"
     - preset: conventionalcommits

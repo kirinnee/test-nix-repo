@@ -57,7 +57,7 @@ plugins:
       presetConfig: *preset
   - - "@semantic-release/release-notes-generator"
     - preset: conventionalcommits
-    - parserOpts: *keywords
+      parserOpts: *keywords
       writerOpts:
         commitsSort:
           - subject

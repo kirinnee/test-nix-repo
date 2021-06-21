@@ -13,6 +13,7 @@ let pkgs = {
       pls
       please
       plz
+      pl0x
     ]
   );
   "nix 21.05 16th June 2021" = (

@@ -15,16 +15,17 @@ This page will document the types and scopes used.
 
 ## Types
 
-| Type                | Description                                                      |
-| ------------------- | ---------------------------------------------------------------- |
-| [fix](#fix)         | Fixed a bug within the repository                                |
-| [new](#new)         | Added new package to the repository                              |
-| [update](#update)   | Update a package in the repository                               |
-| [docs](#docs)       | Add documentation                                                |
-| [ci](#ci)           | Changes to CI                                                    |
-| [chore](#chore)     | Tedious things, such as fixing typo or changing line endings     |
-| [config](#config)   | Configuration changes, such as build scripts or Taskfile.dev etc |
-| [release](#release) | The commit that performs the release.                            |
+| Type                | Description                                                       |
+| ------------------- | ----------------------------------------------------------------- |
+| [fix](#fix)         | Fixed a bug within the repository                                 |
+| [new](#new)         | Added new package to the repository                               |
+| [update](#update)   | Update a package in the repository                                |
+| [docs](#docs)       | Add documentation                                                 |
+| [ci](#ci)           | Changes to CI                                                     |
+| [chore](#chore)     | Tedious things, such as fixing typo or changing line endings      |
+| [config](#config)   | Configuration changes, such as build scripts or Taskfile.dev etc  |
+| [release](#release) | The commit that performs the release.                             |
+| [remove](#remove)   | Removes a package (due to nixpkgs supporting it or other reasons) |
 
 ### fix
 
@@ -147,6 +148,32 @@ Scopes:
 ### chore
 
 As the name suggests, tedious things that need to be done, such as fixing typo or changing line endings
+
+### remove
+
+Remove a package in the repository
+
+Natural language
+
+```
+When this commit is applied, it will **remove** `<scope>` because `<title>`
+```
+
+where `<title>` will be the reason why it would be remove
+
+Example:
+
+```
+remove(narwhal): nixpkgs supports it
+```
+
+Natural Language Translation:
+
+```
+When this commit is applied, it will remove narwhal because nixpkgs supports it
+```
+
+**Bump:** `major`
 
 ### release
 

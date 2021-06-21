@@ -13,4 +13,7 @@ let task = go-task; in
   plz = pkgs.writeShellScriptBin "plz" ''
     ${go-task}/bin/go-task $@
   '';
+  pl0x = pkgs.writeShellScriptBin "pl0x" ''
+    ${go-task}/bin/go-task $@
+  '';
 }

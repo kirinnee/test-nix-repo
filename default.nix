@@ -24,7 +24,12 @@ let
     narwhal = import ./golang/narwhal/default.nix { inherit nixpkgs; };
     narwhal_0_3_11 = import ./golang/narwhal/0.3.11.nix { inherit nixpkgs; };
   };
+
+  # dotnet
+  dotnet = (with import ./nuget/dotnet.nix { inherit nixpkgs; }; {
+    inherit dotnetsay;
+  });
 in
 
 # merge
-npm // shell // python // golang
+npm // shell // python // golang // dotnet

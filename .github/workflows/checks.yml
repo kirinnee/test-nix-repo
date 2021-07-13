@@ -11,18 +11,16 @@ jobs:
         uses: cachix/install-nix-action@v13
         with:
           nix_path: nixpkgs=channel:nixos-unstable
-
       - name: Cache builds
         uses: cachix/cachix-action@v10
         with:
           name: kirinnee-sample-binary-cache
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
       - name: Install Environment
-        run: nix-env -i -f ./env.nix
+        run: nix-env -i -f ./env.nix --substituters ""
       - name: Pre-commit Checks
         run: |
           pre-commit install --install-hooks
           pre-commit run --all
-
       - name: Esnure builds
         run: nix-build

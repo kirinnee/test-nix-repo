@@ -1,0 +1,53 @@
+keywords:
+  - BREAKING CHANGE
+  - BREAKING CHANGES
+  - BREAKING
+
+types:
+  - type: fix
+    section: Bug Fixes
+    desc: Fixed a bug within the repository
+    scopes:
+      default: patch
+      drv: patch
+      config: patch
+
+  - type: new
+    section: New Packages
+    desc: Fixed a bug within the repository
+    scopes:
+      default: minor
+
+  - type: update
+    section: Packages Updated
+    desc: Fixed a bug within the repository
+    scopes:
+      default: major
+
+  - type: remove
+    sections: Removed Packages
+    desc: Fixed a bug within the repository
+    scopes:
+      default: major
+
+  - type: docs
+    desc: Fixed a bug within the repository
+    scopes:
+      default: false
+      dev: false
+      pkg: patch
+
+  - type: ci
+    desc: Fixed a bug within the repository
+    scopes:
+      default: false
+
+  - type: release
+    desc: Fixed a bug within the repository
+    scopes:
+      default: false
+
+  - type: config
+    desc: Fixed a bug within the repository
+    scopes:
+      default: false

@@ -49,15 +49,15 @@ Added new package to the repository
 Natrual language
 
 ```
-When this commit is applied, it will add a **new** package, <title>
+When this commit is applied, it will add a **new** package, `<scope>`: `<title>`
 ```
 
-where `<title>` is in the format `<binary name> - <short description>`
+where `<title>` is in the format `<short description>`
 
 Example:
 
 ```
-new(go): narwhal - a CLI to manage docker
+new(narwhal): a CLI to manage docker
 
 Narwhal is a docker swiss army knife that allows users
 to manage large docker systems quickly
@@ -66,15 +66,8 @@ to manage large docker systems quickly
 Natural Language Translation:
 
 ```
-When this commit is applied, it will add a new package, narwhal - a CLI to manage docker
+When this commit is applied, it will add a new package, narwhal: a CLI to manage docker
 ```
-
-| Scope  | Description    | Bump    |
-| ------ | -------------- | ------- |
-| `node` | A NPM package  | `minor` |
-| `go`   | A Go package   | `minor` |
-| `sh`   | A shell binary | `minor` |
-| `py`   | A pip package  | `minor` |
 
 ### update
 
@@ -83,7 +76,7 @@ Update a package in the repository
 Natural language
 
 ```
-When this commit is applied, it will **update** `<scope>` `<title>`
+When this commit is applied, it will **update** `<scope>`: `<title>`
 ```
 
 where `<title>` will be in the format `from <prev version> to <current version>`
@@ -97,7 +90,7 @@ update(narwhal): from v0.13.1 to v0.14.0
 Natural Language Translation:
 
 ```
-When this commit is applied, it will update narwhal from v0.13.1 to v0.14.0
+When this commit is applied, it will update narwhal: from v0.13.1 to v0.14.0
 ```
 
 **Bump:** `major`

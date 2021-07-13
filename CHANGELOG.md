@@ -1,3 +1,5 @@
+## [2.1.0](https://github.com/kirinnee/test-nix-repo/compare/v2.0.0...v2.1.0) (2021-07-13)
+
 ## [2.0.0](https://github.com/kirinnee/test-nix-repo/compare/v1.0.0...v2.0.0) (2021-06-21)
 
 

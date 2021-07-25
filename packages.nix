@@ -14,6 +14,7 @@ let pkgs = {
       please
       plz
       narwhal
+      sg
     ]
   );
   "nix 21.05 16th June 2021" = (

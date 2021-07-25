@@ -2,9 +2,13 @@ let
   nixpkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/1f91fd1040667e9265a760b0347f8bc416249da7.tar.gz") { };
 
   # Node
-  npm = (with import ./node/default.nix { inherit nixpkgs; }; {
-    inherit cyanprint semantic-release-cli markdown-table-prettify;
-  });
+  npm = (
+    let n = import ./node/export.nix { inherit nixpkgs; }; in
+    with n; {
+      inherit cyanprint semantic-release-cli markdown-table-prettify sg;
+
+    }
+  );
 
   # Shell
   shell = (
@@ -26,9 +30,10 @@ let
   };
 
   # dotnet
-  dotnet = (with import ./nuget/dotnet.nix { inherit nixpkgs; }; {
-    inherit dotnetsay;
-  });
+  # dotnet = (with import ./nuget/dotnet.nix { inherit nixpkgs; }; {
+  #   inherit dotnetsay;
+  # });
+  dotnet = { };
 in
 
 # merge

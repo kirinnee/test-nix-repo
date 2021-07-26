@@ -46,6 +46,13 @@ When this commit is applied, it will **fix** `<title>`
 
 Added new package to the repository
 
+**Vae**
+
+| key | val |
+| --- | --- |
+| a   | b   |
+| c   | d   |
+
 Natrual language
 
 ```

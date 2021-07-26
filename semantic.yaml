@@ -7,6 +7,13 @@ types:
   - type: fix
     section: Bug Fixes
     desc: Fixed a bug within the repository
+    vae:
+      verb: fix
+      application: <title>
+      example:
+        commit: "fix: dropdown flickering"
+        applied: after applying this commit, it will fix the dropdown flickering
+    usage:
     scopes:
       default: patch
       drv: patch
@@ -15,6 +22,12 @@ types:
   - type: new
     section: New Packages
     desc: Fixed a bug within the repository
+    vae:
+      verb: add
+      application: <scope>, <title>
+      example:
+        commit: "fix(narwhal): swiss army knife for docker"
+        applied: after applying this commit, it will fix the dropdown flickering
     scopes:
       default: minor
 

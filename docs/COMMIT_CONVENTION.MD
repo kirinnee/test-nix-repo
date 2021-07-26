@@ -46,12 +46,14 @@ When this commit is applied, it will **fix** `<title>`
 
 Added new package to the repository
 
-**Vae**
+**V.A.E**
 
-| key | val |
-| --- | --- |
-| a   | b   |
-| c   | d   |
+| key             | val                                                                                      |
+| --------------- | ---------------------------------------------------------------------------------------- |
+| verb            | add                                                                                      |
+| apply           | `<scope> - <title>`                                                                      |
+| example commit  | new(narwhal): a swiss army knife for docker                                              |
+| example meaning | when this commit is applied, it will _add_ `narwhal` - **a swiss army knife for docker** |
 
 Natrual language
 

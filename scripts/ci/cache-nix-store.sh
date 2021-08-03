@@ -10,7 +10,7 @@ caches="https://cache.nixos.org/"
 [ "${NIX_CACHE_PATH}" != '' ] && caches="${caches} ${file_cache}"
 
 # setup environment
-nix-env -i -f ./env.nix --substituters "${caches}"
+nix-env -f ./env.nix -iA 'ci' --substituters "${caches}"
 
 # add files to cache
 if [ "${NIX_CACHE_PATH}" != '' ]; then

@@ -18,5 +18,7 @@ nixpkgs.mkShell {
     coreutils
     prettier
     bash
+    node2nix
+    sg
   ];
 }

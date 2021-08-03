@@ -6766,10 +6766,10 @@ in
   "@atomi-user-first/semantic-generator" = nodeEnv.buildNodePackage {
     name = "_at_atomi-user-first_slash_semantic-generator";
     packageName = "@atomi-user-first/semantic-generator";
-    version = "0.2.2";
+    version = "0.2.3";
     src = fetchurl {
-      url = "https://registry.npmjs.org/@atomi-user-first/semantic-generator/-/semantic-generator-0.2.2.tgz";
-      sha512 = "+ZdjaoG/VepZbAXCCcSW9bI4eeJ5UGeivqB7coTsDqXRZf0Y3PItKl1Rzj5NU7Kpjz2rZyiJsKklo0tRRzpBkw==";
+      url = "https://registry.npmjs.org/@atomi-user-first/semantic-generator/-/semantic-generator-0.2.3.tgz";
+      sha512 = "oMHrjnHBit1lqey5gcAHEhH5gxI8DpzuPHNRmM0iAjzCPOivPkF3hdvgaScnw3sy6+6brVLK6qN5ibsCfTphPQ==";
     };
     dependencies = [
       sources."@babel/code-frame-7.14.5"

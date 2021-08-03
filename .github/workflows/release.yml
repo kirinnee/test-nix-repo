@@ -16,7 +16,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: /nix
-          key: ${{ runner.os }}-alpine-nix
+          key: ${{ runner.os }}-alpine-nix-release
 
       - name: Checkout Git
         uses: actions/checkout@v2.3.4

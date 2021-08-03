@@ -145,5 +145,6 @@ types:
   - type: chore
     desc: Any chores, uncategorized, or small mistakes (like typos)
     scopes:
-      default: chores
-      release: false
+      default:
+        desc: chores
+        release: false

@@ -27,7 +27,7 @@ jobs:
           cachix use kirinnee-sample-binary-cache
 
       - name: Install Environment
-        run: nix-env -i -f ./ci-env.nix
+        run: nix-env -i -f ./env.nix
 
       - name: Release
         env:

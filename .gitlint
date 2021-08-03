@@ -3,4 +3,4 @@ contrib=CT1
 ignore=B6
 
 [contrib-title-conventional-commits]
-types = fix,new,update,docs,ci,chore,release,config,remove
+types = chore,ci,config,docs,fix,new,release,remove,update

@@ -51,3 +51,10 @@ repos:
         files: ^.*\.nix$
         language: system
         pass_filenames: false
+
+      - id: gitlint-linter
+        name: Lints Gitlint to conform to atomi_release.yaml
+        entry: sg gitlint
+        files: (atomi_release.yaml|.gitlint)
+        language: system
+        pass_filenames: false

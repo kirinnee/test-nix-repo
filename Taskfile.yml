@@ -1,5 +1,8 @@
 version: "3"
 
+includes:
+  ci: ./scripts/ci/ci.Taskfile.yaml
+
 tasks:
   build:
     desc: Build all derivations within `default.nix`
@@ -94,3 +97,8 @@ tasks:
     cmds:
       - node2nix -i ./node/node-packages.json -e ./node/node-env.nix -o ./node/node-packages.nix -c ./node/composition.nix
       - task: fmt:nix
+
+  cfg:scripts:
+    desc: Make scripts executable
+    cmds:
+      - chmod -R +x ./scripts

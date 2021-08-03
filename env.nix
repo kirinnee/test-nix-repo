@@ -19,6 +19,7 @@ with pkgs;
       coreutils
       prettier
       bash
+      node2nix
     ];
   };
   ci = nixpkgs.buildEnv {
@@ -38,6 +39,7 @@ with pkgs;
       coreutils
       prettier
       bash
+      node2nix
     ];
   };
 

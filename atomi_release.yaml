@@ -1,0 +1,149 @@
+gitlint: .gitlint
+
+conventionMarkdown:
+  path: docs/developer/03-Commit Conventions.md
+  template: |
+    ---
+    id: commit-conventions
+    title: Commit Conventions
+    ---
+
+    var___convention_docs___
+
+keywords:
+  - BREAKING CHANGE
+  - BREAKING CHANGES
+  - BREAKING
+
+branches:
+  - main
+
+specialScopes:
+  no-release:
+    desc: Prevent release from happening
+    release: false
+
+plugins:
+  - module: "@semantic-release/changelog"
+    config:
+      changelogFile: docs/user/03-Changelog.md
+      changelogTitle: |
+        ---
+        id: changelog
+        title: Changelog
+        ---
+  - module: "@semantic-release/git"
+    config:
+      message: "release: ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      assests:
+        - docs/**/*.*
+  - module: "@semantic-release/github"
+
+types:
+  - type: fix
+    section: Bug Fixes
+    desc: Fixed a bug within the repository
+    vae:
+      verb: fix
+      application: <title>
+      example: "fix: dropdown flickering"
+    scopes:
+      default:
+        desc: Generic fixes not under `drv` or `patch`
+        release: patch
+      drv:
+        desc: Fixes in nix derivations in the repository
+        release: patch
+      config:
+        desc: Fixes in configuration
+        release: false
+
+  - type: new
+    section: New Packages
+    desc: Release a new package
+    vae:
+      verb: add
+      application: <scope>, <title>
+      example: "new(narwhal): a swiss army knife for docker"
+    scopes:
+      default:
+        desc: Release a new package
+        release: minor
+
+  - type: update
+    section: Packages Updated
+    desc: Update a package's version
+    scopes:
+      default:
+        desc: Update a package's version
+        release: major
+
+  - type: remove
+    section: Removed Packages
+    desc: Remove package from the repository
+    scopes:
+      default:
+        desc: Removed a package
+        release: major
+
+  - type: docs
+    desc: Add documentation
+    section: Documentation Updates
+    scopes:
+      default:
+        desc: Adds a generic documentation not related to `dev`, `pkg` or `user`
+        release: false
+      user:
+        desc: Adds a user-side documentation
+        release: false
+      dev:
+        desc: Adds a developer-side (contributing) documentation
+        release: false
+      pkg:
+        desc: Updates a documentation on a package
+        release: patch
+
+  - type: ci
+    desc: Changed the CI pipeline
+    scopes:
+      default:
+        desc: Update CI configuration
+        release: false
+
+  - type: release
+    desc: Initiate a release (machine initiated)
+    scopes:
+      default:
+        desc: Machine initiated release
+        release: false
+
+  - type: config
+    desc: Update configuration of the repository
+    scopes:
+      default:
+        desc: Updates the configuration of the repository, not related to the other scopes
+        release: false
+      lint:
+        desc: Add, update or remove linters
+        release: false
+      fmt:
+        desc: Add, updatge or remove formatters
+        release: false
+      build:
+        desc: Add, update or change buyild pipelines and generators
+        release: false
+      nix:
+        desc: Add, update or change nix shell
+        release: false
+      env:
+        desc: Add, update or change environment
+        release: false
+      ignore:
+        desc: Add, update or change ignore configurations
+        release: false
+
+  - type: chore
+    desc: Any chores, uncategorized, or small mistakes (like typos)
+    scopes:
+      default: chores
+      release: false

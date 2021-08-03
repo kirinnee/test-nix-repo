@@ -4,6 +4,33 @@
 
 let
   sources = {
+    "@babel/code-frame-7.14.5" = {
+      name = "_at_babel_slash_code-frame";
+      packageName = "@babel/code-frame";
+      version = "7.14.5";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.14.5.tgz";
+        sha512 = "9pzDqyc6OLDaqe+zbACgFkb6fKMNG6CObKpnYXChRsvYGyEdc7CA2BaqeOM+vOtCS5ndmJicPJhKAwYRI6UfFw==";
+      };
+    };
+    "@babel/helper-validator-identifier-7.14.9" = {
+      name = "_at_babel_slash_helper-validator-identifier";
+      packageName = "@babel/helper-validator-identifier";
+      version = "7.14.9";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@babel/helper-validator-identifier/-/helper-validator-identifier-7.14.9.tgz";
+        sha512 = "pQYxPY0UP6IHISRitNe8bsijHex4TWZXi2HwKVsjPiltzlhse2znVcm9Ace510VT1kxIHjGJCZZQBX2gJDbo0g==";
+      };
+    };
+    "@babel/highlight-7.14.5" = {
+      name = "_at_babel_slash_highlight";
+      packageName = "@babel/highlight";
+      version = "7.14.5";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@babel/highlight/-/highlight-7.14.5.tgz";
+        sha512 = "qf9u2WFWVV0MppaL877j2dBtQIDgmidgjGk5VIMw3OadXvYaXn66U1BFlH2t4+t3i+8PhedppRv+i40ABzd+gg==";
+      };
+    };
     "@babel/runtime-7.14.8" = {
       name = "_at_babel_slash_runtime";
       packageName = "@babel/runtime";
@@ -382,13 +409,22 @@ let
         sha512 = "sq+kwx8zA9BSugT9N+Jr8/uWjbHMZ+N/meJEzRyT3gmLq/WMtx/iSIpvdpmBUi/cvXl6Kzpvve8G2ESkabFwmg==";
       };
     };
-    "@types/node-16.4.2" = {
+    "@types/minimist-1.2.2" = {
+      name = "_at_types_slash_minimist";
+      packageName = "@types/minimist";
+      version = "1.2.2";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@types/minimist/-/minimist-1.2.2.tgz";
+        sha512 = "jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==";
+      };
+    };
+    "@types/node-16.4.10" = {
       name = "_at_types_slash_node";
       packageName = "@types/node";
-      version = "16.4.2";
+      version = "16.4.10";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@types/node/-/node-16.4.2.tgz";
-        sha512 = "vxyhOzFCm+jC/T5KugbVsYy1DbQM0h3NCFUrVbu0+pYa/nr+heeucpqxpa8j4pUmIGLPYzboY9zIdOF0niFAjQ==";
+        url = "https://registry.npmjs.org/@types/node/-/node-16.4.10.tgz";
+        sha512 = "TmVHsm43br64js9BqHWqiDZA+xMtbUpI1MBIA0EyiBmoV9pcEYFOSdj5fr6enZNfh4fChh+AGOLIzGwJnkshyQ==";
       };
     };
     "@types/node-fetch-2.5.12" = {
@@ -398,6 +434,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/@types/node-fetch/-/node-fetch-2.5.12.tgz";
         sha512 = "MKgC4dlq4kKNa/mYrwpKfzQMB5X3ee5U6fSprkKpToBqBmX4nFZL9cW5jl6sWn+xpRJ7ypWh2yyqqr8UUCstSw==";
+      };
+    };
+    "@types/normalize-package-data-2.4.1" = {
+      name = "_at_types_slash_normalize-package-data";
+      packageName = "@types/normalize-package-data";
+      version = "2.4.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@types/normalize-package-data/-/normalize-package-data-2.4.1.tgz";
+        sha512 = "Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==";
       };
     };
     "@types/retry-0.12.1" = {
@@ -1201,13 +1246,13 @@ let
         sha1 = "838a992da9f9d737e0f4b2db0be62bb09dd0c5e8";
       };
     };
-    "binaryextensions-4.15.0" = {
+    "binaryextensions-4.18.0" = {
       name = "binaryextensions";
       packageName = "binaryextensions";
-      version = "4.15.0";
+      version = "4.18.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/binaryextensions/-/binaryextensions-4.15.0.tgz";
-        sha512 = "MkUl3szxXolQ2scI1PM14WOT951KnaTNJ0eMKg7WzOI4kvSxyNo/Cygx4LOBNhwyINhAuSQpJW1rYD9aBSxGaw==";
+        url = "https://registry.npmjs.org/binaryextensions/-/binaryextensions-4.18.0.tgz";
+        sha512 = "PQu3Kyv9dM4FnwB7XGj1+HucW+ShvJzJqjuw1JkKVs1mWdwOKVcRjOi+pV9X52A0tNvrPCsPkbFFQb+wE1EAXw==";
       };
     };
     "bl-4.1.0" = {
@@ -1354,13 +1399,13 @@ let
         sha1 = "f8f78b76789888ef39f205cd637f68e702122b2c";
       };
     };
-    "buffer-from-1.1.1" = {
+    "buffer-from-1.1.2" = {
       name = "buffer-from";
       packageName = "buffer-from";
-      version = "1.1.1";
+      version = "1.1.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/buffer-from/-/buffer-from-1.1.1.tgz";
-        sha512 = "MQcXEUbCKtEo7bhqEs6560Hyd4XaovZlO/k9V3hjVUF/zwW7KBVdSK4gIt/bzwS9MbR5qob+F5jusZsb0YQK2A==";
+        url = "https://registry.npmjs.org/buffer-from/-/buffer-from-1.1.2.tgz";
+        sha512 = "E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==";
       };
     };
     "builtins-1.0.3" = {
@@ -1399,13 +1444,22 @@ let
         sha512 = "L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==";
       };
     };
-    "caniuse-lite-1.0.30001247" = {
+    "camelcase-keys-6.2.2" = {
+      name = "camelcase-keys";
+      packageName = "camelcase-keys";
+      version = "6.2.2";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/camelcase-keys/-/camelcase-keys-6.2.2.tgz";
+        sha512 = "YrwaA0vEKazPBkn0ipTiMpSajYDSe+KjQfrjhcBMxJt/znbvlHd8Pw/Vamaz5EB4Wfhs3SUR3Z9mwRu/P3s3Yg==";
+      };
+    };
+    "caniuse-lite-1.0.30001248" = {
       name = "caniuse-lite";
       packageName = "caniuse-lite";
-      version = "1.0.30001247";
+      version = "1.0.30001248";
       src = fetchurl {
-        url = "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001247.tgz";
-        sha512 = "4rS7co+7+AoOSPRPOPUt5/GdaqZc0EsUpWk66ofE3HJTAajUK2Ss2VwoNzVN69ghg8lYYlh0an0Iy4LIHHo9UQ==";
+        url = "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001248.tgz";
+        sha512 = "NwlQbJkxUFJ8nMErnGtT0QTM2TJ33xgz4KXJSMIrjXIbDVdaYueGyjOrLKRtJC+rTiWfi6j5cnZN1NBiSBJGNw==";
       };
     };
     "caseless-0.12.0" = {
@@ -1435,13 +1489,13 @@ let
         sha512 = "Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==";
       };
     };
-    "chalk-4.1.1" = {
+    "chalk-4.1.2" = {
       name = "chalk";
       packageName = "chalk";
-      version = "4.1.1";
+      version = "4.1.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/chalk/-/chalk-4.1.1.tgz";
-        sha512 = "diHzdDKxcU+bAsUboHLPEDQiw0qEe0qd7SYUn3HgcFlWgbDcfLGswOHYeGrHKzG9z6UYf01d9VFMfZxPM1xZSg==";
+        url = "https://registry.npmjs.org/chalk/-/chalk-4.1.2.tgz";
+        sha512 = "oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==";
       };
     };
     "chardet-0.7.0" = {
@@ -1669,13 +1723,13 @@ let
         sha512 = "GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==";
       };
     };
-    "commander-8.0.0" = {
+    "commander-8.1.0" = {
       name = "commander";
       packageName = "commander";
-      version = "8.0.0";
+      version = "8.1.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/commander/-/commander-8.0.0.tgz";
-        sha512 = "Xvf85aAtu6v22+E5hfVoLHqyul/jyxh91zvqk/ioJTQuJR7Z78n7H558vMPKanPSRgIEeZemT92I2g9Y8LPbSQ==";
+        url = "https://registry.npmjs.org/commander/-/commander-8.1.0.tgz";
+        sha512 = "mf45ldcuHSYShkplHHGKWb4TrmwQadxOn7v4WuhDJy0ZVoY5JFajaRDKD0PNe5qXzBX0rhovjTnP6Kz9LETcuA==";
       };
     };
     "concat-map-0.0.1" = {
@@ -1712,6 +1766,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/console-control-strings/-/console-control-strings-1.1.0.tgz";
         sha1 = "3d7cf4464db6446ea644bf4b39507f9851008e8e";
+      };
+    };
+    "conventional-commits-parser-3.2.1" = {
+      name = "conventional-commits-parser";
+      packageName = "conventional-commits-parser";
+      version = "3.2.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/conventional-commits-parser/-/conventional-commits-parser-3.2.1.tgz";
+        sha512 = "OG9kQtmMZBJD/32NEw5IhN5+HnBqVjy03eC+I71I0oQRFA5rOgA4OtPOYG7mz1GkCfCNxn3gKIX8EiHJYuf1cA==";
       };
     };
     "convert-source-map-1.8.0" = {
@@ -1847,6 +1910,24 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/debug/-/debug-3.2.7.tgz";
         sha512 = "CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==";
+      };
+    };
+    "decamelize-1.2.0" = {
+      name = "decamelize";
+      packageName = "decamelize";
+      version = "1.2.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz";
+        sha1 = "f6534d15148269b20352e7bee26f501f9a191290";
+      };
+    };
+    "decamelize-keys-1.1.0" = {
+      name = "decamelize-keys";
+      packageName = "decamelize-keys";
+      version = "1.1.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/decamelize-keys/-/decamelize-keys-1.1.0.tgz";
+        sha1 = "d171a87933252807eb3cb61dc1c1445d078df2d9";
       };
     };
     "decompress-response-3.3.0" = {
@@ -2011,22 +2092,13 @@ let
         sha1 = "3a83a904e54353287874c564b7549386849a98c9";
       };
     };
-    "editions-6.2.0" = {
-      name = "editions";
-      packageName = "editions";
-      version = "6.2.0";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/editions/-/editions-6.2.0.tgz";
-        sha512 = "ebq3HvvNnoGZ+2T7zlN3GOMYlWZWcyKZe+I2Bg9COPdDvocUciTtQmMpzxDDPgASUvb3e843wreVKBBkQn6J2Q==";
-      };
-    };
-    "electron-to-chromium-1.3.786" = {
+    "electron-to-chromium-1.3.793" = {
       name = "electron-to-chromium";
       packageName = "electron-to-chromium";
-      version = "1.3.786";
+      version = "1.3.793";
       src = fetchurl {
-        url = "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.3.786.tgz";
-        sha512 = "AmvbLBj3hepRk8v/DHrFF8gINxOFfDbrn6Ts3PcK46/FBdQb5OMmpamSpZQXSkfi77FfBzYtQtAk+00LCLYMVw==";
+        url = "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.3.793.tgz";
+        sha512 = "l9NrGV6Mr4ov5mayYPvIWcwklNw5ROmy6rllzz9dCACw9nKE5y+s5uQk+CBJMetxrWZ6QJFsvEfG6WDcH2IGUg==";
       };
     };
     "emoji-regex-7.0.3" = {
@@ -2083,13 +2155,13 @@ let
         sha1 = "06e0116d3028f6aef4806849eb0ea6a748ae6960";
       };
     };
-    "errlop-4.2.0" = {
-      name = "errlop";
-      packageName = "errlop";
-      version = "4.2.0";
+    "error-ex-1.3.2" = {
+      name = "error-ex";
+      packageName = "error-ex";
+      version = "1.3.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/errlop/-/errlop-4.2.0.tgz";
-        sha512 = "oF4tJVrFEs3NnBwi5HuxWhBp6ubwNf+vPG4MhngBPnK93BpJqPuMnfBBAyByis4IznnEq11oceCVoOCZFwjqWg==";
+        url = "https://registry.npmjs.org/error-ex/-/error-ex-1.3.2.tgz";
+        sha512 = "7dFHNmqeFSEt2ZBsCriorKnn3Z2pj+fd9kmI6QoWw4//DL+icEBfc0U7qJCisqrTsKTjw4fNFy2pW9OqStD84g==";
       };
     };
     "es6-promise-3.3.1" = {
@@ -2317,6 +2389,15 @@ let
         sha512 = "qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ==";
       };
     };
+    "find-up-4.1.0" = {
+      name = "find-up";
+      packageName = "find-up";
+      version = "4.1.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/find-up/-/find-up-4.1.0.tgz";
+        sha512 = "PpOwAdQ/YlXQ2vj8a3h8IipDuYRi3wceVQQGYWxNINccq40Anw7BlsEXCMbt1Zt+OLA6Fq9suIpIWD0OsnISlw==";
+      };
+    };
     "flush-write-stream-1.1.1" = {
       name = "flush-write-stream";
       packageName = "flush-write-stream";
@@ -2396,6 +2477,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz";
         sha1 = "1504ad2523158caa40db4a2787cb01411994ea4f";
+      };
+    };
+    "function-bind-1.1.1" = {
+      name = "function-bind";
+      packageName = "function-bind";
+      version = "1.1.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/function-bind/-/function-bind-1.1.1.tgz";
+        sha512 = "yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==";
       };
     };
     "gauge-2.7.4" = {
@@ -2587,6 +2677,24 @@ let
         sha512 = "nmT2T0lljbxdQZfspsno9hgrG3Uir6Ks5afism62poxqBM6sDnMEuPmzTq8XN0OEwqKLLdh1jQI3qyE66Nzb3w==";
       };
     };
+    "hard-rejection-2.1.0" = {
+      name = "hard-rejection";
+      packageName = "hard-rejection";
+      version = "2.1.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/hard-rejection/-/hard-rejection-2.1.0.tgz";
+        sha512 = "VIZB+ibDhx7ObhAe7OVtoEbuP4h/MuOTHJ+J8h/eBXotJYl0fBgR72xDFCKgIh22OJZIOVNxBMWuhAr10r8HdA==";
+      };
+    };
+    "has-1.0.3" = {
+      name = "has";
+      packageName = "has";
+      version = "1.0.3";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/has/-/has-1.0.3.tgz";
+        sha512 = "f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==";
+      };
+    };
     "has-ansi-2.0.0" = {
       name = "has-ansi";
       packageName = "has-ansi";
@@ -2657,6 +2765,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-2.8.9.tgz";
         sha512 = "mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==";
+      };
+    };
+    "hosted-git-info-4.0.2" = {
+      name = "hosted-git-info";
+      packageName = "hosted-git-info";
+      version = "4.0.2";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-4.0.2.tgz";
+        sha512 = "c9OGXbZ3guC/xOlCg1Ci/VgWlwsqDv1yMQL1CWqXDL0hDjXuNcq0zuR4xqPSuasI3kqFDhqSyTjREz5gzq0fXg==";
       };
     };
     "http-cache-semantics-3.8.1" = {
@@ -2803,6 +2920,15 @@ let
         sha1 = "9218b9b2b928a238b13dc4fb6b6d576f231453ea";
       };
     };
+    "indent-string-4.0.0" = {
+      name = "indent-string";
+      packageName = "indent-string";
+      version = "4.0.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/indent-string/-/indent-string-4.0.0.tgz";
+        sha512 = "EdDDZu4A2OyIK7Lr/2zG+w5jmbuk1DVBnEwREQvBzspBJkCEbRa8GxU1lghYcaGJCnRWibjDXlq779X1/y5xwg==";
+      };
+    };
     "infer-owner-1.0.4" = {
       name = "infer-owner";
       packageName = "infer-owner";
@@ -2884,6 +3010,15 @@ let
         sha1 = "dc589076f659f419c222039a33316f1c7387effd";
       };
     };
+    "is-arrayish-0.2.1" = {
+      name = "is-arrayish";
+      packageName = "is-arrayish";
+      version = "0.2.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/is-arrayish/-/is-arrayish-0.2.1.tgz";
+        sha1 = "77c99840527aa8ecb1a8ba697b80645a7a926a9d";
+      };
+    };
     "is-arrayish-0.3.2" = {
       name = "is-arrayish";
       packageName = "is-arrayish";
@@ -2900,6 +3035,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/is-ci/-/is-ci-2.0.0.tgz";
         sha512 = "YfJT7rkpQB0updsdHLGWrvhBJfcfzNNawYDNIyQXJz0IViGf75O8EBPKSdvw2rF+LGCsX4FZ8tcr3b19LcZq4w==";
+      };
+    };
+    "is-core-module-2.5.0" = {
+      name = "is-core-module";
+      packageName = "is-core-module";
+      version = "2.5.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/is-core-module/-/is-core-module-2.5.0.tgz";
+        sha512 = "TXCMSDsEHMEEZ6eCA8rwRDbLu55MRGmrctljsBX/2v1d9/GzqHOxW5c5oPSgrUt2vBFXebu9rGqckXGPWOlYpg==";
       };
     };
     "is-docker-2.2.1" = {
@@ -3019,6 +3163,15 @@ let
         sha1 = "8ef5b7de50437a3fdca6b4e865ef7aa55cb48036";
       };
     };
+    "is-plain-obj-1.1.0" = {
+      name = "is-plain-obj";
+      packageName = "is-plain-obj";
+      version = "1.1.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/is-plain-obj/-/is-plain-obj-1.1.0.tgz";
+        sha1 = "71a50c8429dfca773c92a390a4a03b39fcd51d3e";
+      };
+    };
     "is-stream-1.1.0" = {
       name = "is-stream";
       packageName = "is-stream";
@@ -3028,13 +3181,22 @@ let
         sha1 = "12d4a3dd4e68e0b79ceb8dbc84173ae80d91ca44";
       };
     };
-    "is-stream-2.0.0" = {
+    "is-stream-2.0.1" = {
       name = "is-stream";
       packageName = "is-stream";
-      version = "2.0.0";
+      version = "2.0.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/is-stream/-/is-stream-2.0.0.tgz";
-        sha512 = "XCoy+WlUr7d1+Z8GgSuXmpuUFC9fOhRXglJMx+dwLKTkL44Cjd4W1Z5P+BQZpr+cR93aGP4S/s7Ftw6Nd/kiEw==";
+        url = "https://registry.npmjs.org/is-stream/-/is-stream-2.0.1.tgz";
+        sha512 = "hFoiJiTl63nn+kstHGBtewWSKnQLpyb155KHheA1l39uvtO9nWIop1p3udqPcUd/xbF1VLMO4n7OI6p7RbngDg==";
+      };
+    };
+    "is-text-path-1.0.1" = {
+      name = "is-text-path";
+      packageName = "is-text-path";
+      version = "1.0.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/is-text-path/-/is-text-path-1.0.1.tgz";
+        sha1 = "4e1aa0fb51bfbcb3e92688001397202c1775b66e";
       };
     };
     "is-typedarray-1.0.0" = {
@@ -3100,13 +3262,13 @@ let
         sha1 = "47e63f7af55afa6f92e1500e690eb8b8529c099a";
       };
     };
-    "istextorbinary-5.12.0" = {
+    "istextorbinary-5.15.0" = {
       name = "istextorbinary";
       packageName = "istextorbinary";
-      version = "5.12.0";
+      version = "5.15.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/istextorbinary/-/istextorbinary-5.12.0.tgz";
-        sha512 = "wLDRWD7qpNTYubk04+q3en1+XZGS4vYWK0+SxNSXJLaITMMEK+J3o/TlOMyULeH1qozVZ9uUkKcyMA8odyxz8w==";
+        url = "https://registry.npmjs.org/istextorbinary/-/istextorbinary-5.15.0.tgz";
+        sha512 = "4/Fz28VGgSCb5j6kGJqL1iU28WAFMkcx+uUWaa/pzpGqz5bMIoPzW4F6Nbf/7XFx7nSa+qD6HHprDrilB4RNzw==";
       };
     };
     "jimp-0.16.1" = {
@@ -3163,6 +3325,15 @@ let
         sha1 = "9866df395102130e38f7f996bceb65443209c25b";
       };
     };
+    "js-tokens-4.0.0" = {
+      name = "js-tokens";
+      packageName = "js-tokens";
+      version = "4.0.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz";
+        sha512 = "RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==";
+      };
+    };
     "js-yaml-3.14.1" = {
       name = "js-yaml";
       packageName = "js-yaml";
@@ -3215,6 +3386,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/json-parse-better-errors/-/json-parse-better-errors-1.0.2.tgz";
         sha512 = "mrqyZKfX5EhL7hvqcV6WG1yYjnjeuYDzDhhcAAUrq8Po85NBQBJP+ZDUT75qZQ98IkUoBqdkExkukOU7Ts2wrw==";
+      };
+    };
+    "json-parse-even-better-errors-2.3.1" = {
+      name = "json-parse-even-better-errors";
+      packageName = "json-parse-even-better-errors";
+      version = "2.3.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/json-parse-even-better-errors/-/json-parse-even-better-errors-2.3.1.tgz";
+        sha512 = "xyFwyhro/JEof6Ghe2iz2NcXoj2sloNsWr/XsERDK/oiPCfaNhl5ONfp+jQdAZRQQ0IJWNzH9zIZF7li91kh2w==";
       };
     };
     "json-schema-0.2.3" = {
@@ -3298,6 +3478,15 @@ let
         sha512 = "9ykJ/46SN/9KPM/sichzQ7OvXyGDYKGTaDlKMGCAlg2UK8KRy4jb0d8sFc+0Tt0YYnThq8X2RZgCg74RPxgcVA==";
       };
     };
+    "kind-of-6.0.3" = {
+      name = "kind-of";
+      packageName = "kind-of";
+      version = "6.0.3";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/kind-of/-/kind-of-6.0.3.tgz";
+        sha512 = "dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==";
+      };
+    };
     "latest-version-5.1.0" = {
       name = "latest-version";
       packageName = "latest-version";
@@ -3307,6 +3496,15 @@ let
         sha512 = "weT+r0kTkRQdCdYCNtkMwWXQTMEswKrFBkm4ckQOMVhhqhIMI1UT2hMj+1iigIhgSZm5gTmrRXBNoGUgaTY1xA==";
       };
     };
+    "lines-and-columns-1.1.6" = {
+      name = "lines-and-columns";
+      packageName = "lines-and-columns";
+      version = "1.1.6";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/lines-and-columns/-/lines-and-columns-1.1.6.tgz";
+        sha1 = "1c00c743b433cd0a4e80758f7b64a57440d9ff00";
+      };
+    };
     "load-bmfont-1.4.1" = {
       name = "load-bmfont";
       packageName = "load-bmfont";
@@ -3314,6 +3512,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/load-bmfont/-/load-bmfont-1.4.1.tgz";
         sha512 = "8UyQoYmdRDy81Brz6aLAUhfZLwr5zV0L3taTQ4hju7m6biuwiWiJXjPhBJxbUQJA8PrkvJ/7Enqmwk2sM14soA==";
+      };
+    };
+    "locate-path-5.0.0" = {
+      name = "locate-path";
+      packageName = "locate-path";
+      version = "5.0.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/locate-path/-/locate-path-5.0.0.tgz";
+        sha512 = "t7hw9pI+WvuwNJXwk5zVHpyhIqzg2qTlklJOf0mVxGSbe3Fp2VieZcduNYjaLDoy6p9uGpQEGWG87WpMKlNq8g==";
       };
     };
     "lodash-1.3.1" = {
@@ -3415,6 +3622,33 @@ let
         sha512 = "07JHC0r1ykIoruKO8ifMXu+xEU8qOXDFETylktdug6vJDACnP+HKevOu3PXyNPzFyTSlz8vrBYlBO1JZRe8Cag==";
       };
     };
+    "map-obj-1.0.1" = {
+      name = "map-obj";
+      packageName = "map-obj";
+      version = "1.0.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/map-obj/-/map-obj-1.0.1.tgz";
+        sha1 = "d933ceb9205d82bdcf4886f6742bdc2b4dea146d";
+      };
+    };
+    "map-obj-4.2.1" = {
+      name = "map-obj";
+      packageName = "map-obj";
+      version = "4.2.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/map-obj/-/map-obj-4.2.1.tgz";
+        sha512 = "+WA2/1sPmDj1dlvvJmB5G6JKfY9dpn7EVBUL06+y6PoljPkh+6V1QihwxNkbcGxCRjt2b0F9K0taiCuo7MbdFQ==";
+      };
+    };
+    "meow-8.1.2" = {
+      name = "meow";
+      packageName = "meow";
+      version = "8.1.2";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/meow/-/meow-8.1.2.tgz";
+        sha512 = "r85E3NdZ+mpYk1C6RjPFEMSE+s1iZMuHtsHAqY0DT3jZczl0diWUZ8g6oU7h0M9cD2EL+PzaYghhCLzR0ZNn5Q==";
+      };
+    };
     "merge-stream-2.0.0" = {
       name = "merge-stream";
       packageName = "merge-stream";
@@ -3451,22 +3685,22 @@ let
         sha512 = "x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==";
       };
     };
-    "mime-db-1.48.0" = {
+    "mime-db-1.49.0" = {
       name = "mime-db";
       packageName = "mime-db";
-      version = "1.48.0";
+      version = "1.49.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/mime-db/-/mime-db-1.48.0.tgz";
-        sha512 = "FM3QwxV+TnZYQ2aRqhlKBMHxk10lTbMt3bBkMAp54ddrNeVSfcQYOOKuGuy3Ddrm38I04If834fOUSq1yzslJQ==";
+        url = "https://registry.npmjs.org/mime-db/-/mime-db-1.49.0.tgz";
+        sha512 = "CIc8j9URtOVApSFCQIF+VBkX1RwXp/oMMOrqdyXSBXq5RWNEsRfyj1kiRnQgmNXmHxPoFIxOroKA3zcU9P+nAA==";
       };
     };
-    "mime-types-2.1.31" = {
+    "mime-types-2.1.32" = {
       name = "mime-types";
       packageName = "mime-types";
-      version = "2.1.31";
+      version = "2.1.32";
       src = fetchurl {
-        url = "https://registry.npmjs.org/mime-types/-/mime-types-2.1.31.tgz";
-        sha512 = "XGZnNzm3QvgKxa8dpzyhFTHmpP3l5YNusmne07VUOXxou9CqUqYa/HBy124RqtVh/O2pECas/MOcsDgpilPOPg==";
+        url = "https://registry.npmjs.org/mime-types/-/mime-types-2.1.32.tgz";
+        sha512 = "hJGaVS4G4c9TSMYh2n6SQAGrC4RnfU+daP8G7cSCmaqNjiOoUY0VHCMS42pxnQmVF1GWwFhbHWn3RIxCqTmZ9A==";
       };
     };
     "mimic-fn-1.2.0" = {
@@ -3514,6 +3748,15 @@ let
         sha1 = "7bd282e3f5842ed295bb748cdd9f1ffa2c824685";
       };
     };
+    "min-indent-1.0.1" = {
+      name = "min-indent";
+      packageName = "min-indent";
+      version = "1.0.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/min-indent/-/min-indent-1.0.1.tgz";
+        sha512 = "I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==";
+      };
+    };
     "minimatch-3.0.4" = {
       name = "minimatch";
       packageName = "minimatch";
@@ -3548,6 +3791,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/minimist/-/minimist-1.2.5.tgz";
         sha512 = "FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==";
+      };
+    };
+    "minimist-options-4.1.0" = {
+      name = "minimist-options";
+      packageName = "minimist-options";
+      version = "4.1.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/minimist-options/-/minimist-options-4.1.0.tgz";
+        sha512 = "Q4r8ghd80yhO/0j1O3B2BjweX3fiHg9cdOwjJd2J76Q135c+NDxGCqdYKQ1SKBuFfgWbAUzBfvYjPUEeNgqN1A==";
       };
     };
     "mississippi-3.0.0" = {
@@ -3694,13 +3946,13 @@ let
         sha512 = "iOuIQDWDyjhv9qSDrj9aq/klt6F9z1p2otB3AV7v3zBDcL/x+OfGsvGQZZCcMZbUf4Ujw1xGNQkjvGnVT22cKg==";
       };
     };
-    "node-html-parser-4.1.1" = {
+    "node-html-parser-4.1.2" = {
       name = "node-html-parser";
       packageName = "node-html-parser";
-      version = "4.1.1";
+      version = "4.1.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/node-html-parser/-/node-html-parser-4.1.1.tgz";
-        sha512 = "bc8pTN/BgDxBcS4TiA6pRv3TL2dElxoQwSP0sz/5VgJPASlmGzIU3ozv3hPMqg/hH/T2eqJxqXWuXlSZWggDgw==";
+        url = "https://registry.npmjs.org/node-html-parser/-/node-html-parser-4.1.2.tgz";
+        sha512 = "O5ZnV40UpZWrFth52D62tMppI/veACiSmXJ7R+b4FToly6dnhNkFSeFcUbCHXsfe4U/2+ANiuaPS2Wf9YI6hCA==";
       };
     };
     "nopt-4.0.3" = {
@@ -3712,6 +3964,24 @@ let
         sha512 = "CvaGwVMztSMJLOeXPrez7fyfObdZqNUK1cPAEzLHrTybIua9pMdmmPR5YwtfNftIOMv3DPUhFaxsZMNTQO20Kg==";
       };
     };
+    "normalize-package-data-2.5.0" = {
+      name = "normalize-package-data";
+      packageName = "normalize-package-data";
+      version = "2.5.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/normalize-package-data/-/normalize-package-data-2.5.0.tgz";
+        sha512 = "/5CMN3T0R4XTj4DcGaexo+roZSdSFW/0AOOTROrjxzCG1wrWXEsGbRKevjlIL+ZDE4sZlJr5ED4YW0yqmkK+eA==";
+      };
+    };
+    "normalize-package-data-3.0.2" = {
+      name = "normalize-package-data";
+      packageName = "normalize-package-data";
+      version = "3.0.2";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/normalize-package-data/-/normalize-package-data-3.0.2.tgz";
+        sha512 = "6CdZocmfGaKnIHPVFhJJZ3GuR8SsLKvDANFp47Jmy51aKIr8akjAWTSxtpI+MBgBFdSMRyo4hMpDlT6dTffgZg==";
+      };
+    };
     "normalize-url-4.5.1" = {
       name = "normalize-url";
       packageName = "normalize-url";
@@ -3721,13 +3991,13 @@ let
         sha512 = "9UZCFRHQdNrfTpGg8+1INIg93B6zE0aXMVFkw1WFwvO4SlZywU6aLg5Of0Ap/PgcbSw4LNxvMWXMeugwMCX0AA==";
       };
     };
-    "npm-6.14.13" = {
+    "npm-6.14.14" = {
       name = "npm";
       packageName = "npm";
-      version = "6.14.13";
+      version = "6.14.14";
       src = fetchurl {
-        url = "https://registry.npmjs.org/npm/-/npm-6.14.13.tgz";
-        sha512 = "SRl4jJi0EBHY2xKuu98FLRMo3VhYQSA6otyLnjSEiHoSG/9shXCFNJy9tivpUJvtkN9s6VDdItHa5Rn+fNBzag==";
+        url = "https://registry.npmjs.org/npm/-/npm-6.14.14.tgz";
+        sha512 = "4TnYPV3rvwk9m92ON0iFrdXtRyMhrNkGdI8sr3dy1HVE3pVNxR9FyWYbjAw/HjfmHvmHUbxTVbmjAMv8NhIa6Q==";
       };
     };
     "npm-package-arg-6.1.1" = {
@@ -3910,6 +4180,24 @@ let
         sha1 = "3fbcfb15b899a44123b34b6dcc18b724336a2cae";
       };
     };
+    "p-limit-2.3.0" = {
+      name = "p-limit";
+      packageName = "p-limit";
+      version = "2.3.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/p-limit/-/p-limit-2.3.0.tgz";
+        sha512 = "//88mFWSJx8lxCzwdAABTJL2MyWB12+eIY7MDL2SqLmAkeKU9qxRvWuSyTjm3FUmpBEMuFfckAIqEaVGUDxb6w==";
+      };
+    };
+    "p-locate-4.1.0" = {
+      name = "p-locate";
+      packageName = "p-locate";
+      version = "4.1.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/p-locate/-/p-locate-4.1.0.tgz";
+        sha512 = "R79ZZ/0wAxKGu3oYMlz8jy/kbhsNrS7SKZ7PxEHBgJ5+F2mtFW2fK2cOtBh1cHYkQsbzFV7I+EoRKe6Yt0oK7A==";
+      };
+    };
     "p-retry-4.6.1" = {
       name = "p-retry";
       packageName = "p-retry";
@@ -3917,6 +4205,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/p-retry/-/p-retry-4.6.1.tgz";
         sha512 = "e2xXGNhZOZ0lfgR9kL34iGlU8N/KO0xZnQxVEwdeOvpqNDQfdnxIYizvWtK8RglUa3bGqI8g0R/BdfzLMxRkiA==";
+      };
+    };
+    "p-try-2.2.0" = {
+      name = "p-try";
+      packageName = "p-try";
+      version = "2.2.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/p-try/-/p-try-2.2.0.tgz";
+        sha512 = "R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==";
       };
     };
     "package-json-6.5.0" = {
@@ -4000,6 +4297,15 @@ let
         sha512 = "QhhZ+DCCit2Coi2vmAKbq5RGTRcQUOE2+REgv8vdyu7MnYx2eZztegqtTx99TZ86GTIwqiy3+4nQTWZ2tgmdCA==";
       };
     };
+    "parse-json-5.2.0" = {
+      name = "parse-json";
+      packageName = "parse-json";
+      version = "5.2.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/parse-json/-/parse-json-5.2.0.tgz";
+        sha512 = "ayCKvm/phCGxOkYRSCM82iDwct8/EonSEgCSxWxD7ve6jHggsFl4fZVQBPRNgQoKiuV/odhFrGzQXZwbifC8Rg==";
+      };
+    };
     "parse-png-1.1.2" = {
       name = "parse-png";
       packageName = "parse-png";
@@ -4007,6 +4313,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/parse-png/-/parse-png-1.1.2.tgz";
         sha1 = "f5c2ad7c7993490986020a284c19aee459711ff2";
+      };
+    };
+    "path-exists-4.0.0" = {
+      name = "path-exists";
+      packageName = "path-exists";
+      version = "4.0.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/path-exists/-/path-exists-4.0.0.tgz";
+        sha512 = "ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w==";
       };
     };
     "path-is-absolute-1.0.1" = {
@@ -4043,6 +4358,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/path-key/-/path-key-3.1.1.tgz";
         sha512 = "ojmeN0qd+y0jszEtoY48r0Peq5dwMEkIlCOu6Q5f41lfkswXuKtYrhgoTpLnyIcHm24Uhqx+5Tqm2InSwLhE6Q==";
+      };
+    };
+    "path-parse-1.0.7" = {
+      name = "path-parse";
+      packageName = "path-parse";
+      version = "1.0.7";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/path-parse/-/path-parse-1.0.7.tgz";
+        sha512 = "LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==";
       };
     };
     "path-starts-with-2.0.0" = {
@@ -4279,6 +4603,15 @@ let
         sha512 = "NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==";
       };
     };
+    "quick-lru-4.0.1" = {
+      name = "quick-lru";
+      packageName = "quick-lru";
+      version = "4.0.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/quick-lru/-/quick-lru-4.0.1.tgz";
+        sha512 = "ARhCpm70fzdcvNQfPoy49IaanKkTlRWF2JMzqhcJbhSFRZv7nPTvZJdcY7301IPmvW+/p0RgIWnQDLJxifsQ7g==";
+      };
+    };
     "rc-1.2.8" = {
       name = "rc";
       packageName = "rc";
@@ -4297,6 +4630,24 @@ let
         sha1 = "5f68cab307e663f19993527d9b589cace4661194";
       };
     };
+    "read-pkg-5.2.0" = {
+      name = "read-pkg";
+      packageName = "read-pkg";
+      version = "5.2.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/read-pkg/-/read-pkg-5.2.0.tgz";
+        sha512 = "Ug69mNOpfvKDAc2Q8DRpMjjzdtrnv9HcSMX+4VsZxD1aZ6ZzrIE7rlzXBtWTyhULSMKg076AW6WR5iZpD0JiOg==";
+      };
+    };
+    "read-pkg-up-7.0.1" = {
+      name = "read-pkg-up";
+      packageName = "read-pkg-up";
+      version = "7.0.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/read-pkg-up/-/read-pkg-up-7.0.1.tgz";
+        sha512 = "zK0TB7Xd6JpCLmlLmufqykGE+/TlOePD6qKClNW7hHDKFh/J7/7gCWGR7joEQEW1bKq3a3yUZSObOoWLFQ4ohg==";
+      };
+    };
     "readable-stream-2.3.7" = {
       name = "readable-stream";
       packageName = "readable-stream";
@@ -4313,6 +4664,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/readable-stream/-/readable-stream-3.6.0.tgz";
         sha512 = "BViHy7LKeTz4oNnkcLJ+lVSL6vpiFeX6/d3oSH8zCW7UxP2onchk+vTGB143xuFjHS3deTgkKoXXymXqymiIdA==";
+      };
+    };
+    "redent-3.0.0" = {
+      name = "redent";
+      packageName = "redent";
+      version = "3.0.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/redent/-/redent-3.0.0.tgz";
+        sha512 = "6tDA8g98We0zd0GvVeMT9arEOnTw9qM03L9cJXaCjrip1OO764RDBLBfrB4cwzNGDj5OA5ioymC9GkizgWJDUg==";
       };
     };
     "regenerate-1.4.2" = {
@@ -4493,6 +4853,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/resize-img/-/resize-img-1.1.2.tgz";
         sha1 = "fad650faf3ef2c53ea63112bc272d95e9d92550e";
+      };
+    };
+    "resolve-1.20.0" = {
+      name = "resolve";
+      packageName = "resolve";
+      version = "1.20.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/resolve/-/resolve-1.20.0.tgz";
+        sha512 = "wENBPt4ySzg4ybFQW2TT1zMQucPK95HSh/nq2CFTZVOGut2+pQvSsgtda4d26YrYcr067wjbmzOG8byDPBX63A==";
       };
     };
     "responselike-1.0.2" = {
@@ -4819,6 +5188,51 @@ let
         sha512 = "try0/JqxPLF9nOjvSta7tVondkP5dwgyLDjVoyMDlmjugT2lRZ1OfsrYTkCd2hkDnJTKRbO/Rl3orm8vlsUzbA==";
       };
     };
+    "spdx-correct-3.1.1" = {
+      name = "spdx-correct";
+      packageName = "spdx-correct";
+      version = "3.1.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/spdx-correct/-/spdx-correct-3.1.1.tgz";
+        sha512 = "cOYcUWwhCuHCXi49RhFRCyJEK3iPj1Ziz9DpViV3tbZOwXD49QzIN3MpOLJNxh2qwq2lJJZaKMVw9qNi4jTC0w==";
+      };
+    };
+    "spdx-exceptions-2.3.0" = {
+      name = "spdx-exceptions";
+      packageName = "spdx-exceptions";
+      version = "2.3.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/spdx-exceptions/-/spdx-exceptions-2.3.0.tgz";
+        sha512 = "/tTrYOC7PPI1nUAgx34hUpqXuyJG+DTHJTnIULG4rDygi4xu/tfgmq1e1cIRwRzwZgo4NLySi+ricLkZkw4i5A==";
+      };
+    };
+    "spdx-expression-parse-3.0.1" = {
+      name = "spdx-expression-parse";
+      packageName = "spdx-expression-parse";
+      version = "3.0.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/spdx-expression-parse/-/spdx-expression-parse-3.0.1.tgz";
+        sha512 = "cbqHunsQWnJNE6KhVSMsMeH5H/L9EpymbzqTQ3uLwNCLZ1Q481oWaofqH7nO6V07xlXwY6PhQdQ2IedWx/ZK4Q==";
+      };
+    };
+    "spdx-license-ids-3.0.9" = {
+      name = "spdx-license-ids";
+      packageName = "spdx-license-ids";
+      version = "3.0.9";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.9.tgz";
+        sha512 = "Ki212dKK4ogX+xDo4CtOZBVIwhsKBEfsEEcwmJfLQzirgc2jIWdzg40Unxz/HzEUqM1WFzVlQSMF9kZZ2HboLQ==";
+      };
+    };
+    "split2-3.2.2" = {
+      name = "split2";
+      packageName = "split2";
+      version = "3.2.2";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/split2/-/split2-3.2.2.tgz";
+        sha512 = "9NThjpgZnifTkJpzTZ7Eue85S49QwpNhZTq6GRJwObb6jnLFNGB7Qm73V5HewTROPyxD0C29xqmaI68bQtV+hg==";
+      };
+    };
     "sprintf-js-1.0.3" = {
       name = "sprintf-js";
       packageName = "sprintf-js";
@@ -4936,6 +5350,15 @@ let
         sha512 = "n/ShnvDi6FHbbVfviro+WojiFzv+s8MPMHBczVePfUpDJLwoLT0ht1l4YwBCbi8pJAveEEdnkHyPyTP/mzRfwg==";
       };
     };
+    "string_decoder-1.3.0" = {
+      name = "string_decoder";
+      packageName = "string_decoder";
+      version = "1.3.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/string_decoder/-/string_decoder-1.3.0.tgz";
+        sha512 = "hkRX8U1WjJFd8LsDJ2yQ/wWWxaopEsABU1XfkM8A+j0+85JAGppt16cr1Whg6KIbb4okU6Mql6BOj+uup/wKeA==";
+      };
+    };
     "stringify-clone-1.1.1" = {
       name = "stringify-clone";
       packageName = "stringify-clone";
@@ -4999,6 +5422,15 @@ let
         sha512 = "BrpvfNAE3dcvq7ll3xVumzjKjZQ5tI1sEUIKr3Uoks0XUl45St3FlatVqef9prk4jRDzhW6WZg+3bk93y6pLjA==";
       };
     };
+    "strip-indent-3.0.0" = {
+      name = "strip-indent";
+      packageName = "strip-indent";
+      version = "3.0.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/strip-indent/-/strip-indent-3.0.0.tgz";
+        sha512 = "laJTa3Jb+VQpaC6DseHhF7dXVqHTfJPCRDaEbid/drOhgitgYku/letMUqOXFoWV0zIIUbjpdH2t+tYj4bQMRQ==";
+      };
+    };
     "strip-json-comments-2.0.1" = {
       name = "strip-json-comments";
       packageName = "strip-json-comments";
@@ -5006,6 +5438,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-2.0.1.tgz";
         sha1 = "3c531942e908c2697c0ec344858c286c7ca0a60a";
+      };
+    };
+    "superstruct-0.15.2" = {
+      name = "superstruct";
+      packageName = "superstruct";
+      version = "0.15.2";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/superstruct/-/superstruct-0.15.2.tgz";
+        sha512 = "OsJI8lv6/PsInwCf4ultejmsJYseYshKhkcbDendqNwj3MeGXENajl3ujMGMU4FDDSSeJTOwFn9T6pnfsS9DYA==";
       };
     };
     "supports-color-2.0.0" = {
@@ -5062,13 +5503,22 @@ let
         sha1 = "458b83887f288fc56d6fffbfad262e26638efa69";
       };
     };
-    "textextensions-5.12.0" = {
+    "text-extensions-1.9.0" = {
+      name = "text-extensions";
+      packageName = "text-extensions";
+      version = "1.9.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/text-extensions/-/text-extensions-1.9.0.tgz";
+        sha512 = "wiBrwC1EhBelW12Zy26JeOUkQ5mRu+5o8rpsJk5+2t+Y5vE7e842qtZDQ2g1NpX/29HdyFeJ4nSIhI47ENSxlQ==";
+      };
+    };
+    "textextensions-5.14.0" = {
       name = "textextensions";
       packageName = "textextensions";
-      version = "5.12.0";
+      version = "5.14.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/textextensions/-/textextensions-5.12.0.tgz";
-        sha512 = "IYogUDaP65IXboCiPPC0jTLLBzYlhhw2Y4b0a2trPgbHNGGGEfuHE6tds+yDcCf4mpNDaGISFzwSSezcXt+d6w==";
+        url = "https://registry.npmjs.org/textextensions/-/textextensions-5.14.0.tgz";
+        sha512 = "4cAYwNFNYlIAHBUo7p6zw8POUvWbZor+/R0Tanv+rIhsauEyV9QSrEXL40pI+GfTQxKX8k6Tyw6CmdSDSmASrg==";
       };
     };
     "through-2.3.8" = {
@@ -5197,6 +5647,24 @@ let
         sha512 = "6m+VoKD/va53D4O8I1SLtoLXKLHVUoEL2GksMKLUR0yUqYqco2kj5QB4gdBdFAMw3XL0VBozFsGw8jb6MrrIEQ==";
       };
     };
+    "trim-newlines-3.0.1" = {
+      name = "trim-newlines";
+      packageName = "trim-newlines";
+      version = "3.0.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/trim-newlines/-/trim-newlines-3.0.1.tgz";
+        sha512 = "c1PTsA3tYrIsLGkJkzHF+w9F2EyxfXGo4UyJc4pFL++FMjnq0HJS69T3M7d//gKrFKwy429bouPescbjecU+Zw==";
+      };
+    };
+    "trim-off-newlines-1.0.1" = {
+      name = "trim-off-newlines";
+      packageName = "trim-off-newlines";
+      version = "1.0.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/trim-off-newlines/-/trim-off-newlines-1.0.1.tgz";
+        sha1 = "9f9ba9d9efa8764c387698bcbfeb2c848f11adb3";
+      };
+    };
     "trim-right-1.0.1" = {
       name = "trim-right";
       packageName = "trim-right";
@@ -5269,6 +5737,15 @@ let
         sha512 = "T3aXZtx7KqQbutTtBfn+P5By3HdBuB1eCoGviIrRJV2sXeToxv2X2cv5RvYqgG26PSnN5m3fYixds22Gkfd11w==";
       };
     };
+    "type-fest-0.18.1" = {
+      name = "type-fest";
+      packageName = "type-fest";
+      version = "0.18.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/type-fest/-/type-fest-0.18.1.tgz";
+        sha512 = "OIAYXk8+ISY+qTOwkHtKqzAuxchoMiD9Udx+FSGQDuiRR+PJKJHc2NJAXlbhkGwTt/4/nKZxELY1w3ReWOL8mw==";
+      };
+    };
     "type-fest-0.21.3" = {
       name = "type-fest";
       packageName = "type-fest";
@@ -5285,6 +5762,24 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/type-fest/-/type-fest-0.3.1.tgz";
         sha512 = "cUGJnCdr4STbePCgqNFbpVNCepa+kAVohJs1sLhxzdH+gnEoOd8VhbYa7pD3zZYGiURWM2xzEII3fQcRizDkYQ==";
+      };
+    };
+    "type-fest-0.6.0" = {
+      name = "type-fest";
+      packageName = "type-fest";
+      version = "0.6.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/type-fest/-/type-fest-0.6.0.tgz";
+        sha512 = "q+MB8nYR1KDLrgr4G5yemftpMC7/QLqVndBmEEdqzmNj5dcFOO4Oo8qlwZE3ULT3+Zim1F8Kq4cBnikNhlCMlg==";
+      };
+    };
+    "type-fest-0.8.1" = {
+      name = "type-fest";
+      packageName = "type-fest";
+      version = "0.8.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/type-fest/-/type-fest-0.8.1.tgz";
+        sha512 = "4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==";
       };
     };
     "typedarray-0.0.6" = {
@@ -5422,6 +5917,15 @@ let
         sha512 = "HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==";
       };
     };
+    "validate-npm-package-license-3.0.4" = {
+      name = "validate-npm-package-license";
+      packageName = "validate-npm-package-license";
+      version = "3.0.4";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/validate-npm-package-license/-/validate-npm-package-license-3.0.4.tgz";
+        sha512 = "DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==";
+      };
+    };
     "validate-npm-package-name-3.0.0" = {
       name = "validate-npm-package-name";
       packageName = "validate-npm-package-name";
@@ -5447,24 +5951,6 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/verror/-/verror-1.10.0.tgz";
         sha1 = "3a105ca17053af55d6e270c1f8288682e18da400";
-      };
-    };
-    "version-compare-1.2.0" = {
-      name = "version-compare";
-      packageName = "version-compare";
-      version = "1.2.0";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/version-compare/-/version-compare-1.2.0.tgz";
-        sha512 = "hfc76oyGqCuyofT85uDNbjt4khHijJEmU+0n5Vp6TDPg5WzorV7o8BtGyFJjJHN+5SHJM4gVpyvcdY9x/X5wSQ==";
-      };
-    };
-    "version-range-1.2.0" = {
-      name = "version-range";
-      packageName = "version-range";
-      version = "1.2.0";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/version-range/-/version-range-1.2.0.tgz";
-        sha512 = "dtpGs3yyiQdPLKLGunbfbNDM14g7rH5u1T+/+uyndyPuFBRrFKjMjkLwdD4PsUZlawz9i1DWFJPEw2bCKFJAhQ==";
       };
     };
     "vinyl-2.2.1" = {
@@ -5638,6 +6124,15 @@ let
         sha512 = "r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==";
       };
     };
+    "yargs-parser-20.2.9" = {
+      name = "yargs-parser";
+      packageName = "yargs-parser";
+      version = "20.2.9";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/yargs-parser/-/yargs-parser-20.2.9.tgz";
+        sha512 = "y11nGElTIV+CT3Zv9t7VKl+Q3hTQoT9a1Qzezhhl6Rp21gJ/IVTW7Z3y9EWXhuUBC2Shnf+DX0antecpAwSP8w==";
+      };
+    };
   };
 in
 {
@@ -5657,7 +6152,7 @@ in
         ];
       })
       sources."@types/delete-empty-2.0.0"
-      sources."@types/node-16.4.2"
+      sources."@types/node-16.4.10"
       sources."@types/node-fetch-2.5.12"
       sources."ansi-colors-4.1.1"
       sources."ansi-escapes-3.2.0"
@@ -5701,8 +6196,8 @@ in
       sources."isbinaryfile-4.0.8"
       sources."jsonfile-4.0.0"
       sources."lodash-4.17.21"
-      sources."mime-db-1.48.0"
-      sources."mime-types-2.1.31"
+      sources."mime-db-1.49.0"
+      sources."mime-types-2.1.32"
       sources."mimic-fn-1.2.0"
       sources."minimatch-3.0.4"
       sources."minimist-1.2.5"
@@ -5863,7 +6358,7 @@ in
       })
       sources."brace-expansion-1.1.11"
       sources."browserslist-3.2.8"
-      sources."buffer-from-1.1.1"
+      sources."buffer-from-1.1.2"
       sources."builtins-1.0.3"
       sources."cacache-12.0.4"
       (sources."cacheable-request-6.1.0" // {
@@ -5874,7 +6369,7 @@ in
         ];
       })
       sources."camelcase-5.3.1"
-      sources."caniuse-lite-1.0.30001247"
+      sources."caniuse-lite-1.0.30001248"
       sources."caseless-0.12.0"
       sources."chalk-1.1.3"
       sources."chardet-0.7.0"
@@ -5916,7 +6411,7 @@ in
       sources."duplexer3-0.1.4"
       sources."duplexify-3.7.1"
       sources."ecc-jsbn-0.1.2"
-      sources."electron-to-chromium-1.3.786"
+      sources."electron-to-chromium-1.3.793"
       sources."emoji-regex-8.0.0"
       (sources."encoding-0.1.13" // {
         dependencies = [
@@ -5995,7 +6490,7 @@ in
         dependencies = [
           sources."ansi-regex-5.0.0"
           sources."ansi-styles-4.3.0"
-          sources."chalk-4.1.1"
+          sources."chalk-4.1.2"
           sources."strip-ansi-6.0.0"
           sources."supports-color-7.2.0"
         ];
@@ -6041,8 +6536,8 @@ in
         ];
       })
       sources."make-fetch-happen-5.0.2"
-      sources."mime-db-1.48.0"
-      sources."mime-types-2.1.31"
+      sources."mime-db-1.49.0"
+      sources."mime-types-2.1.32"
       sources."mimic-fn-2.1.0"
       sources."mimic-response-1.0.1"
       sources."minimatch-3.0.4"
@@ -6060,7 +6555,7 @@ in
       sources."node-fetch-npm-2.0.4"
       sources."nopt-4.0.3"
       sources."normalize-url-4.5.1"
-      sources."npm-6.14.13"
+      sources."npm-6.14.14"
       sources."npm-package-arg-6.1.1"
       sources."npm-profile-4.0.4"
       (sources."npm-registry-fetch-4.0.7" // {
@@ -6271,12 +6766,24 @@ in
   "@atomi-user-first/semantic-generator" = nodeEnv.buildNodePackage {
     name = "_at_atomi-user-first_slash_semantic-generator";
     packageName = "@atomi-user-first/semantic-generator";
-    version = "0.1.4";
+    version = "0.1.5";
     src = fetchurl {
-      url = "https://registry.npmjs.org/@atomi-user-first/semantic-generator/-/semantic-generator-0.1.4.tgz";
-      sha512 = "m/SGCqiJRuSHCDHXmQ/tcyR+nzv73Xy1Zxy29KU7nEw+YaKhxy/wIsgsPeXjS68ns7MNJyZLQFdul3fpUlj6Bw==";
+      url = "https://registry.npmjs.org/@atomi-user-first/semantic-generator/-/semantic-generator-0.1.5.tgz";
+      sha512 = "hyv0cDL7OUtikl5QldAcfa65VgKa8kC4HN33icXuhLmsoOHclqkgy6LGr4ty/ruEyfoLlOcnsoBuEukzQLtMUA==";
     };
     dependencies = [
+      sources."@babel/code-frame-7.14.5"
+      sources."@babel/helper-validator-identifier-7.14.9"
+      (sources."@babel/highlight-7.14.5" // {
+        dependencies = [
+          sources."ansi-styles-3.2.1"
+          sources."chalk-2.4.2"
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."supports-color-5.5.0"
+        ];
+      })
       sources."@babel/runtime-7.14.8"
       sources."@hqoss/monads-0.5.0"
       sources."@jimp/bmp-0.16.1"
@@ -6318,12 +6825,21 @@ in
       sources."@nodelib/fs.scandir-2.1.5"
       sources."@nodelib/fs.stat-2.0.5"
       sources."@nodelib/fs.walk-1.2.8"
+      sources."@types/minimist-1.2.2"
+      sources."@types/normalize-package-data-2.4.1"
+      sources."JSONStream-1.3.5"
       sources."ajv-6.12.6"
       sources."ansi-regex-2.1.1"
       sources."ansi-styles-4.3.0"
       sources."any-base-1.1.0"
       sources."aproba-1.2.0"
-      sources."are-we-there-yet-1.1.5"
+      (sources."are-we-there-yet-1.1.5" // {
+        dependencies = [
+          sources."readable-stream-2.3.7"
+          sources."safe-buffer-5.1.2"
+          sources."string_decoder-1.1.1"
+        ];
+      })
       sources."arrify-1.0.1"
       sources."asn1-0.2.4"
       sources."assert-plus-1.0.0"
@@ -6334,12 +6850,8 @@ in
       sources."base64-js-1.5.1"
       sources."bcrypt-pbkdf-1.0.2"
       sources."bignumber.js-2.4.0"
-      sources."binaryextensions-4.15.0"
-      (sources."bl-4.1.0" // {
-        dependencies = [
-          sources."readable-stream-3.6.0"
-        ];
-      })
+      sources."binaryextensions-4.18.0"
+      sources."bl-4.1.0"
       sources."bmp-js-0.1.0"
       sources."boolbase-1.0.0"
       sources."brace-expansion-1.1.11"
@@ -6349,13 +6861,21 @@ in
       sources."buffer-alloc-unsafe-1.1.0"
       sources."buffer-equal-0.0.1"
       sources."buffer-fill-1.0.0"
+      sources."camelcase-5.3.1"
+      sources."camelcase-keys-6.2.2"
       sources."caseless-0.12.0"
-      sources."chalk-4.1.1"
+      sources."chalk-4.1.2"
       sources."chownr-1.1.4"
       sources."clone-2.1.2"
       sources."clone-buffer-1.0.0"
       sources."clone-stats-1.0.0"
-      sources."cloneable-readable-1.1.3"
+      (sources."cloneable-readable-1.1.3" // {
+        dependencies = [
+          sources."readable-stream-2.3.7"
+          sources."safe-buffer-5.1.2"
+          sources."string_decoder-1.1.1"
+        ];
+      })
       sources."code-point-at-1.1.0"
       (sources."color-3.2.1" // {
         dependencies = [
@@ -6368,14 +6888,21 @@ in
       sources."color-string-1.6.0"
       sources."colors-1.4.0"
       sources."combined-stream-1.0.8"
-      sources."commander-8.0.0"
+      sources."commander-8.1.0"
       sources."concat-map-0.0.1"
       sources."console-control-strings-1.1.0"
+      sources."conventional-commits-parser-3.2.1"
       sources."core-util-is-1.0.2"
       sources."cross-spawn-7.0.3"
       sources."css-select-4.1.3"
       sources."css-what-5.0.1"
       sources."dashdash-1.14.1"
+      sources."decamelize-1.2.0"
+      (sources."decamelize-keys-1.1.0" // {
+        dependencies = [
+          sources."map-obj-1.0.1"
+        ];
+      })
       sources."decompress-response-4.2.1"
       sources."deep-extend-0.6.0"
       sources."delayed-stream-1.0.0"
@@ -6387,11 +6914,15 @@ in
       sources."domhandler-4.2.0"
       sources."domutils-2.7.0"
       sources."ecc-jsbn-0.1.2"
-      sources."editions-6.2.0"
       sources."end-of-stream-1.4.4"
       sources."entities-2.2.0"
-      sources."errlop-4.2.0"
+      (sources."error-ex-1.3.2" // {
+        dependencies = [
+          sources."is-arrayish-0.2.1"
+        ];
+      })
       sources."es6-promise-3.3.1"
+      sources."escape-string-regexp-1.0.5"
       sources."execa-5.1.1"
       sources."exif-parser-0.1.12"
       sources."expand-template-2.0.3"
@@ -6404,10 +6935,12 @@ in
       sources."favicons-6.2.2"
       sources."file-type-9.0.0"
       sources."fill-range-7.0.1"
+      sources."find-up-4.1.0"
       sources."forever-agent-0.6.1"
       sources."form-data-2.3.3"
       sources."fs-constants-1.0.0"
       sources."fs.realpath-1.0.0"
+      sources."function-bind-1.1.1"
       sources."gauge-2.7.4"
       sources."get-stream-6.0.1"
       sources."getpass-0.1.7"
@@ -6419,52 +6952,70 @@ in
       sources."graceful-fs-4.2.6"
       sources."har-schema-2.0.0"
       sources."har-validator-5.1.5"
+      sources."hard-rejection-2.1.0"
+      sources."has-1.0.3"
       sources."has-flag-4.0.0"
       sources."has-unicode-2.0.1"
       sources."he-1.2.0"
+      sources."hosted-git-info-4.0.2"
       sources."http-signature-1.2.0"
       sources."human-signals-2.1.0"
       sources."ieee754-1.2.1"
       sources."image-q-1.1.1"
       sources."image-size-0.8.3"
+      sources."indent-string-4.0.0"
       sources."inflight-1.0.6"
       sources."inherits-2.0.4"
       sources."ini-1.3.8"
       sources."ip-regex-1.0.3"
       sources."is-arrayish-0.3.2"
+      sources."is-core-module-2.5.0"
       sources."is-extglob-2.1.1"
       sources."is-fullwidth-code-point-1.0.0"
       sources."is-function-1.0.2"
       sources."is-glob-4.0.1"
       sources."is-number-7.0.0"
-      sources."is-stream-2.0.0"
+      sources."is-plain-obj-1.1.0"
+      sources."is-stream-2.0.1"
+      sources."is-text-path-1.0.1"
       sources."is-typedarray-1.0.0"
       sources."isarray-1.0.0"
       sources."isexe-2.0.0"
       sources."isstream-0.1.2"
-      sources."istextorbinary-5.12.0"
+      sources."istextorbinary-5.15.0"
       sources."jimp-0.16.1"
       sources."jpeg-js-0.4.2"
+      sources."js-tokens-4.0.0"
       sources."jsbn-0.1.1"
+      sources."json-parse-even-better-errors-2.3.1"
       sources."json-schema-0.2.3"
       sources."json-schema-traverse-0.4.1"
       sources."json-stringify-safe-5.0.1"
+      sources."jsonparse-1.3.1"
       sources."jsontoxml-1.0.1"
       sources."jsprim-1.4.1"
+      sources."kind-of-6.0.3"
+      sources."lines-and-columns-1.1.6"
       sources."load-bmfont-1.4.1"
+      sources."locate-path-5.0.0"
+      sources."lodash-4.17.21"
       sources."lodash.defaultsdeep-4.6.1"
       sources."lru-cache-6.0.0"
+      sources."map-obj-4.2.1"
+      sources."meow-8.1.2"
       sources."merge-stream-2.0.0"
       sources."merge2-1.4.1"
       sources."micromatch-4.0.4"
       sources."mime-1.6.0"
-      sources."mime-db-1.48.0"
-      sources."mime-types-2.1.31"
+      sources."mime-db-1.49.0"
+      sources."mime-types-2.1.32"
       sources."mimic-fn-2.1.0"
       sources."mimic-response-2.1.0"
       sources."min-document-2.19.0"
+      sources."min-indent-1.0.1"
       sources."minimatch-3.0.4"
       sources."minimist-1.2.5"
+      sources."minimist-options-4.1.0"
       sources."mkdirp-1.0.4"
       sources."mkdirp-classic-0.5.3"
       sources."napi-build-utils-1.0.2"
@@ -6474,7 +7025,8 @@ in
         ];
       })
       sources."node-addon-api-3.2.1"
-      sources."node-html-parser-4.1.1"
+      sources."node-html-parser-4.1.2"
+      sources."normalize-package-data-3.0.2"
       sources."npm-run-path-4.0.1"
       sources."npmlog-4.1.2"
       sources."nth-check-2.0.0"
@@ -6484,14 +7036,20 @@ in
       sources."omggif-1.0.10"
       sources."once-1.4.0"
       sources."onetime-5.1.2"
+      sources."p-limit-2.3.0"
+      sources."p-locate-4.1.0"
+      sources."p-try-2.2.0"
       sources."pako-1.0.11"
       sources."parse-bmfont-ascii-1.0.6"
       sources."parse-bmfont-binary-1.0.6"
       sources."parse-bmfont-xml-1.1.4"
       sources."parse-headers-2.0.3"
+      sources."parse-json-5.2.0"
       sources."parse-png-1.1.2"
+      sources."path-exists-4.0.0"
       sources."path-is-absolute-1.0.1"
       sources."path-key-3.1.1"
+      sources."path-parse-1.0.7"
       sources."performance-now-2.1.0"
       sources."phin-2.9.3"
       sources."picomatch-2.3.0"
@@ -6508,9 +7066,24 @@ in
       sources."qs-6.5.2"
       sources."queue-6.0.1"
       sources."queue-microtask-1.2.3"
+      sources."quick-lru-4.0.1"
       sources."rc-1.2.8"
       sources."read-chunk-1.0.1"
-      sources."readable-stream-2.3.7"
+      (sources."read-pkg-5.2.0" // {
+        dependencies = [
+          sources."hosted-git-info-2.8.9"
+          sources."normalize-package-data-2.5.0"
+          sources."semver-5.7.1"
+          sources."type-fest-0.6.0"
+        ];
+      })
+      (sources."read-pkg-up-7.0.1" // {
+        dependencies = [
+          sources."type-fest-0.8.1"
+        ];
+      })
+      sources."readable-stream-3.6.0"
+      sources."redent-3.0.0"
       sources."regenerator-runtime-0.13.9"
       sources."remove-trailing-separator-1.1.0"
       sources."replace-ext-1.0.1"
@@ -6532,10 +7105,11 @@ in
           sources."mkdirp-0.5.1"
         ];
       })
+      sources."resolve-1.20.0"
       sources."reusify-1.0.4"
       sources."rimraf-3.0.2"
       sources."run-parallel-1.2.0"
-      sources."safe-buffer-5.1.2"
+      sources."safe-buffer-5.2.1"
       sources."safer-buffer-2.1.2"
       sources."sax-1.2.4"
       sources."semver-7.3.5"
@@ -6547,27 +7121,28 @@ in
       sources."simple-concat-1.0.1"
       sources."simple-get-3.1.0"
       sources."simple-swizzle-0.2.2"
+      sources."spdx-correct-3.1.1"
+      sources."spdx-exceptions-2.3.0"
+      sources."spdx-expression-parse-3.0.1"
+      sources."spdx-license-ids-3.0.9"
+      sources."split2-3.2.2"
       sources."sshpk-1.16.1"
       sources."stream-to-0.2.2"
       sources."stream-to-buffer-0.1.0"
       sources."string-width-1.0.2"
-      sources."string_decoder-1.1.1"
+      sources."string_decoder-1.3.0"
       sources."strip-ansi-3.0.1"
       sources."strip-final-newline-2.0.0"
+      sources."strip-indent-3.0.0"
       sources."strip-json-comments-2.0.1"
+      sources."superstruct-0.15.2"
       sources."supports-color-7.2.0"
       sources."tar-fs-2.1.1"
-      (sources."tar-stream-2.2.0" // {
-        dependencies = [
-          sources."readable-stream-3.6.0"
-        ];
-      })
-      sources."textextensions-5.12.0"
-      (sources."through2-4.0.2" // {
-        dependencies = [
-          sources."readable-stream-3.6.0"
-        ];
-      })
+      sources."tar-stream-2.2.0"
+      sources."text-extensions-1.9.0"
+      sources."textextensions-5.14.0"
+      sources."through-2.3.8"
+      sources."through2-4.0.2"
       sources."timm-1.7.1"
       sources."tinycolor2-1.4.2"
       sources."tmp-0.2.1"
@@ -6579,18 +7154,20 @@ in
       })
       sources."to-regex-range-5.0.1"
       sources."tough-cookie-2.5.0"
+      sources."trim-newlines-3.0.1"
+      sources."trim-off-newlines-1.0.1"
       sources."ts-union-2.3.0"
       sources."tslib-2.3.0"
       sources."tunnel-agent-0.6.0"
       sources."tweetnacl-0.14.5"
+      sources."type-fest-0.18.1"
       sources."uri-js-4.4.1"
       sources."url-regex-3.2.0"
       sources."utif-2.0.1"
       sources."util-deprecate-1.0.2"
       sources."uuid-3.4.0"
+      sources."validate-npm-package-license-3.0.4"
       sources."verror-1.10.0"
-      sources."version-compare-1.2.0"
-      sources."version-range-1.2.0"
       sources."vinyl-2.2.1"
       sources."which-2.0.2"
       sources."wide-align-1.1.3"
@@ -6602,6 +7179,7 @@ in
       sources."xtend-4.0.2"
       sources."yallist-4.0.0"
       sources."yaml-1.10.2"
+      sources."yargs-parser-20.2.9"
     ];
     buildInputs = globalBuildInputs;
     meta = {

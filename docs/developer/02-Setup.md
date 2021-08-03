@@ -1,4 +1,7 @@
-# Quick Setup
+---
+id: setup
+title: Quick Setup
+---
 
 1. Install Nix:
 

@@ -4,24 +4,32 @@ on:
     branches:
       - main
 jobs:
-  release:
+  Release:
     name: Release
-    runs-on: ubuntu-latest
+    container: nixos/nix
+    runs-on: ubuntu-20.04
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
+      - name: Install git and tar
+        run: apk add git tar
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
+      - name: Cache Whole of NIX
+        uses: actions/cache@v2
         with:
-          node-version: 12
+          path: /nix
+          key: ${{ runner.os }}-alpine-nix
 
-      - name: Install Semantic Release
-        run: npm -g install @semantic-release/git @semantic-release/commit-analyzer conventional-changelog-conventionalcommits @semantic-release/release-notes-generator @semantic-release/github @semantic-release/changelog semantic-release
+      - name: Checkout Git
+        uses: actions/checkout@v2.3.4
+
+      - name: Install Cachix
+        run: |
+          nix-env -i cachix
+          cachix use kirinnee-sample-binary-cache
+
+      - name: Install Environment
+        run: nix-env -i -f ./ci-env.nix
 
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: semantic-release
+        run: sg release

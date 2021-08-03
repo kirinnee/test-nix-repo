@@ -1,0 +1,34 @@
+title: Atomi Nix Repository
+organization: AtomiCloud
+description: Nix Repository by AtomiCloud
+github:
+  org: kirinnee
+  project: test-nix-repo
+logo: logo.svg
+color: "#008b8b"
+url: https://cyanprint-demo-test-1.netlify.app
+historyDir: history
+staticDir: static
+landing:
+  enable: true
+  button:
+    text: Get Started with Atomi's Nix Repository - 1min ⏱
+    to: docs/user/index
+  features:
+    - title: Install Packages quickly
+      desc: Don't waste time sorting out dependencies or figuring out different installation method based on Operating System or distros. With Atomi's Nix repository, you can publish your package and install in any Linux distribution with all dependencies bundled with a single command
+      svg: fast.svg
+    - title: Language Agnostic
+      desc: Easily and quickly install tools and binaries regardless or runtime or language. No need to worry whether you need python 2.6 or Python 3.9 for your shiny new CLI tool - Nix handles all of dependencies and runtime for you
+      svg: any-lang.svg
+    - title: Consolidated Packages
+      desc: All packages and tools published by AtomiCloud will be downloadable and accessbile via this Nix repository. No need to go multiple website and multiple places to search for packages - its all in Atomi's Nix repository
+      svg: package.svg
+navbar:
+  tabs:
+    - name: User Guide
+      folder: user
+      id: index
+    - name: Developer Guide
+      folder: developer
+      id: index

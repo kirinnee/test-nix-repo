@@ -34,6 +34,7 @@ tasks:
     desc: Formats Markdown with prettier
     cmds:
       - prettier -w "**/*.MD"
+      - prettier -w "**/*.md"
 
   fmt:yaml:
     desc: Formats YAML with prettier

@@ -9,7 +9,7 @@ jobs:
     container: nixos/nix
     runs-on: ubuntu-20.04
     steps:
-      - name: Install git and tar
+      - name: Install git and tar and bash
         run: apk add git tar bash
 
       - name: Cache Whole of NIX

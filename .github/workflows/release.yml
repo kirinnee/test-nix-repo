@@ -26,10 +26,7 @@ jobs:
           nix-env -i cachix
           cachix use kirinnee-sample-binary-cache
 
-      - name: Install Environment
-        run: nix-env -f ./env.nix -iA cd
-
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: sg release
+        run: nix-shell --run sg release

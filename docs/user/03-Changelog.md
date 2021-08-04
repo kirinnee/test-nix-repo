@@ -3,19 +3,16 @@ id: changelog
 title: Changelog
 ---
 
-
 ## [6.2.0](https://github.com/kirinnee/test-nix-repo/compare/v6.1.0...v6.2.0) (2021-08-04)
-
 
 ### Bug Fixes
 
-* versioning not saved ([47bc58b](https://github.com/kirinnee/test-nix-repo/commit/47bc58bbd3c4e329cd24b3c34a92756a1bff7449))
-* versioning not saved ([c465d03](https://github.com/kirinnee/test-nix-repo/commit/c465d03fd1e28c7832d3a8eabbf50035d21473ca))
-
+- versioning not saved ([47bc58b](https://github.com/kirinnee/test-nix-repo/commit/47bc58bbd3c4e329cd24b3c34a92756a1bff7449))
+- versioning not saved ([c465d03](https://github.com/kirinnee/test-nix-repo/commit/c465d03fd1e28c7832d3a8eabbf50035d21473ca))
 
 ### New Packages
 
-* allow for versioning ([4a3c7ab](https://github.com/kirinnee/test-nix-repo/commit/4a3c7abecb77bdd469408e9fae8cc1da4ba715f4))
+- allow for versioning ([4a3c7ab](https://github.com/kirinnee/test-nix-repo/commit/4a3c7abecb77bdd469408e9fae8cc1da4ba715f4))
 
 ## [6.1.0](https://github.com/kirinnee/test-nix-repo/compare/v6.0.0...v6.1.0) (2021-08-04)
 

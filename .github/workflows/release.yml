@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Install git and tar
-        run: apk add git tar
+        run: apk add git tar bash
 
       - name: Cache Whole of NIX
         uses: actions/cache@v2

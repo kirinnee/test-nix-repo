@@ -18,6 +18,8 @@ tasks:
     desc: remove all artifacts from `build`
     cmds:
       - rm -rf result*
+      - rm -rf target
+      - rm -rf tmp
 
   test:
     desc: Build and remove all build artifacts. Test whether all `nix` code is well-format and 'compilable'

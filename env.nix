@@ -29,6 +29,7 @@ with pkgs;
     paths = [
       sg
       pnpm
+      prettier
     ];
   };
 }

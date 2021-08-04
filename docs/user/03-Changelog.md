@@ -3,13 +3,11 @@ id: changelog
 title: Changelog
 ---
 
-
 ## [6.1.0](https://github.com/kirinnee/test-nix-repo/compare/v6.0.0...v6.1.0) (2021-08-04)
-
 
 ### New Packages
 
-* versioned documentation ([612c018](https://github.com/kirinnee/test-nix-repo/commit/612c018878fb4837cfe3147529f9116c9aff6c06))
+- versioned documentation ([612c018](https://github.com/kirinnee/test-nix-repo/commit/612c018878fb4837cfe3147529f9116c9aff6c06))
 
 ## [6.0.0](https://github.com/kirinnee/test-nix-repo/compare/v5.0.0...v6.0.0) (2021-08-04)
 

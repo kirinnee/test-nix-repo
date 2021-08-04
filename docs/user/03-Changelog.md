@@ -3,6 +3,24 @@ id: changelog
 title: Changelog
 ---
 
+
+## [5.0.0](https://github.com/kirinnee/test-nix-repo/compare/v4.0.0...v5.0.0) (2021-08-04)
+
+
+### Bug Fixes
+
+* pre-commit hook Commit Convention EOL ([be0fb72](https://github.com/kirinnee/test-nix-repo/commit/be0fb72f8d860dda77dc794ec48d6152dac45ad4))
+
+
+### Packages Updated
+
+* **sg:** from v0.2.3 to v0.2.6 ([aeb7c54](https://github.com/kirinnee/test-nix-repo/commit/aeb7c5418957b56edae54abd0307ee5cbedfaf77))
+
+
+### Documentation Updates
+
+* **fix:** broken link ([f186616](https://github.com/kirinnee/test-nix-repo/commit/f186616745fbf2b974b8d7288af4a5e71af80897))
+
 ## [4.0.0](https://github.com/kirinnee/test-nix-repo/compare/v3.0.1...v4.0.0) (2021-08-03)
 
 ### Packages Updated

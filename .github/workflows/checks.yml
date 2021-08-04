@@ -3,25 +3,26 @@ on:
   pull_request:
 jobs:
   cache:
-    runs-on: ubuntu-latest
+    container: nixos/nix
+    runs-on: ubuntu-20.04
     steps:
+      - name: Install git and tar and bash
+        run: apk add git tar bash
+
+      - name: Install Cachix
+        run: nix-env -i cachix
+
       - name: Checkout Code
         uses: actions/checkout@v2.3.4
 
-      - name: Install Cachix
-        uses: cachix/install-nix-action@v13
-        with:
-          nix_path: nixpkgs=channel:nixos-unstable
       - name: Cache builds
         uses: cachix/cachix-action@v10
         with:
           name: kirinnee-sample-binary-cache
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
-      - name: Install Environment
-        run: nix-env -f ./env.nix -iA ci
-      - name: Pre-commit Checks
-        run: |
-          pre-commit install --install-hooks
-          pre-commit run --all
+
+      - name: Run Pre-commit checks
+        run: nix-shell --run ./scripts/ci/pre-commit.sh
+
       - name: Esnure builds
         run: nix-build

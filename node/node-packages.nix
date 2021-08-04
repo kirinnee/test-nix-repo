@@ -418,13 +418,13 @@ let
         sha512 = "jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==";
       };
     };
-    "@types/node-16.4.10" = {
+    "@types/node-16.4.11" = {
       name = "_at_types_slash_node";
       packageName = "@types/node";
-      version = "16.4.10";
+      version = "16.4.11";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@types/node/-/node-16.4.10.tgz";
-        sha512 = "TmVHsm43br64js9BqHWqiDZA+xMtbUpI1MBIA0EyiBmoV9pcEYFOSdj5fr6enZNfh4fChh+AGOLIzGwJnkshyQ==";
+        url = "https://registry.npmjs.org/@types/node/-/node-16.4.11.tgz";
+        sha512 = "nWSFUbuNiPKJEe1IViuodSI+9cM+vpM8SWF/O6dJK7wmGRNq55U7XavJHrlRrPkSMuUZUFzg1xaZ1B+ZZCrRWw==";
       };
     };
     "@types/node-fetch-2.5.12" = {
@@ -6467,7 +6467,7 @@ in
         ];
       })
       sources."@types/delete-empty-2.0.0"
-      sources."@types/node-16.4.10"
+      sources."@types/node-16.4.11"
       sources."@types/node-fetch-2.5.12"
       sources."ansi-colors-4.1.1"
       sources."ansi-escapes-3.2.0"
@@ -7081,10 +7081,10 @@ in
   "@atomi-user-first/semantic-generator" = nodeEnv.buildNodePackage {
     name = "_at_atomi-user-first_slash_semantic-generator";
     packageName = "@atomi-user-first/semantic-generator";
-    version = "0.2.6";
+    version = "0.3.0";
     src = fetchurl {
-      url = "https://registry.npmjs.org/@atomi-user-first/semantic-generator/-/semantic-generator-0.2.6.tgz";
-      sha512 = "AA4bIzjzyWIEj9/qUNslZ37d159qzSe7jE/Ce/O1bm+sQrCyjWT+lRQkumz/1YZUUeIIt97ZwXfz64NyPh54mw==";
+      url = "https://registry.npmjs.org/@atomi-user-first/semantic-generator/-/semantic-generator-0.3.0.tgz";
+      sha512 = "tghHGB9Gaq7XcXvLEnaQKO1dRW+MBvmGWH6HV7AJzp5NvEkil9qix4qun+CcgHjD64nImUWnQTyRGRekr1wmhQ==";
     };
     dependencies = [
       sources."@babel/code-frame-7.14.5"
@@ -7535,7 +7535,7 @@ in
     dependencies = [
       sources."@sindresorhus/is-0.14.0"
       sources."@szmarczak/http-timer-1.1.2"
-      sources."@types/node-16.4.10"
+      sources."@types/node-16.4.11"
       sources."@vercel/build-utils-2.11.1"
       sources."@vercel/go-1.2.2"
       sources."@vercel/node-1.11.1"

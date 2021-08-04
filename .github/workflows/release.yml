@@ -29,4 +29,4 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: nix-shell --run sg release
+        run: nix-shell ./shells.nix -A cd --run sg release

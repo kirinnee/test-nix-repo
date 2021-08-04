@@ -7081,10 +7081,10 @@ in
   "@atomi-user-first/semantic-generator" = nodeEnv.buildNodePackage {
     name = "_at_atomi-user-first_slash_semantic-generator";
     packageName = "@atomi-user-first/semantic-generator";
-    version = "0.2.6";
+    version = "0.2.7";
     src = fetchurl {
-      url = "https://registry.npmjs.org/@atomi-user-first/semantic-generator/-/semantic-generator-0.2.6.tgz";
-      sha512 = "AA4bIzjzyWIEj9/qUNslZ37d159qzSe7jE/Ce/O1bm+sQrCyjWT+lRQkumz/1YZUUeIIt97ZwXfz64NyPh54mw==";
+      url = "https://registry.npmjs.org/@atomi-user-first/semantic-generator/-/semantic-generator-0.2.7.tgz";
+      sha512 = "U5tPazQAEmSGcXsFME9XhEU9K8nOnJ0XN1P8f/T3Zlt789dA8exddHQTUW6GFA5LxiZHqIgn14ibbgw2SVm9hg==";
     };
     dependencies = [
       sources."@babel/code-frame-7.14.5"

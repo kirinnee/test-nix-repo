@@ -8,7 +8,7 @@ let pkgs = {
     let self = import ./default.nix; in
     with self;
     {
-      inherit gitlint pls please plz narwhal sg;
+      inherit gitlint pls please plz narwhal sg vercel;
     }
   );
   "nix 21.05 16th June 2021" = (

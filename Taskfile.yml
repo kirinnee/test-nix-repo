@@ -4,6 +4,11 @@ includes:
   ci: ./scripts/ci/ci.Taskfile.yaml
 
 tasks:
+  isolate:
+    desc: Drop into a isolated environment
+    cmds:
+      - ./scripts/isolate.sh
+
   build:
     desc: Build all derivations within `default.nix`
     cmds:

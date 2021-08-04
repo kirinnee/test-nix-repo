@@ -14,5 +14,5 @@ with n;
     ];
     nativeBuildInputs = [ npkgs."25th July 2021 21.05".pkg-config ];
   };
-  inherit cyanprint semantic-release-cli markdown-table-prettify;
+  inherit cyanprint semantic-release-cli markdown-table-prettify vercel;
 }

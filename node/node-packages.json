@@ -2,5 +2,6 @@
   "cyanprint",
   "semantic-release-cli",
   "@atomi-user-first/semantic-generator",
-  "markdown-table-prettify"
+  "markdown-table-prettify",
+  "vercel"
 ]

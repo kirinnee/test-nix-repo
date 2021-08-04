@@ -20,5 +20,6 @@ nixpkgs.mkShell {
     bash
     node2nix
     sg
+    pnpm
   ];
 }

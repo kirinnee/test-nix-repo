@@ -5,7 +5,7 @@ let
   npm = (
     let n = import ./node/export.nix { inherit nixpkgs; }; in
     with n; {
-      inherit cyanprint semantic-release-cli markdown-table-prettify sg;
+      inherit cyanprint semantic-release-cli markdown-table-prettify sg vercel;
 
     }
   );

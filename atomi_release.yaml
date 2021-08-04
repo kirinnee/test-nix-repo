@@ -1,7 +1,7 @@
 gitlint: .gitlint
 
 conventionMarkdown:
-  path: docs/developer/03-Commit Conventions.md
+  path: docs/developer/99-CommitConventions.md
   template: |
     ---
     id: commit-conventions
@@ -33,7 +33,7 @@ plugins:
         ---
   - module: "@semantic-release/exec"
     config:
-      prepareCmd: prettier docs/user/03-Changelog.md
+      prepareCmd: prettier -w docs/user/03-Changelog.md
   - module: "@semantic-release/exec"
     config:
       prepareCmd: sg docs version docs ${nextRelease.version}

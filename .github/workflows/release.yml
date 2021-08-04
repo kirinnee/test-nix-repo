@@ -9,8 +9,8 @@ jobs:
     container: nixos/nix
     runs-on: ubuntu-20.04
     steps:
-      - name: Install git and tar and bash
-        run: apk add git tar bash
+      - name: Install git and tar
+        run: apk add git tar
 
       - name: Cache Whole of NIX
         uses: actions/cache@v2

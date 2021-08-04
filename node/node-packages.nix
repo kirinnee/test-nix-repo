@@ -4477,13 +4477,13 @@ let
         sha1 = "9e7d8bb252a6cb6ba42595060b7bf6df3dbc1f50";
       };
     };
-    "parse-headers-2.0.3" = {
+    "parse-headers-2.0.4" = {
       name = "parse-headers";
       packageName = "parse-headers";
-      version = "2.0.3";
+      version = "2.0.4";
       src = fetchurl {
-        url = "https://registry.npmjs.org/parse-headers/-/parse-headers-2.0.3.tgz";
-        sha512 = "QhhZ+DCCit2Coi2vmAKbq5RGTRcQUOE2+REgv8vdyu7MnYx2eZztegqtTx99TZ86GTIwqiy3+4nQTWZ2tgmdCA==";
+        url = "https://registry.npmjs.org/parse-headers/-/parse-headers-2.0.4.tgz";
+        sha512 = "psZ9iZoCNFLrgRjZ1d8mn0h9WRqJwFxM9q3x7iUjN/YT2OksthDJ5TiPCu2F38kS4zutqfW+YdVVkBZZx3/1aw==";
       };
     };
     "parse-json-5.2.0" = {
@@ -7358,7 +7358,7 @@ in
       sources."parse-bmfont-ascii-1.0.6"
       sources."parse-bmfont-binary-1.0.6"
       sources."parse-bmfont-xml-1.1.4"
-      sources."parse-headers-2.0.3"
+      sources."parse-headers-2.0.4"
       sources."parse-json-5.2.0"
       sources."parse-png-1.1.2"
       sources."path-exists-4.0.0"

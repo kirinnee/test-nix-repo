@@ -19,9 +19,6 @@ jobs:
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
       - name: Install Environment
         run: nix-env -f ./env.nix -iA ci
-      - name: Ensure File is updated
-        run: |
-          cat "docs/developer/03-Commit Conventions.md"
       - name: Pre-commit Checks
         run: |
           pre-commit install --install-hooks

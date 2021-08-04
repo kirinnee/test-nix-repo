@@ -33,6 +33,9 @@ plugins:
         ---
   - module: "@semantic-release/exec"
     config:
+      prepareCmd: prettier docs/user/03-Changelog.md
+  - module: "@semantic-release/exec"
+    config:
       prepareCmd: sg docs version docs ${nextRelease.version}
   - module: "@semantic-release/git"
     config:

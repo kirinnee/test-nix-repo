@@ -32,14 +32,14 @@ plugins:
         id: changelog
         title: Changelog
         ---
+  - module: "@semantic-release/exec"
+    config:
+      publishCmd: sg docs version docs ${nextRelease.version}
   - module: "@semantic-release/git"
     config:
       message: "release: ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
       assets:
         - docs/**/*.*
-  - module: "@semantic-release/exec"
-    config:
-      publishCmd: sg docs version docs ${nextRelease.version}
   - module: "@semantic-release/github"
 
 types:

@@ -19,4 +19,4 @@ For how to install the pre-requisite, please look at each tools' official site, 
 
 We have strict conventions on our commit messages as it is used completely in our
 release strategy and automation pipeline. The convention is documented
-[here](03-Commit Conventions.MD)
+[here](03-Commit Conventions.md)

@@ -6,14 +6,14 @@ github:
   project: test-nix-repo
 logo: logo.svg
 color: "#008b8b"
-url: https://cyanprint-demo-test-1.netlify.app
+url: https://test-nix-repo.pages.dev
 historyDir: history
 staticDir: static
 landing:
   enable: true
   button:
     text: Get Started with Atomi's Nix Repository - 1min ⏱
-    to: docs/user/index
+    to: user/index
   features:
     - title: Install Packages quickly
       desc: Don't waste time sorting out dependencies or figuring out different installation method based on Operating System or distros. With Atomi's Nix repository, you can publish your package and install in any Linux distribution with all dependencies bundled with a single command

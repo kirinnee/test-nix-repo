@@ -3,19 +3,16 @@ id: changelog
 title: Changelog
 ---
 
-
 ## [6.0.0](https://github.com/kirinnee/test-nix-repo/compare/v5.0.0...v6.0.0) (2021-08-04)
-
 
 ### New Packages
 
-* **sg:** v0.2.6 to v0.2.7 ([b4ac965](https://github.com/kirinnee/test-nix-repo/commit/b4ac9651f98cbad5e5fef8dbe53359d2e35ca37c))
-* versioning to semantic release ([dbd7c20](https://github.com/kirinnee/test-nix-repo/commit/dbd7c20fd43569d3935c57daa0fda3b0341ff963))
-
+- **sg:** v0.2.6 to v0.2.7 ([b4ac965](https://github.com/kirinnee/test-nix-repo/commit/b4ac9651f98cbad5e5fef8dbe53359d2e35ca37c))
+- versioning to semantic release ([dbd7c20](https://github.com/kirinnee/test-nix-repo/commit/dbd7c20fd43569d3935c57daa0fda3b0341ff963))
 
 ### Packages Updated
 
-* **sg:** from v0.2.6 to v0.3.0 ([7c0502a](https://github.com/kirinnee/test-nix-repo/commit/7c0502a4fba2523d440014afe589963b4a47416b))
+- **sg:** from v0.2.6 to v0.3.0 ([7c0502a](https://github.com/kirinnee/test-nix-repo/commit/7c0502a4fba2523d440014afe589963b4a47416b))
 
 ## [5.0.0](https://github.com/kirinnee/test-nix-repo/compare/v4.0.0...v5.0.0) (2021-08-04)
 

@@ -132,4 +132,3 @@ Any chores, uncategorized, or small mistakes (like typos)
 | Scope        | Description                    | Bump  |
 | ------------ | ------------------------------ | ----- |
 | `no-release` | Prevent release from happening | `nil` |
-

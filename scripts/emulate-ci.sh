@@ -13,7 +13,7 @@ cleanup() {
 trap cleanup EXIT
 
 # copy current folder and emulate commit
-docker cp . "$container_id:/data"
+docker cp . "${container_id}:/data"
 docker exec "${container_id}" /data/scripts/emulate-commit.sh >/dev/null
 docker exec "${container_id}" git clone /data /workspace >/dev/null
 

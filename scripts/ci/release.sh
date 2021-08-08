@@ -1,3 +1,4 @@
 #! /bin/sh
 
-sg release
+sg release || true
+pnpm exec semantic-release

@@ -1,6 +1,10 @@
 #! /bin/sh
 
+pnpm --version
+
 pnpm bin
+echo ""
+ls "$(pnpm bin)"
 
 ls
 

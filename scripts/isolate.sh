@@ -10,5 +10,5 @@ cleanup() {
 }
 trap cleanup EXIT
 
-docker cp . "$container_id:/workspace"
+docker cp . "${container_id}:/workspace"
 docker exec -ti -e TERM=xterm-256color "${container_id}" bash

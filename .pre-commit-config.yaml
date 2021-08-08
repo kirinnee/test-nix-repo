@@ -58,3 +58,10 @@ repos:
         files: (atomi_release.yaml|.gitlint)
         language: system
         pass_filenames: false
+
+      - id: cfg-scripts
+        name: Configure Scripts
+        entry: pls cfg:scripts
+        files: ^.*\.sh$
+        pass_filenames: false
+        language: system

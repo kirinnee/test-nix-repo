@@ -7,7 +7,7 @@ let env = import ./env.nix { inherit nixpkgs; }; in
   ci = nixpkgs.mkShell {
     buildInputs = env.minimal ++ env.lint ++ [ ];
   };
-  cd = nixpkgs.mkShell {
+  releaser = nixpkgs.mkShell {
     buildInputs = env.cd;
   };
 }

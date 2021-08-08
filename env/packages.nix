@@ -26,6 +26,7 @@ let pkgs = {
       npm = nodePackages.npm;
       pnpm = nodePackages.pnpm;
       prettier = nodePackages.prettier;
+      node = nodejs-16_x;
       inherit bash;
     }
   );

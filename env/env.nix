@@ -26,5 +26,6 @@ with pkgs;
     npm
     sg
     prettier
+    node
   ];
 }

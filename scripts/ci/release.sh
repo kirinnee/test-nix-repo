@@ -1,7 +1,9 @@
 #! /bin/sh
 
+pnpm bin
+
+ls
+
 sg release || true
 
-echo "release: " "$(pwd)"
-
-ls -al
+ls

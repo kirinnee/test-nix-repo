@@ -16,7 +16,7 @@ jobs:
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
 
       - name: Run Pre-commit checks
-        run: nix-shell shells.nix -A ci --run scripts/ci/pre-commit.sh
+        run: nix-shell env/shells.nix -A ci --run scripts/ci/pre-commit.sh
 
       - name: Esnure builds
         run: nix-build

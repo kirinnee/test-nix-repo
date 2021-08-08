@@ -2,6 +2,6 @@
 
 sg release || true
 
-echo "release"
+echo "release: " "$(pwd)"
 
 ls -al

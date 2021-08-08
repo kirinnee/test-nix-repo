@@ -6,7 +6,7 @@ on:
 jobs:
   Release:
     name: Release
-    container: nixos/nix
+    container: ghcr.io/kirinnee/nix-ci/nix-ci:main-152fe7
     runs-on: ubuntu-20.04
     steps:
       - name: Cache Whole of NIX

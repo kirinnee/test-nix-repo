@@ -1,9 +1,11 @@
 #! /bin/sh
 
+pnpm add -D semantic-release
+
 sg release || true
 
 echo "release"
 
-ls
+ls -al
 
 pnpm exec -r semantic-release

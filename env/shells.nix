@@ -8,6 +8,6 @@ let env = import ./env.nix { inherit nixpkgs; }; in
     buildInputs = env.minimal ++ env.lint ++ [ ];
   };
   releaser = nixpkgs.mkShell {
-    buildInputs = env.cd;
+    buildInputs = env.releaser;
   };
 }

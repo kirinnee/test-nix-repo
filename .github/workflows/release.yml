@@ -14,4 +14,5 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NIX_PATH: nixpkgs=channel:nixos-unstable
         run: nix-shell env/shells.nix -A releaser --run scripts/ci/release.sh

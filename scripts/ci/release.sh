@@ -6,4 +6,6 @@ ls
 
 sg release || true
 
-ls
+pnpm semantic-release
+
+"$(pnpm bin)/semantic-release"

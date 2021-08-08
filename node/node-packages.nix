@@ -418,13 +418,13 @@ let
         sha512 = "jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==";
       };
     };
-    "@types/node-16.4.11" = {
+    "@types/node-16.4.13" = {
       name = "_at_types_slash_node";
       packageName = "@types/node";
-      version = "16.4.11";
+      version = "16.4.13";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@types/node/-/node-16.4.11.tgz";
-        sha512 = "nWSFUbuNiPKJEe1IViuodSI+9cM+vpM8SWF/O6dJK7wmGRNq55U7XavJHrlRrPkSMuUZUFzg1xaZ1B+ZZCrRWw==";
+        url = "https://registry.npmjs.org/@types/node/-/node-16.4.13.tgz";
+        sha512 = "bLL69sKtd25w7p1nvg9pigE4gtKVpGTPojBFLMkGHXuUgap2sLqQt2qUnqmVCDfzGUL0DRNZP+1prIZJbMeAXg==";
       };
     };
     "@types/node-fetch-2.5.12" = {
@@ -454,49 +454,49 @@ let
         sha512 = "xoDlM2S4ortawSWORYqsdU+2rxdh4LRW9ytc3zmT37RIKQh6IHyKwwtKhKis9ah8ol07DCkZxPt8BBvPjC6v4g==";
       };
     };
-    "@vercel/build-utils-2.11.1" = {
+    "@vercel/build-utils-2.12.1" = {
       name = "_at_vercel_slash_build-utils";
       packageName = "@vercel/build-utils";
-      version = "2.11.1";
+      version = "2.12.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@vercel/build-utils/-/build-utils-2.11.1.tgz";
-        sha512 = "4eVUV7az4c/Avb9tdkoeJf8EYXW4mSY42ZQh15WRUkEXZq80FAgmywrklKOt3B/J+DW6fn8R4exuI1yXnu2iJg==";
+        url = "https://registry.npmjs.org/@vercel/build-utils/-/build-utils-2.12.1.tgz";
+        sha512 = "85FUGmNQWL+gWORGIfW2amNeDt3vBgliZ51j3D9s+2qcAv+Li+ghLfzjoP5w5E+DhO8OxHfy53WbqR5aprAWEA==";
       };
     };
-    "@vercel/go-1.2.2" = {
+    "@vercel/go-1.2.3" = {
       name = "_at_vercel_slash_go";
       packageName = "@vercel/go";
-      version = "1.2.2";
+      version = "1.2.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@vercel/go/-/go-1.2.2.tgz";
-        sha512 = "Oo1lXjXmDrSqdF3LKCWXJGU9DInq5aMe6weQSoWnKRvSZ6v4at2x19ltHYvgUO95y4tbdzqPLRKFNUSQEJVdjQ==";
+        url = "https://registry.npmjs.org/@vercel/go/-/go-1.2.3.tgz";
+        sha512 = "BZCHRz43Qfr0DwZlZQCcofR+3cr+H+HK72/ZPkZy1Uq0NYjJMlmZ3ahuMgvJxT9lfC1RA6eOEUlUsZ+gqKcMCg==";
       };
     };
-    "@vercel/node-1.11.1" = {
+    "@vercel/node-1.12.0" = {
       name = "_at_vercel_slash_node";
       packageName = "@vercel/node";
-      version = "1.11.1";
+      version = "1.12.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@vercel/node/-/node-1.11.1.tgz";
-        sha512 = "2OheDtjxr1OkYyvMh7laDkOA4K6KfLL60IBg1D+PksNri2YEFaPK1lzdq7xuByuDRUs+tm9U57sPVAlyzGjlvw==";
+        url = "https://registry.npmjs.org/@vercel/node/-/node-1.12.0.tgz";
+        sha512 = "McwhEg6KI0y7R875IG87Ry3HrFvws+60/yKk1KqJxbOud/n/Mj9eEZTI5mxxMFj8tT7KhmFaRdl8pJz8ISR1Cg==";
       };
     };
-    "@vercel/python-2.0.4" = {
+    "@vercel/python-2.0.5" = {
       name = "_at_vercel_slash_python";
       packageName = "@vercel/python";
-      version = "2.0.4";
+      version = "2.0.5";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@vercel/python/-/python-2.0.4.tgz";
-        sha512 = "pGHtsbF2gVHnZGw62HIUZhfGzO+jXGprFsmgJwHdDWkUjiVGGKpbMKiDZlZPJQF7FC4xTF4rb0JKzrcckrpYXg==";
+        url = "https://registry.npmjs.org/@vercel/python/-/python-2.0.5.tgz";
+        sha512 = "WCSTTw6He2COaSBiGDk2q5Q1ue+z5usRZcvUHCpsK6KvNkkV/PrY8JT73XQysMWKiXh6yQy19IUFAOqK/xwhig==";
       };
     };
-    "@vercel/ruby-1.2.6" = {
+    "@vercel/ruby-1.2.7" = {
       name = "_at_vercel_slash_ruby";
       packageName = "@vercel/ruby";
-      version = "1.2.6";
+      version = "1.2.7";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@vercel/ruby/-/ruby-1.2.6.tgz";
-        sha512 = "ZLDMxMvOL0xd7FBHXQJ9EJxPohw+qzpgwulaNhXGgPuFUfnS9mboUEyj0sU9A9F7lMJFPJ6gs8UfVxBY2eNnGA==";
+        url = "https://registry.npmjs.org/@vercel/ruby/-/ruby-1.2.7.tgz";
+        sha512 = "ZG2VxMHHSKocL57UWsfNc9UsblwYGm55/ujqGIBnkNUURnRgtUrwtWlEts1eJ4VHD754Lc/0/R1pfJXoN5SbRw==";
       };
     };
     "JSONStream-1.3.5" = {
@@ -1516,13 +1516,13 @@ let
         sha512 = "YrwaA0vEKazPBkn0ipTiMpSajYDSe+KjQfrjhcBMxJt/znbvlHd8Pw/Vamaz5EB4Wfhs3SUR3Z9mwRu/P3s3Yg==";
       };
     };
-    "caniuse-lite-1.0.30001248" = {
+    "caniuse-lite-1.0.30001249" = {
       name = "caniuse-lite";
       packageName = "caniuse-lite";
-      version = "1.0.30001248";
+      version = "1.0.30001249";
       src = fetchurl {
-        url = "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001248.tgz";
-        sha512 = "NwlQbJkxUFJ8nMErnGtT0QTM2TJ33xgz4KXJSMIrjXIbDVdaYueGyjOrLKRtJC+rTiWfi6j5cnZN1NBiSBJGNw==";
+        url = "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001249.tgz";
+        sha512 = "vcX4U8lwVXPdqzPWi6cAJ3FnQaqXbBqy/GZseKNQzRj37J7qZdGcBtxq/QLFNLLlfsoXLUdHw8Iwenri86Tagw==";
       };
     };
     "caseless-0.12.0" = {
@@ -2200,13 +2200,13 @@ let
         sha1 = "3a83a904e54353287874c564b7549386849a98c9";
       };
     };
-    "electron-to-chromium-1.3.795" = {
+    "electron-to-chromium-1.3.799" = {
       name = "electron-to-chromium";
       packageName = "electron-to-chromium";
-      version = "1.3.795";
+      version = "1.3.799";
       src = fetchurl {
-        url = "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.3.795.tgz";
-        sha512 = "4TPxrLf9Fzsi4rVgTlDm+ubxoXm3/TN67/LGHx/a4UkVubKILa6L26O6eTnHewixG/knzU9L3lLmfL39eElwlQ==";
+        url = "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.3.799.tgz";
+        sha512 = "V2rbYWdGvSqrg+95KjkVuSi41bGfrhrOzjl1tSi2VLnm0mRe3FsSvhiqidSiSll9WiMhrQAhpDcW/wcqK3c+Yw==";
       };
     };
     "emoji-regex-7.0.3" = {
@@ -2776,13 +2776,13 @@ let
         sha512 = "R7eWptXuGYxwijs0eV+v3o6+XH1IqVK8dJOEecQfTmkncw9AV4dcw/Dhxi8MdlqPthxxpZyizMzyg8RTmEsG+Q==";
       };
     };
-    "graceful-fs-4.2.6" = {
+    "graceful-fs-4.2.8" = {
       name = "graceful-fs";
       packageName = "graceful-fs";
-      version = "4.2.6";
+      version = "4.2.8";
       src = fetchurl {
-        url = "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.6.tgz";
-        sha512 = "nTnJ528pbqxYanhpDYsi4Rd8MAeaBA67+RZ10CM1m3bTAVFEDcd5AuA4a6W5YkGZ1iNXHzZz8T6TBKLeBuNriQ==";
+        url = "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.8.tgz";
+        sha512 = "qkIilPUYcNhJpd33n0GBXTB1MMPp14TxEsEs0pTrsSVucApsYzW5V+Q8Qxhik6KU3evy+qkAAowTByymK0avdg==";
       };
     };
     "har-schema-2.0.0" = {
@@ -4135,13 +4135,13 @@ let
         sha512 = "iOuIQDWDyjhv9qSDrj9aq/klt6F9z1p2otB3AV7v3zBDcL/x+OfGsvGQZZCcMZbUf4Ujw1xGNQkjvGnVT22cKg==";
       };
     };
-    "node-html-parser-4.1.2" = {
+    "node-html-parser-4.1.3" = {
       name = "node-html-parser";
       packageName = "node-html-parser";
-      version = "4.1.2";
+      version = "4.1.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/node-html-parser/-/node-html-parser-4.1.2.tgz";
-        sha512 = "O5ZnV40UpZWrFth52D62tMppI/veACiSmXJ7R+b4FToly6dnhNkFSeFcUbCHXsfe4U/2+ANiuaPS2Wf9YI6hCA==";
+        url = "https://registry.npmjs.org/node-html-parser/-/node-html-parser-4.1.3.tgz";
+        sha512 = "jWFd9TBxDJ0hXkvPKxiWXy4R87ZoIjYj5P2twbef3q/E4vJyFt8TTRQ68ssHYW5Aozwth4SWHOPT6yfDd/gzQQ==";
       };
     };
     "nopt-4.0.3" = {
@@ -5350,13 +5350,13 @@ let
         sha1 = "c41f2f6c39fc16d1cd17ad4b5d896114ae470d55";
       };
     };
-    "smart-buffer-4.1.0" = {
+    "smart-buffer-4.2.0" = {
       name = "smart-buffer";
       packageName = "smart-buffer";
-      version = "4.1.0";
+      version = "4.2.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/smart-buffer/-/smart-buffer-4.1.0.tgz";
-        sha512 = "iVICrxOzCynf/SNaBQCw34eM9jROU/s5rzIhpOvzhzuYHfJR/DhZfDkXiZSgKXfgv26HT3Yni3AV/DGw0cGnnw==";
+        url = "https://registry.npmjs.org/smart-buffer/-/smart-buffer-4.2.0.tgz";
+        sha512 = "94hK0Hh8rPqQl2xXc3HsaBoOXKV20MToPkcXvwbISWLEs+64sBq5kFgn2kJDHb1Pry9yrP0dxrCI9RRci7RXKg==";
       };
     };
     "socks-2.3.3" = {
@@ -6052,13 +6052,13 @@ let
         sha512 = "w6fIxVE/H1PkLKcCPsFqKE7Kv7QUwhU8qQY2MueZXWx5cPZdwFupLgKK3vntcK98BtNHZtAF4LA/yl2a7k8R6Q==";
       };
     };
-    "typescript-3.9.3" = {
+    "typescript-4.3.4" = {
       name = "typescript";
       packageName = "typescript";
-      version = "3.9.3";
+      version = "4.3.4";
       src = fetchurl {
-        url = "https://registry.npmjs.org/typescript/-/typescript-3.9.3.tgz";
-        sha512 = "D/wqnB2xzNFIcoBG9FG8cXRDjiqSTbG2wd8DMZeQyJlP1vfTkIxH4GKveWaEBYySKIg+USu+E+EDIR47SqnaMQ==";
+        url = "https://registry.npmjs.org/typescript/-/typescript-4.3.4.tgz";
+        sha512 = "uauPG7XZn9F/mo+7MrsRjyvbxFpzemRjKEZXS4AK83oP2KKOJPvb+9cO/gmnv8arWZvhnjVOXz7B49m1l0e9Ew==";
       };
     };
     "underscore.string-2.2.1" = {
@@ -6467,7 +6467,7 @@ in
         ];
       })
       sources."@types/delete-empty-2.0.0"
-      sources."@types/node-16.4.11"
+      sources."@types/node-16.4.13"
       sources."@types/node-fetch-2.5.12"
       sources."ansi-colors-4.1.1"
       sources."ansi-escapes-3.2.0"
@@ -6496,7 +6496,7 @@ in
       sources."fs-extra-7.0.1"
       sources."fs.realpath-1.0.0"
       sources."glob-7.1.7"
-      sources."graceful-fs-4.2.6"
+      sources."graceful-fs-4.2.8"
       sources."has-flag-3.0.0"
       sources."iconv-lite-0.4.24"
       sources."inflight-1.0.6"
@@ -6684,7 +6684,7 @@ in
         ];
       })
       sources."camelcase-5.3.1"
-      sources."caniuse-lite-1.0.30001248"
+      sources."caniuse-lite-1.0.30001249"
       sources."caseless-0.12.0"
       sources."chalk-1.1.3"
       sources."chardet-0.7.0"
@@ -6726,7 +6726,7 @@ in
       sources."duplexer3-0.1.4"
       sources."duplexify-3.7.1"
       sources."ecc-jsbn-0.1.2"
-      sources."electron-to-chromium-1.3.795"
+      sources."electron-to-chromium-1.3.799"
       sources."emoji-regex-8.0.0"
       (sources."encoding-0.1.13" // {
         dependencies = [
@@ -6770,7 +6770,7 @@ in
       sources."global-dirs-0.1.1"
       sources."globals-9.18.0"
       sources."got-9.6.0"
-      sources."graceful-fs-4.2.6"
+      sources."graceful-fs-4.2.8"
       sources."har-schema-2.0.0"
       sources."har-validator-5.1.5"
       sources."has-ansi-2.0.0"
@@ -6963,7 +6963,7 @@ in
       sources."shebang-regex-1.0.0"
       sources."signal-exit-3.0.3"
       sources."slash-1.0.0"
-      sources."smart-buffer-4.1.0"
+      sources."smart-buffer-4.2.0"
       sources."socks-2.3.3"
       (sources."socks-proxy-agent-4.0.2" // {
         dependencies = [
@@ -7081,10 +7081,10 @@ in
   "@atomi-user-first/semantic-generator" = nodeEnv.buildNodePackage {
     name = "_at_atomi-user-first_slash_semantic-generator";
     packageName = "@atomi-user-first/semantic-generator";
-    version = "0.4.0";
+    version = "0.4.1";
     src = fetchurl {
-      url = "https://registry.npmjs.org/@atomi-user-first/semantic-generator/-/semantic-generator-0.4.0.tgz";
-      sha512 = "dfH3Hx0D9EW00oyFCHko8mL6UmL5ILpPKKv/4FT2PLFMftBv2HB16ADJHcpk4nd/1QmyHM+dua1dceBMmbsvSA==";
+      url = "https://registry.npmjs.org/@atomi-user-first/semantic-generator/-/semantic-generator-0.4.1.tgz";
+      sha512 = "sm9Hju525B7ok0vrhZDqBpAxXxWTnMKRb5xYnOa/n7xkEaLZKqU9fzw9As9vg84iC71JPEdsXiorsvvEJGQJ4g==";
     };
     dependencies = [
       sources."@babel/code-frame-7.14.5"
@@ -7264,7 +7264,7 @@ in
       sources."glob-7.1.7"
       sources."glob-parent-5.1.2"
       sources."global-4.4.0"
-      sources."graceful-fs-4.2.6"
+      sources."graceful-fs-4.2.8"
       sources."har-schema-2.0.0"
       sources."har-validator-5.1.5"
       sources."hard-rejection-2.1.0"
@@ -7340,7 +7340,7 @@ in
         ];
       })
       sources."node-addon-api-3.2.1"
-      sources."node-html-parser-4.1.2"
+      sources."node-html-parser-4.1.3"
       sources."normalize-package-data-3.0.2"
       sources."npm-run-path-4.0.1"
       sources."npmlog-4.1.2"
@@ -7527,20 +7527,20 @@ in
   vercel = nodeEnv.buildNodePackage {
     name = "vercel";
     packageName = "vercel";
-    version = "23.0.1";
+    version = "23.1.1";
     src = fetchurl {
-      url = "https://registry.npmjs.org/vercel/-/vercel-23.0.1.tgz";
-      sha512 = "gY9D74WG9OL7TB/z1g4fypxq3eSiWtFMFx1gIbNf0DXIHGxWG+eczhGxa3IiZ14HhrebTfiPnM8O26AL81MVrQ==";
+      url = "https://registry.npmjs.org/vercel/-/vercel-23.1.1.tgz";
+      sha512 = "9HScSWBFGHmFvvInD0IgbkIrP1+rPjajDlI0n/7HTPOgZ68l2DShEpN6Igt2BPFQhbMK8Fwt5MNuC5RM6JTI2Q==";
     };
     dependencies = [
       sources."@sindresorhus/is-0.14.0"
       sources."@szmarczak/http-timer-1.1.2"
-      sources."@types/node-16.4.11"
-      sources."@vercel/build-utils-2.11.1"
-      sources."@vercel/go-1.2.2"
-      sources."@vercel/node-1.11.1"
-      sources."@vercel/python-2.0.4"
-      sources."@vercel/ruby-1.2.6"
+      sources."@types/node-16.4.13"
+      sources."@vercel/build-utils-2.12.1"
+      sources."@vercel/go-1.2.3"
+      sources."@vercel/node-1.12.0"
+      sources."@vercel/python-2.0.5"
+      sources."@vercel/ruby-1.2.7"
       (sources."ansi-align-3.0.0" // {
         dependencies = [
           sources."string-width-3.1.0"
@@ -7578,7 +7578,7 @@ in
       sources."get-stream-4.1.0"
       sources."global-dirs-2.1.0"
       sources."got-9.6.0"
-      sources."graceful-fs-4.2.6"
+      sources."graceful-fs-4.2.8"
       sources."has-flag-4.0.0"
       sources."has-yarn-2.1.0"
       sources."http-cache-semantics-4.1.0"
@@ -7633,7 +7633,7 @@ in
       sources."ts-node-8.9.1"
       sources."type-fest-0.8.1"
       sources."typedarray-to-buffer-3.1.5"
-      sources."typescript-3.9.3"
+      sources."typescript-4.3.4"
       sources."unique-string-2.0.0"
       sources."update-notifier-4.1.0"
       sources."url-parse-lax-3.0.0"

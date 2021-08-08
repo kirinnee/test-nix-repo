@@ -5,7 +5,7 @@ let pkgs = {
     { }
   );
   self = (
-    let self = import ./default.nix; in
+    let self = import ../default.nix; in
     with self;
     {
       inherit gitlint pls please plz narwhal sg vercel;

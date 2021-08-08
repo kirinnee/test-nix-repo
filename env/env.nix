@@ -22,7 +22,7 @@ with pkgs;
     prettier
     sg # for linting gitlint file
   ];
-  cd = [
+  releaser = [
     pnpm
     sg
     prettier

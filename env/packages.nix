@@ -11,17 +11,15 @@ let pkgs = {
       inherit gitlint pls please plz narwhal sg vercel;
     }
   );
-  "nix 21.05 16th June 2021" = (
-    let n = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/1f91fd1040667e9265a760b0347f8bc416249da7.tar.gz") { }; in
-    with n;
+  "nix 21.05 8th August 2021" = (
+    with import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/5b252d8e07edf3434e713420299e51b330bfd562.tar.gz") { };
     {
       node2nix = nodePackages.node2nix;
       inherit pre-commit git shfmt shellcheck nixpkgs-fmt nix-prefetch sd coreutils;
     }
   );
-  "nix 21.05 18th June 2021" = (
-    let n = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/bad3ccd099ebe9a8aa017bda8500ab02787d90aa.tar.gz") { }; in
-    with n;
+  "nix Unstable 8th August 2021" = (
+    with import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/e087f5def9adc76ff649fd8f007cc06eb0ad607e.tar.gz") { };
     {
       npm = nodePackages.npm;
       pnpm = nodePackages.pnpm;
@@ -35,5 +33,5 @@ with pkgs;
 
 pkgs.latest //
 pkgs.self //
-pkgs."nix 21.05 16th June 2021" //
-pkgs."nix 21.05 18th June 2021"
+pkgs."nix 21.05 8th August 2021" //
+pkgs."nix Unstable 8th August 2021"

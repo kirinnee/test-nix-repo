@@ -243,7 +243,7 @@ let
       postPatch = (attrs.postPatch or "") + optionalString (stdenv.isLinux) ''
         # Webstorm tries to use bundled jre if available.
         # Lets prevent this for the moment
-        rm -r jbr
+        # rm -r jbr
       '';
     });
 in
@@ -285,8 +285,8 @@ in
     description = "Integrated Development Environment (IDE) by Jetbrains, requires paid license";
     license = lib.licenses.unfree;
     src = fetchurl {
-      url = "https://download.jetbrains.com/idea/ideaIU-${version}-no-jbr.tar.gz";
-      sha256 = "0w36qnqgkvw6j1ks09h515237bhqfaixrimzg2r494ic98amvkps"; /* updated by script */
+      url = "https://download.jetbrains.com/idea/ideaIU-${version}.tar.gz";
+      sha256 = "sha256-CzIw+9iZzII3fCvg+wNjNyAvNBw8I2JS3Y7tw3JINBw="; /* updated by script */
     };
     wmClass = "jetbrains-idea";
     update-channel = "IntelliJ IDEA RELEASE";

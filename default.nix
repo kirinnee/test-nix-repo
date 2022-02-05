@@ -1,5 +1,5 @@
 let
-  nixpkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/1f91fd1040667e9265a760b0347f8bc416249da7.tar.gz") { };
+  nixpkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/554d2d8aa25b6e583575459c297ec23750adb6cb.tar.gz") { };
 
   # Node
   npm = (
@@ -28,6 +28,9 @@ let
     narwhal_0_3_11 = import ./golang/narwhal/0.3.11.nix { inherit nixpkgs; };
   };
 
+  # JetBrains IDE
+  jetbrains = import ./jetbrains/default.nix { inherit nixpkgs; };
+
   # dotnet
   # dotnet = (with import ./nuget/dotnet.nix { inherit nixpkgs; }; {
   #   inherit dotnetsay;
@@ -36,4 +39,4 @@ let
 in
 
 # merge
-npm // shell // python // golang // dotnet
+npm // shell // python // golang // dotnet // jetbrains

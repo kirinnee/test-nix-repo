@@ -264,18 +264,6 @@ in
     update-channel = "CLion RELEASE"; # channel's id as in http://www.jetbrains.com/updates/updates.xml
   };
 
-  datagrip = buildDataGrip rec {
-    name = "datagrip-${version}";
-    version = "2021.3.4"; /* updated by script */
-    description = "Your Swiss Army Knife for Databases and SQL";
-    license = lib.licenses.unfree;
-    src = fetchurl {
-      url = "https://download.jetbrains.com/datagrip/${name}.tar.gz";
-      sha256 = "09dkxj5vn99gkgc1yd18w7gqkw2vzci0z9q2fcih0zn7lvqp0im3"; /* updated by script */
-    };
-    wmClass = "jetbrains-datagrip";
-    update-channel = "DataGrip RELEASE";
-  };
 
   goland = buildGoland rec {
     name = "goland-${version}";
@@ -290,18 +278,6 @@ in
     update-channel = "GoLand RELEASE";
   };
 
-  idea-community = buildIdea rec {
-    name = "idea-community-${version}";
-    version = "2021.3.2"; /* updated by script */
-    description = "Integrated Development Environment (IDE) by Jetbrains, community edition";
-    license = lib.licenses.asl20;
-    src = fetchurl {
-      url = "https://download.jetbrains.com/idea/ideaIC-${version}.tar.gz";
-      sha256 = "1j889b2r950bl9wiqq1z8v8s2qicidfcdar300cy666i8rc25qlr"; /* updated by script */
-    };
-    wmClass = "jetbrains-idea-ce";
-    update-channel = "IntelliJ IDEA RELEASE";
-  };
 
   idea-ultimate = buildIdea rec {
     name = "idea-ultimate-${version}";
@@ -316,19 +292,6 @@ in
     update-channel = "IntelliJ IDEA RELEASE";
   };
 
-  mps = buildMps rec {
-    name = "mps-${version}";
-    version = "2021.2.3"; /* updated by script */
-    versionMajorMinor = "2021.2"; /* updated by script */
-    description = "Create your own domain-specific language";
-    license = lib.licenses.asl20;
-    src = fetchurl {
-      url = "https://download.jetbrains.com/mps/${versionMajorMinor}/MPS-${version}.tar.gz";
-      sha256 = "1j33b48ki1xw7xb1hr8k2jz7d78h0qcr1b5gql7i40d7szq0iy10"; /* updated by script */
-    };
-    wmClass = "jetbrains-mps";
-    update-channel = "MPS RELEASE";
-  };
 
   phpstorm = buildPhpStorm rec {
     name = "phpstorm-${version}";
@@ -343,18 +306,6 @@ in
     update-channel = "PhpStorm RELEASE";
   };
 
-  pycharm-community = buildPycharm rec {
-    name = "pycharm-community-${version}";
-    version = "2021.3.2"; /* updated by script */
-    description = "PyCharm Community Edition";
-    license = lib.licenses.asl20;
-    src = fetchurl {
-      url = "https://download.jetbrains.com/python/${name}.tar.gz";
-      sha256 = "1s36basydp7cxgbgdapjhkslx0x9vv3639xhm84ny76hf7s03bpi"; /* updated by script */
-    };
-    wmClass = "jetbrains-pycharm-ce";
-    update-channel = "PyCharm RELEASE";
-  };
 
   pycharm-professional = buildPycharm rec {
     name = "pycharm-professional-${version}";

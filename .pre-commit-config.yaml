@@ -45,12 +45,12 @@ repos:
         language: system
         pass_filenames: false
 
-      # - id: build-nix
-      #   name: Build NIX Packages
-      #   entry: pls test
-      #   files: ^.*\.nix$
-      #   language: system
-      #   pass_filenames: false
+      - id: build-nix
+        name: Build NIX Packages
+        entry: pls test
+        files: ^.*\.nix$
+        language: system
+        pass_filenames: false
 
       - id: gitlint-linter
         name: Lints Gitlint to conform to atomi_release.yaml

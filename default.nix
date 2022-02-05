@@ -19,7 +19,7 @@ let
 
   # Python
   python = {
-    gitlint = import ./python/gitlint/default.nix { inherit nixpkgs; };
+    # gitlint = import ./python/gitlint/default.nix { inherit nixpkgs; };
   };
 
   # Go

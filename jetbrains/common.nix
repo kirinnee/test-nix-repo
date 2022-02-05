@@ -6,6 +6,7 @@
 , writeText
 , coreutils
 , gnugrep
+, gnused
 , which
 , git
 , unzip
@@ -82,7 +83,10 @@ with stdenv; lib.makeOverridable mkDerivation (rec {
     mv bin/fsnotifier* $out/libexec/${name}/.
     jdk=${jdk.home}
     item=${desktopItem}
-    makeWrapper "$out/$name/bin/${loName}.sh" "$out/bin/${mainProgram}" \
+
+    ${gnused}/bin/sed -i '/# Patch JBR to make self-contained JVM (requires nothing from host system except glibc)/,/# Display project trust warning/d' "$out/$name/plugins/remote-dev-server/bin/launcher.sh"
+    ${gnused}/bin/sed -i '/echo "-Djava.home=$TEMP_JBR" >>"$TEMP_VM_OPTIONS"/d' "$out/$name/plugins/remote-dev-server/bin/launcher.sh"
+    makeWrapper "$out/$name/bin/remote-dev-server.sh" "$out/bin/${mainProgram}" \
       --prefix PATH : "$out/libexec/${name}:${lib.optionalString (stdenv.isDarwin) "${jdk}/jdk/Contents/Home/bin:"}${lib.makeBinPath [ jdk coreutils gnugrep which git ]}" \
       --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath ([
         # Some internals want libstdc++.so.6
@@ -95,6 +99,8 @@ with stdenv; lib.makeOverridable mkDerivation (rec {
       --set ANDROID_JAVA_HOME "$jdk" \
       --set JAVA_HOME "$jdk" \
       --set ${hiName}_VM_OPTIONS ${vmoptsFile}
+
+
     ln -s "$item/share/applications" $out/share
     runHook postInstall
   '';

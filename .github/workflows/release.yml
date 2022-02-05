@@ -8,6 +8,11 @@ jobs:
     name: Release
     runs-on: ubuntu-20.04
     steps:
+      - name: AtomiCloud CI Environment
+        uses: kirinnee/atomici-action@v2.1.0
+        with:
+          binary_cache: kirinnee-sample-binary-cache
+
       - name: Checkout Git
         uses: actions/checkout@v2.3.4
 
@@ -15,4 +20,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NIX_PATH: nixpkgs=channel:nixos-unstable
+          NIXPKGS_ALLOW_UNFREE: "1"
         run: nix-shell env/shells.nix -A releaser --run scripts/ci/release.sh

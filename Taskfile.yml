@@ -9,11 +9,12 @@ tasks:
     cmds:
       - ./scripts/isolate.sh
 
-  build:
+  build:all:
     desc: Build all derivations within `default.nix`
     cmds:
       - nix-build
-  build:one:
+
+  build:
     desc: Build a specific derivation
     deps:
       - clean
@@ -30,7 +31,7 @@ tasks:
   test:
     desc: Build and remove all build artifacts. Test whether all `nix` code is well-format and 'compilable'
     cmds:
-      - task: build
+      - task: build:all
       - task: clean
 
   fmt:
@@ -110,7 +111,11 @@ tasks:
     cmds:
       - node2nix -i ./node/node-packages.json -e ./node/node-env.nix -o ./node/node-packages.nix -c ./node/composition.nix
       - task: fmt:nix
-
+  gen:node:silent:
+    desc: Genreates Node package Nix files as CLI binaries, without noisy output
+    cmds:
+      - node2nix -i ./node/node-packages.json -e ./node/node-env.nix -o ./node/node-packages.nix -c ./node/composition.nix 1>/dev/null
+      - task: fmt:nix
   cfg:scripts:
     desc: Make scripts executable
     cmds:

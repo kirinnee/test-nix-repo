@@ -17,13 +17,6 @@ repos:
       - id: shellcheck
   - repo: local
     hooks:
-      - id: generate-npm-pkgs
-        name: Generate Nodejs NIX Packages
-        entry: pls gen:node
-        files: ^node/node-packages\.json$
-        pass_filenames: false
-        language: system
-
       - id: yaml-fmt
         name: Format YAML with prettier
         entry: pls fmt:yaml
@@ -63,5 +56,12 @@ repos:
         name: Configure Scripts
         entry: pls cfg:scripts
         files: ^.*\.sh$
+        pass_filenames: false
+        language: system
+
+      - id: generate-npm-pkgs
+        name: Generate Nodejs NIX Packages
+        entry: pls gen:node:silent
+        files: ^node/node-packages\.json$
         pass_filenames: false
         language: system

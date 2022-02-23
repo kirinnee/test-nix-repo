@@ -35,8 +35,8 @@ let
   # dotnet = (with import ./nuget/dotnet.nix { inherit nixpkgs; }; {
   #   inherit dotnetsay;
   # });
-  dotnet = { };
+  dotnet = import ./nuget/default.nix { inherit nixpkgs; };
 in
 
 # merge
-npm // shell // python // golang // dotnet // jetbrains
+npm // shell // python // golang // dotnet // jetbrains // dotnet

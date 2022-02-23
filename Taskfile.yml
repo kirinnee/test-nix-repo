@@ -13,6 +13,12 @@ tasks:
     desc: Build all derivations within `default.nix`
     cmds:
       - nix-build
+  build:one:
+    desc: Build a specific derivation
+    deps:
+      - clean
+    cmds:
+      - nix-build -A {{.CLI_ARGS}}
 
   clean:
     desc: remove all artifacts from `build`

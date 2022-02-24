@@ -14,6 +14,7 @@ let
     with (import ./shellWrapper/pls/default.nix { inherit nixpkgs; });
     {
       inherit pls please plz;
+      github-runner = import ./shellWrapper/github-runner/default.nix { inherit nixpkgs; };
     }
   );
 

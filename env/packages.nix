@@ -5,7 +5,7 @@ let pkgs = {
     { }
   );
   self = (
-    let self = import (fetchTarball "https://github.com/kirinnee/test-nix-repo/archive/refs/tags/v7.0.0.tar.gz"); in
+    let self = import (fetchTarball "https://github.com/kirinnee/test-nix-repo/archive/refs/tags/v8.1.0.tar.gz"); in
     with self;
     {
       inherit gitlint pls please plz narwhal sg vercel;

@@ -22,8 +22,6 @@ let dlls = stdenv.mkDerivation {
 }; in
 let bin = writeShellScriptBin name ''
   path_to_dll="$(${coreutils}/bin/cat ${dlls}/path)"
-  echo ${dlls}
-  echo $path_do_dll
   ${runtime}/bin/dotnet "$path_to_dll" $@
 ''; in
 stdenv.mkDerivation ({

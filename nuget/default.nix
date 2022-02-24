@@ -4,7 +4,7 @@ let buildNuget = import ./common.nix; in
 {
   dotnet-ef = buildNuget {
     inherit nixpkgs;
-    runtime = dotnet-runtime;
+    runtime = dotnet-sdk;
     name = "dotnet-ef";
     version = "6.0.2";
     sha256 = "sha256-Qw4Z54Sh4JauWtHY2lV15CHgGTS/pUKTYjPY7EmDkCk=";

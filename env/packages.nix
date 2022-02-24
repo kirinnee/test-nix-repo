@@ -8,24 +8,18 @@ let pkgs = {
     let self = import (fetchTarball "https://github.com/kirinnee/test-nix-repo/archive/refs/tags/v8.1.0.tar.gz"); in
     with self;
     {
-      inherit gitlint pls please plz narwhal sg vercel;
+      inherit pls please plz narwhal sg vercel;
     }
   );
-  "nix 21.05 8th August 2021" = (
-    with import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/5b252d8e07edf3434e713420299e51b330bfd562.tar.gz") { };
-    {
-      node2nix = nodePackages.node2nix;
-      inherit pre-commit git shfmt shellcheck nixpkgs-fmt nix-prefetch sd coreutils;
-    }
-  );
-  "nix Unstable 8th August 2021" = (
-    with import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/e087f5def9adc76ff649fd8f007cc06eb0ad607e.tar.gz") { };
+  "nix Unstable 24th Feburary 2022" = (
+    with import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/40ef692a55b188b1f5ae3967f3fc7808838c3f1d.tar.gz") { };
     {
       npm = nodePackages.npm;
       pnpm = nodePackages.pnpm;
+      node2nix = nodePackages.node2nix;
       prettier = nodePackages.prettier;
       node = nodejs-16_x;
-      inherit bash;
+      inherit bash gitlint pre-commit git shfmt shellcheck nixpkgs-fmt nix-prefetch sd coreutils;
     }
   );
 }; in
@@ -33,5 +27,4 @@ with pkgs;
 
 pkgs.latest //
 pkgs.self //
-pkgs."nix 21.05 8th August 2021" //
-pkgs."nix Unstable 8th August 2021"
+pkgs."nix Unstable 24th Feburary 2022"

@@ -110,12 +110,10 @@ tasks:
     desc: Generates Node package Nix files as CLI binaries
     cmds:
       - node2nix -i ./node/node-packages.json -e ./node/node-env.nix -o ./node/node-packages.nix -c ./node/composition.nix
-      - task: fmt:nix
   gen:node:silent:
     desc: Genreates Node package Nix files as CLI binaries, without noisy output
     cmds:
       - node2nix -i ./node/node-packages.json -e ./node/node-env.nix -o ./node/node-packages.nix -c ./node/composition.nix 1>/dev/null
-      - task: fmt:nix
   cfg:scripts:
     desc: Make scripts executable
     cmds:

@@ -1,11 +1,11 @@
 let
-  nixpkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/554d2d8aa25b6e583575459c297ec23750adb6cb.tar.gz") { };
+  nixpkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/48037fd90426e44e4bf03e6479e88a11453b9b66.tar.gz") { };
 
   # Node
   npm = (
-    let n = import ./node/export.nix { inherit nixpkgs; }; in
+    let n = import ./node/export.nix { inherit nixpkgs; nodejs = nixpkgs.nodejs-14_x; }; in
     with n; {
-      inherit cyanprint semantic-release-cli markdown-table-prettify sg vercel;
+      inherit cyanprint semantic-release-cli sg vercel;
     }
   );
 
@@ -32,9 +32,6 @@ let
   jetbrains = import ./jetbrains/default.nix { inherit nixpkgs; };
 
   # dotnet
-  # dotnet = (with import ./nuget/dotnet.nix { inherit nixpkgs; }; {
-  #   inherit dotnetsay;
-  # });
   dotnet = import ./nuget/default.nix { inherit nixpkgs; };
 in
 

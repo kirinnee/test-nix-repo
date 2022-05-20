@@ -11,8 +11,8 @@ let pkgs = {
       inherit pls please plz narwhal sg vercel;
     }
   );
-  "nix Unstable 24th Feburary 2022" = (
-    with import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/40ef692a55b188b1f5ae3967f3fc7808838c3f1d.tar.gz") { };
+  "nix Unstable 20th May 2022" = (
+    with import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/48037fd90426e44e4bf03e6479e88a11453b9b66.tar.gz") { };
     {
       npm = nodePackages.npm;
       pnpm = nodePackages.pnpm;
@@ -27,4 +27,4 @@ with pkgs;
 
 pkgs.latest //
 pkgs.self //
-pkgs."nix Unstable 24th Feburary 2022"
+pkgs."nix Unstable 20th May 2022"

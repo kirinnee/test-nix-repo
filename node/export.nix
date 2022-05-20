@@ -1,18 +1,18 @@
-{ nixpkgs ? import <nixpkgs> { } }:
+{ nixpkgs ? import <nixpkgs> { }, nodejs }:
 let
-  n = import ./composition.nix { pkgs = nixpkgs; };
+  n = import ./composition.nix { pkgs = nixpkgs; inherit nodejs; };
   npkgs = {
-    "25th July 2021 21.05" = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/537678cb1ead06fca831077c3b193566cbc3f406.tar.gz") { };
+    "20th May 2020 Unstable" = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/48037fd90426e44e4bf03e6479e88a11453b9b66.tar.gz") { };
   };
 in
 with n;
 {
   sg = n."@atomi-user-first/semantic-generator".override {
     buildInputs = [
-      npkgs."25th July 2021 21.05".vips
-      npkgs."25th July 2021 21.05".nodePackages.pnpm
+      npkgs."20th May 2020 Unstable".vips
+      npkgs."20th May 2020 Unstable".nodePackages.pnpm
     ];
-    nativeBuildInputs = [ npkgs."25th July 2021 21.05".pkg-config ];
+    nativeBuildInputs = [ npkgs."20th May 2020 Unstable".pkg-config ];
   };
-  inherit cyanprint semantic-release-cli markdown-table-prettify vercel;
+  inherit cyanprint semantic-release-cli vercel;
 }

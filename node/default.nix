@@ -1,2 +1,2 @@
-{ nixpkgs }:
-import ./composition.nix { pkgs = nixpkgs; }
+{ nixpkgs, nodejs }:
+import ./composition.nix { pkgs = nixpkgs; inherit nodejs; }

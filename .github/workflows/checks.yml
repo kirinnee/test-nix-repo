@@ -16,6 +16,7 @@ jobs:
         with:
           name: kirinnee-sample-binary-cache
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
+        continue-on-error: true
 
       - name: Run Pre-commit checks
         run: nix-shell env/shells.nix -A ci --run scripts/ci/pre-commit.sh

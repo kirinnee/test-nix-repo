@@ -10,12 +10,7 @@ let
   );
 
   # Shell
-  shell = (
-    with (import ./shellWrapper/pls/default.nix { inherit nixpkgs; });
-    {
-      inherit pls please plz;
-    }
-  );
+  shell = (import ./shellWrapper/default.nix { inherit nixpkgs; });
 
   # Python
   python = {

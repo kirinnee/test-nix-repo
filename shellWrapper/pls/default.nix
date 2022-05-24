@@ -1,19 +1,28 @@
-{ nixpkgs ? import <nixpkgs> { } }:
+{ trivialBuilders, nixpkgs ? import <nixpkgs> { } }:
 
 with nixpkgs;
+let version = go-task.version; in
 let task = go-task; in
-
 {
-  pls = pkgs.writeShellScriptBin "pls" ''
-    ${go-task}/bin/go-task $@
-  '';
-  please = pkgs.writeShellScriptBin "please" ''
-    ${go-task}/bin/go-task $@
-  '';
-  plz = pkgs.writeShellScriptBin "plz" ''
-    ${go-task}/bin/go-task $@
-  '';
-  pl0x = pkgs.writeShellScriptBin "pl0x" ''
-    ${go-task}/bin/go-task $@
-  '';
+  pls = trivialBuilders.writeShellScriptBin {
+    name = "pls";
+    inherit version;
+    text = ''
+      ${go-task}/bin/go-task $@
+    '';
+  };
+  please = trivialBuilders.writeShellScriptBin {
+    name = "please";
+    inherit version;
+    text = ''
+      ${go-task}/bin/go-task $@
+    '';
+  };
+  plz = trivialBuilders.writeShellScriptBin {
+    name = "plz";
+    inherit version;
+    text = ''
+      ${go-task}/bin/go-task $@
+    '';
+  };
 }

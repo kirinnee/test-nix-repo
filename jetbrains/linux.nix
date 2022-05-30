@@ -84,7 +84,8 @@ with stdenv; lib.makeOverridable mkDerivation (rec {
     item=${desktopItem}
 
     ${gnused}/bin/sed -i '/# Patch JBR to make self-contained JVM (requires nothing from host system except glibc)/,/# Display project trust warning/d' "$out/$pname/plugins/remote-dev-server/bin/launcher.sh"
-    ${gnused}/bin/sed -i '/echo "-Djava.home=$TEMP_JBR" >>"$TEMP_VM_OPTIONS"/d' "$out/$pname/plugins/remote-dev-server/bin/launcher.sh"
+    ${gnused}/bin/sed -i 's/echo "-Djava.home=$TEMP_JBR" >>"$TEMP_VM_OPTIONS"/echo "Non-Darwin"/g' "$out/$pname/plugins/remote-dev-server/bin/launcher.sh"
+    ${gnused}/bin/sed -i '/-Xmx2048m/d' "$out/$pname/plugins/remote-dev-server/bin/launcher.sh"
 
     makeWrapper "$out/$pname/bin/remote-dev-server.sh" "$out/bin/${pname}" \
       --prefix PATH : "$out/libexec/${pname}:${lib.makeBinPath [ jdk coreutils gnugrep which git ]}" \

@@ -6,7 +6,7 @@ on:
 jobs:
   Release:
     name: Release
-    runs-on: ubuntu-20.04
+    runs-on: nix
     steps:
       - name: AtomiCloud CI Environment
         uses: kirinnee/atomici-action@v2.1.2

@@ -9,7 +9,7 @@ jobs:
     runs-on: nix
     steps:
       - name: AtomiCloud CI Environment
-        uses: kirinnee/atomici-action@v2.1.2
+        uses: kirinnee/atomici-action@v2.2.0
         with:
           binary_cache: kirinnee-sample-binary-cache
 

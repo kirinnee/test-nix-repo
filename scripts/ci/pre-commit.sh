@@ -1,4 +1,4 @@
 #! /bin/sh
 
 pre-commit install --install-hooks
-pre-commit run --all
+SKIP=generate-npm-pkgs pre-commit run --all

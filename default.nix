@@ -1,6 +1,5 @@
 let
   nixpkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/48037fd90426e44e4bf03e6479e88a11453b9b66.tar.gz") { };
-
   # Node
   npm = (
     let n = import ./node/export.nix { inherit nixpkgs; nodejs = nixpkgs.nodejs-14_x; }; in
@@ -21,6 +20,7 @@ let
   golang = {
     narwhal = import ./golang/narwhal/default.nix { inherit nixpkgs; };
     narwhal_0_3_11 = import ./golang/narwhal/0.3.11.nix { inherit nixpkgs; };
+    spacectl = import ./golang/spacectl/default.nix { inherit nixpkgs; };
   };
 
   # JetBrains IDE

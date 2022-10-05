@@ -21,6 +21,7 @@ let
     narwhal = import ./golang/narwhal/default.nix { inherit nixpkgs; };
     narwhal_0_3_11 = import ./golang/narwhal/0.3.11.nix { inherit nixpkgs; };
     spacectl = import ./golang/spacectl/default.nix { inherit nixpkgs; };
+    gattai = import ./golang/gattai/default.nix { nixpkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/de80d1d04ee691279e1302a1128c082bbda3ab01.tar.gz") { }; };
   };
 
   # JetBrains IDE
@@ -31,4 +32,4 @@ let
 in
 
 # merge
-npm // shell // python // golang // dotnet // jetbrains // dotnet
+npm // shell // python // golang // jetbrains

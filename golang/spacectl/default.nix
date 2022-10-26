@@ -17,5 +17,5 @@ buildGoModule rec {
 
   doCheck = false;
 
-  buildFlagsArray = [ "-ldflags=-w -s -a -installsuffix cgo" ];
+  ldflags = [ "-w" "-s" "-a" ];
 }

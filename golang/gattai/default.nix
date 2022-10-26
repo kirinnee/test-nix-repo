@@ -1,21 +1,22 @@
 { nixpkgs ? import <nixpkgs> { } }:
 with nixpkgs;
 buildGoModule rec {
-  pname = "gattai";
+  name = "gattai";
   version = "v0.1.1";
 
   meta = {
     owner = "tr8team";
     repo = "gattai";
-    rev = version;
-    sha256 = "03za0mr0hk7yyksinjpxrnvn90dihdwvijzx33rzpa786jcmjrn9";
   };
 
-  src = fetchFromGitHub meta;
+  src = fetchurl {
+    url = "https://github.com/${meta.owner}/${meta.repo}/archive/refs/tags/${version}.tar.gz";
+    sha256 = "sha256-Q6ZT/vPtUJvzQvbjVbIREEoLgweK2ulF0QD7m+xdWqo=";
+  };
 
-  vendorSha256 = "sha256-MYgCOOQJ7Ge0LbTxOkQWhxzqTxAgrxYmBs+WIkFxBz4=";
+  vendorSha256 = "MYgCOOQJ7Ge0LbTxOkQWhxzqTxAgrxYmBs+WIkFxBz4=";
 
   doCheck = false;
 
-  buildFlagsArray = [ "-ldflags=-w -s -a -installsuffix cgo" ];
+  ldflags = [ "-w" "-s" "-a" ];
 }

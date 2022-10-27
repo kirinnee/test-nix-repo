@@ -25,11 +25,11 @@ let
   };
 
   # JetBrains IDE
-  # jetbrains = import ./jetbrains/default.nix { inherit nixpkgs; };
+  jetbrains = import ./jetbrains/default.nix { inherit nixpkgs; };
 
   # dotnet
   dotnet = import ./nuget/default.nix { inherit nixpkgs; };
 in
 
 # merge
-npm // shell // python // golang
+npm // shell // python // golang // jetbrains

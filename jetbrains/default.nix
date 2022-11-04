@@ -71,4 +71,22 @@ let patchJetBrains = import ./editor.nix { inherit nixpkgs; }; in
       extraWrapperArgs = [ ];
     }
   );
+
+  idea-u = jetbrains.idea-ultimate.overrideAttrs (finalAttr: prevAttr:
+    patchJetBrains
+      {
+        inherit finalAttr prevAttr;
+        shortProduct = "IDEA";
+        extraLdPath = [ zlib ];
+        extraWrapperArgs = [
+          ''--set M2_HOME "${maven}/maven"''
+          ''--set M2 "${maven}/maven/bin"''
+        ];
+      } // (if stdenv.isLinux then {
+      src = fetchurl {
+        url = "https://download.jetbrains.com/idea/ideaIU-${finalAttr.version}.tar.gz";
+        sha256 = "sha256-4fnegXPOyfcWaJTWa4K4ne5NqQIsBTZtGS9hEpVhhLM";
+      };
+    } else { })
+  );
 }

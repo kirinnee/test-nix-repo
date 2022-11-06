@@ -22,6 +22,7 @@ let
     narwhal_0_3_11 = import ./golang/narwhal/0.3.11.nix { inherit nixpkgs; };
     spacectl = import ./golang/spacectl/default.nix { inherit nixpkgs; };
     gattai = import ./golang/gattai/default.nix { inherit nixpkgs; };
+    nix-share = import ./golang/nix-share/default.nix { inherit nixpkgs; };
   };
 
   # JetBrains IDE

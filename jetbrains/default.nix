@@ -3,7 +3,8 @@ with nixpkgs;
 let patchJetBrains = import ./editor.nix { inherit nixpkgs; }; in
 {
   # Tested
-  goland = jetbrains.goland.overrideAttrs (finalAttr: prevAttr:
+  goland = if stdenv.isDarwin then jetbrains.goland else
+  jetbrains.goland.overrideAttrs (finalAttr: prevAttr:
     patchJetBrains {
       inherit finalAttr prevAttr;
       shortProduct = "Goland";
@@ -13,7 +14,8 @@ let patchJetBrains = import ./editor.nix { inherit nixpkgs; }; in
   );
 
   # Tested
-  clion = jetbrains.clion.overrideAttrs (finalAttr: prevAttr:
+  clion = if stdenv.isDarwin then jetbrains.clion else
+  jetbrains.clion.overrideAttrs (finalAttr: prevAttr:
     patchJetBrains {
       inherit finalAttr prevAttr;
       shortProduct = "CLion";
@@ -23,7 +25,8 @@ let patchJetBrains = import ./editor.nix { inherit nixpkgs; }; in
   );
 
   # Tested
-  phpstorm = jetbrains.phpstorm.overrideAttrs (finalAttr: prevAttr:
+  phpstorm = if stdenv.isDarwin then jetbrains.phpstorm else
+  jetbrains.phpstorm.overrideAttrs (finalAttr: prevAttr:
     patchJetBrains {
       inherit finalAttr prevAttr;
       shortProduct = "PhpStorm";
@@ -33,7 +36,8 @@ let patchJetBrains = import ./editor.nix { inherit nixpkgs; }; in
   );
 
   # Tested
-  pycharm = jetbrains.pycharm-professional.overrideAttrs (finalAttr: prevAttr:
+  pycharm = if stdenv.isDarwin then jetbrains.pycharm-professional else
+  jetbrains.pycharm-professional.overrideAttrs (finalAttr: prevAttr:
     patchJetBrains {
       inherit finalAttr prevAttr;
       shortProduct = "PyCharm";
@@ -43,7 +47,8 @@ let patchJetBrains = import ./editor.nix { inherit nixpkgs; }; in
   );
 
   # Tested
-  rider = jetbrains.rider.overrideAttrs (finalAttr: prevAttr:
+  rider = if stdenv.isDarwin then jetbrains.rider else
+  jetbrains.rider.overrideAttrs (finalAttr: prevAttr:
     patchJetBrains {
       inherit finalAttr prevAttr;
       shortProduct = "Rider";
@@ -53,7 +58,8 @@ let patchJetBrains = import ./editor.nix { inherit nixpkgs; }; in
   );
 
   # Tested
-  ruby-mine = jetbrains.ruby-mine.overrideAttrs (finalAttr: prevAttr:
+  ruby-mine = if stdenv.isDarwin then jetbrains.ruby-mine else
+  jetbrains.ruby-mine.overrideAttrs (finalAttr: prevAttr:
     patchJetBrains {
       inherit finalAttr prevAttr;
       shortProduct = "RubyMine";
@@ -63,7 +69,8 @@ let patchJetBrains = import ./editor.nix { inherit nixpkgs; }; in
   );
 
   # Tested
-  webstorm = jetbrains.webstorm.overrideAttrs (finalAttr: prevAttr:
+  webstorm = if stdenv.isDarwin then jetbrains.webstorm else
+  jetbrains.webstorm.overrideAttrs (finalAttr: prevAttr:
     patchJetBrains {
       inherit finalAttr prevAttr;
       shortProduct = "WebStorm";
@@ -72,7 +79,8 @@ let patchJetBrains = import ./editor.nix { inherit nixpkgs; }; in
     }
   );
 
-  idea-u = jetbrains.idea-ultimate.overrideAttrs (finalAttr: prevAttr:
+  idea-u = if stdenv.isDarwin then jetbrains.idea-ultimate else
+  jetbrains.idea-ultimate.overrideAttrs (finalAttr: prevAttr:
     patchJetBrains
       {
         inherit finalAttr prevAttr;

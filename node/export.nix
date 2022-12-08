@@ -6,6 +6,11 @@ let
   };
 in
 with n;
+({
+
+  inherit cyanprint semantic-release-cli vercel;
+} //
+(if nixpkgs.stdenv.isDarwin then { } else
 {
   sg = n."@atomi-user-first/semantic-generator".override {
     buildInputs = [
@@ -17,5 +22,4 @@ with n;
       makeWrapper "$out/bin/sg" --prefix PATH : ${nixpkgs.lib.makeBinPath [ nixpkgs.nodePackages.pnpm ]}"
     '';
   };
-  inherit cyanprint semantic-release-cli vercel;
-}
+}))

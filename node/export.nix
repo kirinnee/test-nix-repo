@@ -12,7 +12,10 @@ with n;
       npkgs."20th May 2020 Unstable".vips
       npkgs."20th May 2020 Unstable".nodePackages.pnpm
     ];
-    nativeBuildInputs = [ npkgs."20th May 2020 Unstable".pkg-config ];
+    nativeBuildInputs = [ npkgs."20th May 2020 Unstable".pkg-config nixpkgs.makeWrapper ];
+    postInstall = ''
+      makeWrapper "$out/bin/sg" --prefix PATH : ${nixpkgs.lib.makeBinPath [ nixpkgs.nodePackages.pnpm ]}"
+    '';
   };
   inherit cyanprint semantic-release-cli vercel;
 }

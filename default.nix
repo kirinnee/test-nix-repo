@@ -26,7 +26,7 @@ let
   };
 
   # JetBrains IDE
-  jetbrains = import ./jetbrains/default.nix { inherit nixpkgs; };
+  jetbrains = import ./jetbrains/default.nix { nixpkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/a5f661b80e4c163510a5013b585a040a5c7ef55e.tar.gz") { }; };
 
   # dotnet
   dotnet = import ./nuget/default.nix { inherit nixpkgs; };

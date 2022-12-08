@@ -9,6 +9,7 @@ let
   # Python
   python = {
     # gitlint = import ./python/gitlint/default.nix { inherit nixpkgs; };
+    aws-export-credentials = import ./python/aws-export-credentials/default.nix { inherit nixpkgs; };
   };
 
   # Go

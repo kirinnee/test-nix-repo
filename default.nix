@@ -18,7 +18,7 @@ let
 
   # Go
   golang = {
-    narwhal = import ./golang/narwhal/default.nix { inherit nixpkgs; };
+    narwhal = import ./golang/narwhal/default.nix { nixpkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/7e72265b08d4c60f414a0f3ab162e24648e84342.tar.gz") { }; };
     spacectl = import ./golang/spacectl/default.nix { inherit nixpkgs; };
     gattai = import ./golang/gattai/default.nix { inherit nixpkgs; };
     nix-share = import ./golang/nix-share/default.nix { inherit nixpkgs; };

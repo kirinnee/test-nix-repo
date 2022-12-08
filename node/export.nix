@@ -19,7 +19,7 @@ with n;
     ];
     nativeBuildInputs = [ npkgs."20th May 2020 Unstable".pkg-config nixpkgs.makeWrapper ];
     postInstall = ''
-      makeWrapper "$out/bin/sg" --prefix PATH : ${nixpkgs.lib.makeBinPath [ nixpkgs.nodePackages.pnpm ]}
+      makeWrapper "$out/bin/sg" --set PATH ${nixpkgs.lib.makeBinPath [ nixpkgs.nodePackages.pnpm ]}
     '';
   };
 }))

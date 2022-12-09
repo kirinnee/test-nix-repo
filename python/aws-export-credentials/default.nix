@@ -1,5 +1,19 @@
 { nixpkgs ? import <nixpkgs> { }, pyPkgs ? nixpkgs.pkgs.python3Packages }:
 with pyPkgs;
+let
+  bc = buildPythonPackage rec {
+    pname = "botocore";
+    version = "1.29.26";
+    src = fetchPypi {
+      inherit version pname;
+      sha256 = "f71220fe5a5d393c391ed81a291c0d0985f147568c56da236453043f93727a34";
+    };
+    checkPhase = ''
+      echo "no test!"
+    '';
+    propagatedBuildInputs = [ urllib3 jmespath python-dateutil docutils pytest ];
+  };
+in
 buildPythonPackage rec {
   pname = "aws-export-credentials";
   version = "0.13.0";
@@ -10,5 +24,5 @@ buildPythonPackage rec {
   checkPhase = ''
     echo "no test!"
   '';
-  propagatedBuildInputs = [ click sh botocore ];
+  propagatedBuildInputs = [ click sh bc ];
 }

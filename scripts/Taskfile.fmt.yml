@@ -1,0 +1,25 @@
+version: "3"
+
+tasks:
+  default:
+    cmds:
+      - task: md
+      - task: yaml
+      - task: nix
+
+  md:
+    desc: Formats Markdown with prettier
+    cmds:
+      - prettier -w "**/*.MD"
+      - prettier -w "**/*.md"
+
+  yaml:
+    desc: Formats YAML with prettier
+    cmds:
+      - prettier -w "**/*.yaml"
+      - prettier -w "**/*.yml"
+
+  nix:
+    desc: Formats Nix files
+    cmds:
+      - nixpkgs-fmt .

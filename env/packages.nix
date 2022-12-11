@@ -23,10 +23,18 @@ let
         inherit bash gitlint pre-commit git shfmt shellcheck nixpkgs-fmt nix-prefetch sd coreutils;
       }
     );
+
+    "nix Unstable 11th Dec 2022" = (
+      with import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/f82f0ec1b70b2879c3f3d9a1015a05c73a90a17c.tar.gz") { };
+      {
+        inherit bundix;
+      }
+    );
   };
 in
 with pkgs;
 
 pkgs.latest //
 pkgs.self //
-pkgs."nix Unstable 5th Oct 2022"
+pkgs."nix Unstable 5th Oct 2022" //
+pkgs."nix Unstable 11th Dec 2022"

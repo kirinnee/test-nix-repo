@@ -12,6 +12,7 @@ with pkgs;
     coreutils
     sd
     bash
+    bundix
   ];
   lint = [
     gitlint

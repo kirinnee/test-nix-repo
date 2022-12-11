@@ -25,7 +25,10 @@ let
 
   # dotnet
   dotnet = import ./nuget/default.nix { inherit nixpkgs; };
+
+  # ruby
+  ruby = import ./ruby/default.nix { inherit nixpkgs; };
 in
 
 # merge
-npm // shell // python // golang // jetbrains
+npm // shell // python // golang // jetbrains // ruby

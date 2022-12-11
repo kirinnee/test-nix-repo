@@ -1,7 +1,9 @@
 version: "3"
 
 includes:
-  ci: ./scripts/ci/ci.Taskfile.yaml
+  ci: ./scripts/Taskfile.ci.yml
+  fmt: ./scripts/Taskfile.fmt.yml
+  gen: ./scripts/Taskfile.gen.yml
 
 tasks:
   isolate:
@@ -35,7 +37,7 @@ tasks:
       - task: clean
 
   fmt:
-    desc: Run all formatting supported.
+    desc: Run all formatting supported
     summary: |
       Runs all formatting supported.
 
@@ -43,77 +45,8 @@ tasks:
       2. Runs fmt:yaml, which formats all YAML using prettier
       3. Runs fmt:nix, which formats all Nix files with nixpkgs-fmt
     cmds:
-      - task: fmt:md
-      - task: fmt:yaml
-      - task: fmt:nix
+      - task: fmt:default
 
-  fmt:md:
-    desc: Formats Markdown with prettier
-    cmds:
-      - prettier -w "**/*.MD"
-      - prettier -w "**/*.md"
-
-  fmt:yaml:
-    desc: Formats YAML with prettier
-    cmds:
-      - prettier -w "**/*.yaml"
-      - prettier -w "**/*.yml"
-
-  fmt:nix:
-    desc: Formats Nix files
-    cmds:
-      - nixpkgs-fmt .
-
-  get:go:sha:
-    desc: Calculate SHA of Go module using the GitHub information
-    summary: |
-      Calculate SHA of Go module using the GitHub information
-
-      Usage:
-      pls get:go:sha -- <nix-identifier> <path to nix file in golang>
-
-      example:
-      1. In default.nix
-         { narwhal = import golang/narwhal/default.nix ... }
-
-         command to run: pls get:go:sha -- narwhal narwhal/default
-
-      2. In default.nix
-         { narwhal_0_3_11 = import ./golang/narwhal/0.3.11.nix ...}
-
-         command to run: pls get:go:sha -- narwhal_0_3_11 narwhal/0.3.11
-    cmds:
-      - ./scripts/go-sha.sh {{.CLI_ARGS}}
-
-  get:go:vendor:sha:
-    desc: Calculate SHA of Go module's vendor (depedency/go.sum)'s packages
-    summary: |
-      Calculate SHA of Go module using the GitHub information
-
-      Usage:
-      pls get:go:vendor:sha -- <nix-identifier> <path to nix file in golang>
-
-      example:
-      1. In default.nix
-         { narwhal = import golang/narwhal/default.nix ... }
-
-         command to run: pls get:go:vendor:sha -- narwhal narwhal/default
-
-      2. In default.nix
-         { narwhal_0_3_11 = import ./golang/narwhal/0.3.11.nix ...}
-
-         command to run: pls get:go:vendor:sha -- narwhal_0_3_11 narwhal/0.3.11
-    cmds:
-      - ./scripts/golang-vendor.sh {{.CLI_ARGS}}
-
-  gen:node:
-    desc: Generates Node package Nix files as CLI binaries
-    cmds:
-      - node2nix -i ./node/node-packages.json -e ./node/node-env.nix -o ./node/node-packages.nix -c ./node/composition.nix
-  gen:node:silent:
-    desc: Genreates Node package Nix files as CLI binaries, without noisy output
-    cmds:
-      - node2nix -i ./node/node-packages.json -e ./node/node-env.nix -o ./node/node-packages.nix -c ./node/composition.nix 1>/dev/null
   cfg:scripts:
     desc: Make scripts executable
     cmds:

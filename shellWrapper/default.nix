@@ -5,4 +5,5 @@ with (import ./pls/default.nix { inherit nixpkgs trivialBuilders; });
 {
   inherit pls please plz;
   awsmfa = import ./awsmfa/default.nix { inherit nixpkgs trivialBuilders; };
+  precommit-patch-nix = import ./precommit-patch-nix/default.nix { inherit nixpkgs trivialBuilders; };
 }

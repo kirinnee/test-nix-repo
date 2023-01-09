@@ -7,7 +7,6 @@ let
 in
 with n;
 ({
-
   inherit cyanprint semantic-release-cli vercel;
 } //
 (if nixpkgs.stdenv.isDarwin then { } else

@@ -1,7 +1,8 @@
 let
   nixpkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/d4f8e53720b554b6dac71c7ec62b3b51158905f9.tar.gz") { };
   # Node
-  npm = import ./node/export.nix { inherit nixpkgs; nodejs = nixpkgs.nodejs-14_x; };
+  node14 = import ./node/14/export.nix { inherit nixpkgs; nodejs = nixpkgs.nodejs-14_x; };
+  node16 = import ./node/16/export.nix { inherit nixpkgs; nodejs = nixpkgs.nodejs-16_x; };
 
   # Shell
   shell = (import ./shellWrapper/default.nix { inherit nixpkgs; });
@@ -31,4 +32,4 @@ let
 in
 
 # merge
-npm // shell // python // golang // jetbrains // ruby
+node14 // node16 // shell // python // golang // jetbrains // ruby

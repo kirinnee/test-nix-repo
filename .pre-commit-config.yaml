@@ -21,6 +21,7 @@ repos:
         name: Format YAML with prettier
         entry: pls fmt:yaml
         files: ^.*\.(yaml|yml)$
+        exclude: ^.*result.*$
         pass_filenames: false
         language: system
 

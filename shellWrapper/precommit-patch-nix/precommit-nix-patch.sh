@@ -28,8 +28,7 @@ dir="$2"
 
 find "${dir}"/.git/hooks/* ! -name "*.sample" | while read -r line; do
 	echo "🧩 Replacing '$line'..."
-	sed -i '1d' "$line"
-	sed -i '1s;^;#!nix-shell ../../nix/shells.nix -A ci -i bash\n;' "$line"
-	sed -i "1s;^;#!$(command -v nix-shell)\n;" "$line"
+	p="export PATH=\"${PATH}:\$PATH\""
+	sed -i "4 i $p" "$line"
 done
 echo "✅ Pre-commit patched!"

@@ -22,7 +22,7 @@ let
   };
 
   # JetBrains IDE
-  jetbrains = import ./jetbrains/default.nix { nixpkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/a5f661b80e4c163510a5013b585a040a5c7ef55e.tar.gz") { }; };
+  jetbrains = import ./jetbrains/default.nix { nixpkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/70414d340baab99231000e4af02ec812e7d0c17b.tar.gz") { }; };
 
   # dotnet
   dotnet = import ./nuget/default.nix { inherit nixpkgs; };

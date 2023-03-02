@@ -1,3 +1,4 @@
 [
-  "@upstash/cli"
+  "@upstash/cli",
+  "action-docs"
 ]

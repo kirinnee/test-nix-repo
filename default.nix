@@ -20,6 +20,7 @@ let
     spacectl = import ./golang/spacectl/default.nix { inherit nixpkgs; };
     gattai = import ./golang/gattai/default.nix { inherit nixpkgs; };
     nix-share = import ./golang/nix-share/default.nix { inherit nixpkgs; };
+    kubefwd = import ./golang/kubefwd/default.nix { inherit nixpkgs; };
   };
 
   # JetBrains IDE

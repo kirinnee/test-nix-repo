@@ -23,6 +23,7 @@ let
     gattai = import ./golang/gattai/default.nix { inherit nixpkgs; };
     nix-share = import ./golang/nix-share/default.nix { inherit nixpkgs; };
     kubefwd = import ./golang/kubefwd/default.nix { inherit nixpkgs; };
+    flyctl = import ./golang/flyctl/default.nix { inherit nixpkgs; };
   };
 
   # dotnet

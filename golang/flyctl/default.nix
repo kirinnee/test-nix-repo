@@ -1,16 +1,16 @@
 { nixpkgs ? import <nixpkgs> { } }:
 with nixpkgs;
 buildGoModule rec {
-  version = "0.1.3";
+  version = "0.1.22";
   pname = "flyctl";
 
   src = fetchFromGitHub {
     owner = "superfly";
     repo = "flyctl";
     rev = "v${version}";
-    sha256 = "sha256-ZhlBOZHUN8fHgbxR85+oy7mIRHKAhb02MTtkhprA2V0=";
+    sha256 = "sha256-cKyr+x2+j3fWWBzwISJttm/0yIl6cH+m1tkWZQicYX0=";
   };
-  vendorHash = "sha256-w/8cCtu+SKhooutKt810pnbGR1a3hWHjhNmzLVU0Zxk=";
+  vendorHash = "sha256-tqOZJu/QeB6w2kvTSszyFYmJbcB44auQoVNz1NYltRE=";
 
   subPackages = [ "." ];
 

@@ -1,4 +1,4 @@
-{ trivialBuilders, nixpkgs ? import <nixpkgs> { } }:
+{ trivialBuilders, nixpkgs }:
 
 with nixpkgs;
 let version = go-task.version; in

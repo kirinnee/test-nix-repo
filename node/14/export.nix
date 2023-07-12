@@ -1,9 +1,6 @@
-{ nixpkgs ? import <nixpkgs> { }, nodejs }:
+{ nixpkgs, nixpkgs_20_May_2020, nodejs }:
 let
   n = import ./composition.nix { pkgs = nixpkgs; inherit nodejs; };
-  npkgs = {
-    "20th May 2020 Unstable" = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/48037fd90426e44e4bf03e6479e88a11453b9b66.tar.gz") { };
-  };
 in
 with n;
 ({
@@ -13,10 +10,10 @@ with n;
 {
   sg = n."@atomi-user-first/semantic-generator".override {
     buildInputs = [
-      npkgs."20th May 2020 Unstable".vips
-      npkgs."20th May 2020 Unstable".nodePackages.pnpm
+      nixpkgs_20_May_2020.vips
+      nixpkgs_20_May_2020.nodePackages.pnpm
     ];
-    nativeBuildInputs = [ npkgs."20th May 2020 Unstable".pkg-config nixpkgs.makeWrapper ];
+    nativeBuildInputs = [ nixpkgs_20_May_2020.pkg-config nixpkgs.makeWrapper ];
     postFixup = ''
       wrapProgram $out/bin/sg --prefix PATH : ${nixpkgs.lib.makeBinPath [ nixpkgs.nodePackages.pnpm ]}
     '';

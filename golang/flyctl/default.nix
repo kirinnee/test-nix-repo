@@ -1,4 +1,4 @@
-{ nixpkgs ? import <nixpkgs> { } }:
+{ nixpkgs }:
 with nixpkgs;
 buildGoModule rec {
   version = "0.1.22";

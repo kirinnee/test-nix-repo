@@ -1,4 +1,4 @@
-{ nixpkgs ? import <nixpkgs> { } }:
+{ nixpkgs }:
 with nixpkgs;
 buildGoModule rec {
   name = "kubefwd";

@@ -21,4 +21,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NIX_PATH: nixpkgs=channel:nixos-unstable
           NIXPKGS_ALLOW_UNFREE: "1"
-        run: nix develop .#releaser -c scripts/ci/release.sh
+        run: nix --extra-experimental-features nix-command develop .#releaser -c scripts/ci/release.sh

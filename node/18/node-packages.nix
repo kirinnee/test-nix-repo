@@ -148,13 +148,13 @@ let
         sha512 = "7yAQpD2UMJzLi1Dqv7qFYnPbaPx7ZfFK6PiIxQ4PfkGPyNyl2Ugx+a/umUonmKqjhM4DnfbMvdX6otXq83soQQ==";
       };
     };
-    "figlet-1.5.2" = {
+    "figlet-1.6.0" = {
       name = "figlet";
       packageName = "figlet";
-      version = "1.5.2";
+      version = "1.6.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/figlet/-/figlet-1.5.2.tgz";
-        sha512 = "WOn21V8AhyE1QqVfPIVxe3tupJacq1xGkPTB4iagT6o+P2cAgEOOwIxMftr4+ZCTI6d551ij9j61DFr0nsP2uQ==";
+        url = "https://registry.npmjs.org/figlet/-/figlet-1.6.0.tgz";
+        sha512 = "31EQGhCEITv6+hi2ORRPyn3bulaV9Fl4xOdR169cBzH/n1UqcxsiSB/noo6SJdD7Kfb1Ljit+IgR1USvF/XbdA==";
       };
     };
     "formdata-polyfill-4.0.10" = {
@@ -265,13 +265,13 @@ let
         sha512 = "/jKZoMpw0F8GRwl4/eLROPA3cfcXtLApP0QzLmUT/HuPCZWyB7IY9ZrMeKw2O/nFIqPQB3PVM9aYm0F312AXDQ==";
       };
     };
-    "node-fetch-3.3.0" = {
+    "node-fetch-3.3.1" = {
       name = "node-fetch";
       packageName = "node-fetch";
-      version = "3.3.0";
+      version = "3.3.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/node-fetch/-/node-fetch-3.3.0.tgz";
-        sha512 = "BKwRP/O0UvoMKp7GNdwPlObhYGB5DQqwhEDQlNKuoqwVYSxkSZCSbHjnFFmUEtwSKRPU4kNK8PbDYYitwaE3QA==";
+        url = "https://registry.npmjs.org/node-fetch/-/node-fetch-3.3.1.tgz";
+        sha512 = "cRVc/kyto/7E5shrWca1Wsea4y6tL9iYJE5FBCius3JQfb/4P4I295PfhgbJQBLTx6lATE4z+wK0rPM4VS2uow==";
       };
     };
     "once-1.4.0" = {
@@ -382,13 +382,13 @@ let
         sha512 = "0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA==";
       };
     };
-    "yargs-17.7.1" = {
+    "yargs-17.7.2" = {
       name = "yargs";
       packageName = "yargs";
-      version = "17.7.1";
+      version = "17.7.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/yargs/-/yargs-17.7.1.tgz";
-        sha512 = "cwiTb08Xuv5fqF4AovYacTFNxk62th7LKJ6BL9IGUpTJrWoU7/7WdQGTP2SjKf1dUNBGzDd28p/Yfs/GI6JrLw==";
+        url = "https://registry.npmjs.org/yargs/-/yargs-17.7.2.tgz";
+        sha512 = "7dSzzRQ++CKnNI/krKnYRV7JKKPUXMEh61soaHKg9mrWEhzFWhFnxPxGl+69cD1Ou63C13NUPCnmIcrvqCuM6w==";
       };
     };
     "yargs-parser-21.1.1" = {
@@ -419,7 +419,7 @@ in
       sources."formdata-polyfill-4.0.10"
       sources."isexe-2.0.0"
       sources."node-domexception-1.0.0"
-      sources."node-fetch-3.3.0"
+      sources."node-fetch-3.3.1"
       sources."web-streams-polyfill-3.2.1"
       sources."which-2.0.2"
     ];
@@ -436,10 +436,10 @@ in
   action-docs = nodeEnv.buildNodePackage {
     name = "action-docs";
     packageName = "action-docs";
-    version = "1.1.1";
+    version = "1.2.0";
     src = fetchurl {
-      url = "https://registry.npmjs.org/action-docs/-/action-docs-1.1.1.tgz";
-      sha512 = "Woa+6Uz81Bf0g7UjUfQOC1HyfSfCEKGeAxqu6JXqIQgpZ+INcjUfVZtSZZsppXJeEYiQh99PQjJPeQ9UzG3pUQ==";
+      url = "https://registry.npmjs.org/action-docs/-/action-docs-1.2.0.tgz";
+      sha512 = "qSyslpGvLfrUSmYqFthlCcSbUCkDe4sr4Q3/imnUFwaH5gdD94WO+bjY4AfYJB2iBf+iNs0JYHU8UpCpnjSodg==";
     };
     dependencies = [
       sources."ansi-regex-5.0.1"
@@ -454,7 +454,7 @@ in
       sources."concat-map-0.0.1"
       sources."emoji-regex-8.0.0"
       sources."escalade-3.1.1"
-      sources."figlet-1.5.2"
+      sources."figlet-1.6.0"
       sources."fs.realpath-1.0.0"
       sources."get-caller-file-2.0.5"
       sources."glob-7.2.3"
@@ -474,7 +474,7 @@ in
       sources."wrap-ansi-7.0.0"
       sources."wrappy-1.0.2"
       sources."y18n-5.0.8"
-      sources."yargs-17.7.1"
+      sources."yargs-17.7.2"
       sources."yargs-parser-21.1.1"
     ];
     buildInputs = globalBuildInputs;

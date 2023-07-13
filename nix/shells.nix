@@ -1,5 +1,8 @@
-{ nixpkgs ? import <nixpkgs> { } }:
-let env = import ./env.nix { inherit nixpkgs; }; in
+{ registry }:
+let
+  env = import ./env.nix { inherit registry; };
+  nixpkgs = registry.dev-nixpkgs;
+in
 {
   dev = nixpkgs.mkShell {
     buildInputs = env.minimal ++ env.lint ++ [ ];

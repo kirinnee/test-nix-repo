@@ -16,8 +16,8 @@ tasks:
   yaml:
     desc: Formats YAML with prettier
     cmds:
-      - prettier -w "**/*.yaml"
-      - prettier -w "**/*.yml"
+      - prettier -w "**/*.yaml" "!.direnv/**/*.*"
+      - prettier -w "**/*.yml" "!.direnv/**/*.*"
 
   nix:
     desc: Formats Nix files

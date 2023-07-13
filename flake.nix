@@ -2,42 +2,68 @@
   description = "Atomi Flake Registry";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    flake-utils.url = "github:numtide/flake-utils";
+    # main
+    npkgs.url = "github:nixos/nixpkgs/nixos-23.05";
+    npkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+
+    # dev
+    dev-atomi_classic.url = "github:kirinnee/test-nix-repo/classic";
+    dev-npkgs.url = "github:nixos/nixpkgs/nixos-23.05";
+    dev-npkgs-unstable-05-Oct-2022.url = "nixpkgs/de80d1d04ee691279e1302a1128c082bbda3ab01";
+    dev-npkgs-unstable-11-Dec-2022.url = "nixpkgs/f82f0ec1b70b2879c3f3d9a1015a05c73a90a17c";
   };
 
   outputs =
     { self
-    , nixpkgs
-    , nixpkgs-unstable
+    , npkgs
+    , npkgs-unstable
+    , flake-utils
+    , dev-npkgs
+    , dev-npkgs-unstable-05-Oct-2022
+    , dev-npkgs-unstable-11-Dec-2022
+    , dev-atomi_classic
     }@inputs:
-    let
-      inherit (self) outputs;
-      forAllSystems = nixpkgs.lib.genAttrs [
-        "aarch64-linux"
-        "i686-linux"
-        "x86_64-linux"
-        "aarch64-darwin"
-        "x86_64-darwin"
-      ];
-    in
-    rec {
-      packages = forAllSystems (system:
+    flake-utils.lib.eachDefaultSystem
+      (
+        system:
         let
-          pkgs = nixpkgs.legacyPackages.${system};
-          pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
+          nixpkgs = npkgs.legacyPackages.${system};
+          nixpkgs-unstable = npkgs-unstable.legacyPackages.${system};
+          dev-nixpkgs = dev-npkgs.legacyPackages.${system};
+          dev-nixpkgs-unstable-05-Oct-2022 = dev-npkgs-unstable-05-Oct-2022.legacyPackages.${system};
+          dev-nixpkgs-unstable-11-Dec-2022 = dev-npkgs-unstable-11-Dec-2022.legacyPackages.${system};
+          atomi_classic = dev-atomi_classic.packages.${system};
         in
-        import ./default.nix {
-          nixpkgs = pkgs;
-          nixpkgs-unstable = pkgs-unstable;
+        rec {
+          packages = import ./default.nix {
+            inherit
+              nixpkgs
+              nixpkgs-unstable;
+          };
+          devShells =
+            let
+              shells = import ./nix/shells.nix {
+                registry = {
+                  inherit
+                    atomi_classic
+                    dev-nixpkgs
+                    dev-nixpkgs-unstable-11-Dec-2022
+                    dev-nixpkgs-unstable-05-Oct-2022;
+                  self = packages;
+                };
+              };
+            in
+            {
+              default = shells.dev;
+              ci = shells.ci;
+              releaser = shells.releaser;
+            };
+          defaultPackage = nixpkgs.symlinkJoin
+            {
+              name = "all";
+              paths = builtins.attrValues packages;
+            };
         }
       );
-      defaultPackage = forAllSystems (system:
-        nixpkgs.legacyPackages.${system}.symlinkJoin
-          {
-            name = "all";
-            paths = builtins.attrValues packages.${system};
-          }
-      );
-    };
 }

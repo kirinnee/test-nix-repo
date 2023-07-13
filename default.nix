@@ -1,8 +1,7 @@
-{ nixpkgs, nixpkgs-unstable }:
+{ nixpkgs ? import <nixpkgs>, nixpkgs-unstable ? import <nixpkgs> }:
 let
-  # node14 = import ./node/14/export.nix { inherit nixpkgs nixpkgs_20_May_2020; nodejs = nixpkgs.nodejs-14_x; };
-  # node16 = import ./node/16/export.nix { inherit nixpkgs; nodejs = nixpkgs.nodejs-16_x; };
 
+  node18 = import ./node/18/export.nix { inherit nixpkgs; nodejs = nixpkgs.nodejs-18_x; };
   # Shell
   shell = (import ./shellWrapper/default.nix { inherit nixpkgs; });
 
@@ -28,4 +27,4 @@ let
 in
 
 # merge
-shell // python // golang // ruby
+shell // python // golang // ruby // node18

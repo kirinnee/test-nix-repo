@@ -1,19 +1,20 @@
-{ nixpkgs ? import <nixpkgs> { } }:
+{ registry }:
 let
   pkgs = {
-    latest = (
-      with nixpkgs;
-      { }
-    );
     self = (
-      let self = import (fetchTarball "https://github.com/kirinnee/test-nix-repo/archive/refs/tags/v8.1.0.tar.gz"); in
-      with self;
+      with registry.self;
       {
-        inherit pls please plz narwhal sg vercel;
+        inherit pls;
+      }
+    );
+    ac = (
+      with registry.atomi_classic;
+      {
+        inherit sg;
       }
     );
     "nix Unstable 5th Oct 2022" = (
-      with import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/de80d1d04ee691279e1302a1128c082bbda3ab01.tar.gz") { };
+      with registry.dev-nixpkgs-unstable-05-Oct-2022;
       {
         npm = nodePackages.npm;
         pnpm = nodePackages.pnpm;
@@ -25,16 +26,14 @@ let
     );
 
     "nix Unstable 11th Dec 2022" = (
-      with import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/f82f0ec1b70b2879c3f3d9a1015a05c73a90a17c.tar.gz") { };
+      with registry.dev-nixpkgs-unstable-11-Dec-2022;
       {
         inherit bundix;
       }
     );
   };
 in
-with pkgs;
-
-pkgs.latest //
 pkgs.self //
+pkgs.ac //
 pkgs."nix Unstable 5th Oct 2022" //
 pkgs."nix Unstable 11th Dec 2022"

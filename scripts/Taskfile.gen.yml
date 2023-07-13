@@ -48,23 +48,16 @@ tasks:
     cmds:
       - node2nix -i ./node/{{.NODE_VER}}/node-packages.json -e ./node/{{.NODE_VER}}/node-env.nix -o ./node/{{.NODE_VER}}/node-packages.nix -c ./node/{{.NODE_VER}}/composition.nix
 
-  node:14:
-    desc: Generate Node 14 packages Nix files as CLI binaries
+  node:18:
+    desc: Generate Node 18 packages Nix files as CLI binaries
     cmds:
       - task: node:base
         vars:
-          NODE_VER: 14
-  node:16:
-    desc: Generate Node 16 packages Nix files as CLI binaries
-    cmds:
-      - task: node:base
-        vars:
-          NODE_VER: 16
+          NODE_VER: 18
   node:
     desc: Generate all Node packages
     deps:
-      - node:14
-      - node:16
+      - node:18
 
   gem:
     desc: Generate Gem package Nix files as CLI binaries

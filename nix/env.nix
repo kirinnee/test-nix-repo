@@ -1,12 +1,10 @@
-{ nixpkgs ? import <nixpkgs> { } }:
-let pkgs = import ./packages.nix { inherit nixpkgs; }; in
+{ registry }:
+let pkgs = import ./packages.nix { inherit registry; }; in
 with pkgs;
 {
   minimal = [
     node2nix
     pls
-    please
-    plz
     git
     nix-prefetch
     coreutils

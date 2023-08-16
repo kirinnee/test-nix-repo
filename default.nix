@@ -24,7 +24,13 @@ let
 
   # ruby
   ruby = import ./ruby/default.nix { inherit nixpkgs; };
+
+  # bin wrapper
+  bin = {
+    infisical = import ./binWrapper/infisical.nix { inherit nixpkgs; };
+  };
+
 in
 
 # merge
-shell // python // golang // ruby // node18
+shell // python // golang // ruby // node18 // bin

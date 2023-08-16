@@ -1,12 +1,13 @@
 { nixpkgs }:
 with nixpkgs;
 buildGoModule rec {
-  name = "gattai";
+  pname = "gattai";
   version = "v0.1.1";
 
   meta = {
     owner = "tr8team";
     repo = "gattai";
+    rev = version;
   };
 
   src = fetchurl {

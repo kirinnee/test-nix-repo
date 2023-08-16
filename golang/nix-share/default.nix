@@ -1,7 +1,7 @@
 { nixpkgs ? import <nixpkgs> { } }:
 with nixpkgs;
 buildGoModule rec {
-  name = "nix-share";
+  pname = "nix-share";
   version = "v0.1.2";
 
   meta = {

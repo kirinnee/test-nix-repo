@@ -1,7 +1,7 @@
 { nixpkgs }:
 with nixpkgs;
 buildGoModule rec {
-  name = "kubefwd";
+  pname = "kubefwd";
   version = "1.22.4";
 
   meta = {

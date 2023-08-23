@@ -29,6 +29,7 @@ let
   # bin wrapper
   bin = {
     infisical = import ./binWrapper/infisical.nix { inherit nixpkgs; };
+    mirrord = import ./binWrapper/mirrord.nix { inherit nixpkgs; };
   };
 
 in

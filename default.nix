@@ -17,6 +17,7 @@ let
     nix-share = import ./golang/nix-share/default.nix { inherit nixpkgs; };
     kubefwd = import ./golang/kubefwd/default.nix { inherit nixpkgs; };
     flyctl = import ./golang/flyctl/default.nix { inherit nixpkgs; };
+    telepresence = import ./golang/telepresence/default.nix { inherit nixpkgs; };
   };
 
   # dotnet

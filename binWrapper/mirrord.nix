@@ -14,13 +14,13 @@ let
   archive_fmt = "tar.gz";
 
   sha256 = {
-    x86_64-linux = "sha256-Q4lioUsX4E4QqMA5RRO2HMnNQuOLCeYlwjcSkxANDhw=";
-    x86_64-darwin = "sha256-CfJFAtL0iC2NPlPI5MRvhWnbo8d358TuTRIQZ3Llguk=";
-    aarch64-linux = "sha256-oPIogrJ3mtXpx9pLF/NHaZf/Jz8bulE+NMrxzOUS6So=";
-    aarch64-darwin = "sha256-CfJFAtL0iC2NPlPI5MRvhWnbo8d358TuTRIQZ3Llguk=";
+    x86_64-linux = "sha256-S9aT5xXrxfAuUMi9pJjhgnndK77DJhR1ciHQ8ztKLDM=";
+    x86_64-darwin = "sha256-Atcs+Q/JTV+iDwa0wfRR5TITYqzpsP6nNnjvmVdHH0Q=";
+    aarch64-linux = "sha256-0hHx52fv08JIBfDGchbkVsx7FOSVbQo5etby2Bw6gRw=";
+    aarch64-darwin = "sha256-Atcs+Q/JTV+iDwa0wfRR5TITYqzpsP6nNnjvmVdHH0Q=";
   }.${system} or throwSystem;
 in
-let version = "3.61.0"; in
+let version = "3.65.2"; in
 let
   binary = fetchurl {
     url = "https://github.com/metalbear-co/mirrord/releases/download/${version}/mirrord_${plat}";

@@ -69,16 +69,16 @@
     },
     "dev-npkgs-unstable-20-Sep-2023": {
       "locked": {
-        "lastModified": 1694058953,
-        "narHash": "sha256-bCpOlJnz/YCmj0vdSoLcC9h4VhmTkmbLrsnyGKvFZRY=",
+        "lastModified": 1694959747,
+        "narHash": "sha256-CXQ2MuledDVlVM5dLC4pB41cFlBWxRw4tCBsFrq3cRk=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "e480fdf4a388f413fd4b57e9ff159562e9cc5b2f",
+        "rev": "970a59bd19eff3752ce552935687100c46e820a5",
         "type": "github"
       },
       "original": {
         "id": "nixpkgs",
-        "rev": "e480fdf4a388f413fd4b57e9ff159562e9cc5b2f",
+        "rev": "970a59bd19eff3752ce552935687100c46e820a5",
         "type": "indirect"
       }
     },

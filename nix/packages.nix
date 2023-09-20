@@ -42,4 +42,5 @@ in
 pkgs.self //
 pkgs.ac //
 pkgs."nix Unstable 5th Oct 2022" //
-pkgs."nix Unstable 11th Dec 2022"
+pkgs."nix Unstable 11th Dec 2022" //
+pkgs."nix Unstable 20th Sep 2023"

@@ -67,6 +67,21 @@
         "type": "indirect"
       }
     },
+    "dev-npkgs-unstable-20-Sep-2023": {
+      "locked": {
+        "lastModified": 1694058953,
+        "narHash": "sha256-bCpOlJnz/YCmj0vdSoLcC9h4VhmTkmbLrsnyGKvFZRY=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "e480fdf4a388f413fd4b57e9ff159562e9cc5b2f",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "rev": "e480fdf4a388f413fd4b57e9ff159562e9cc5b2f",
+        "type": "indirect"
+      }
+    },
     "flake-utils": {
       "inputs": {
         "systems": "systems"
@@ -171,6 +186,7 @@
         "dev-npkgs": "dev-npkgs",
         "dev-npkgs-unstable-05-Oct-2022": "dev-npkgs-unstable-05-Oct-2022",
         "dev-npkgs-unstable-11-Dec-2022": "dev-npkgs-unstable-11-Dec-2022",
+        "dev-npkgs-unstable-20-Sep-2023": "dev-npkgs-unstable-20-Sep-2023",
         "flake-utils": "flake-utils_2",
         "npkgs": "npkgs",
         "npkgs-unstable": "npkgs-unstable"

@@ -22,7 +22,7 @@ with pkgs;
     sg # for linting gitlint file
   ];
   releaser = [
-    pnpm
+    node20
     sg
     prettier
   ];

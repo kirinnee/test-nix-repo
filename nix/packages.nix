@@ -31,6 +31,12 @@ let
         inherit bundix;
       }
     );
+    "nix Unstable 20th Sep 2023" = (
+      with registry.dev-nixpkgs-unstable-20-Sep-2023;
+      {
+        node20 = nodejs_20;
+      }
+    );
   };
 in
 pkgs.self //

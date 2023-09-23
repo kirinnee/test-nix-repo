@@ -6,6 +6,7 @@
     # main
     npkgs.url = "github:nixos/nixpkgs/nixos-23.05";
     npkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    fenix.url = "github:nix-community/fenix";
 
     # dev
     dev-atomi_classic.url = "github:kirinnee/test-nix-repo/classic";
@@ -25,6 +26,7 @@
     , dev-npkgs-unstable-11-Dec-2022
     , dev-npkgs-unstable-20-Sep-2023
     , dev-atomi_classic
+    , fenix
     }@inputs:
     flake-utils.lib.eachDefaultSystem
       (
@@ -37,12 +39,15 @@
           dev-nixpkgs-unstable-11-Dec-2022 = dev-npkgs-unstable-11-Dec-2022.legacyPackages.${system};
           dev-nixpkgs-unstable-20-Sep-2023 = dev-npkgs-unstable-20-Sep-2023.legacyPackages.${system};
           atomi_classic = dev-atomi_classic.packages.${system};
+          fenixpkgs = fenix.packages.${system};
         in
         rec {
           packages = import ./default.nix {
             inherit
               nixpkgs
-              nixpkgs-unstable;
+              nixpkgs-unstable
+              ;
+            fenix = fenixpkgs;
           };
           devShells =
             let

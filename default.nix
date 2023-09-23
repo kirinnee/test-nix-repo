@@ -1,4 +1,4 @@
-{ nixpkgs ? import <nixpkgs>, nixpkgs-unstable ? import <nixpkgs> }:
+{ nixpkgs ? import <nixpkgs>, nixpkgs-unstable ? import <nixpkgs>, fenix }:
 let
 
   node18 = import ./node/18/export.nix { inherit nixpkgs; nodejs = nixpkgs.nodejs-18_x; };
@@ -32,7 +32,9 @@ let
     mirrord = import ./binWrapper/mirrord.nix { inherit nixpkgs; };
   };
 
+  rust = import ./rust/default.nix { inherit nixpkgs fenix; };
+
 in
 
 # merge
-shell // python // golang // ruby // node18 // bin
+shell // python // golang // ruby // node18 // bin // rust

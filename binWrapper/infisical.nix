@@ -14,15 +14,15 @@ let
   archive_fmt = "tar.gz";
 
   sha256 = {
-    x86_64-linux = "sha256-6d7jLKf3h3EiPiEw2tYAdwDe7EmaXh1ykaF4kQJZeog=";
-    x86_64-darwin = "sha256-xqXFOfQ7s4guCG8eK96w937RrL3WFiujWG7PwK50e9U=";
-    aarch64-linux = "sha256-wNCeLGQ1Zp0/O2wxcPTpy0LtTeoP/Znn5o/qFL686n8=";
-    aarch64-darwin = "sha256-9JKgeb5ymIs5MlMRBvjGlBKOjCtf+TecYbGjkHOIuxU=";
+    x86_64-linux = "sha256-KzBNXNUkL0bQ9AEXmD683j7mciTp3ApxivZT7i6AdFM=";
+    x86_64-darwin = "sha256-pmAJ/eEVLnkDcqxEiXGjUYu1szImdFKyPAkCaGhQvOQ=";
+    aarch64-linux = "sha256-wJWNRS9xjHhcZdG5wO4KuercXEVI5nnNUYhHd7r0foM=";
+    aarch64-darwin = "sha256-tTNjEpNyFbcFlDMhbC+pii1j2PC5oGRTVks6ShnhX3Q=";
   }.${system} or throwSystem;
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "infisical";
-  version = "0.12.2";
+  version = "0.13.0";
 
   src = fetchurl {
     url = "https://github.com/Infisical/infisical/releases/download/infisical-cli%2Fv${finalAttrs.version}/infisical_${finalAttrs.version}_${plat}.tar.gz";

@@ -4,3 +4,4 @@ result*
 target
 tmp
 .direnv
+.DS_Store

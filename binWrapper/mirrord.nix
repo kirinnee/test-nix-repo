@@ -37,7 +37,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   postInstall = ''
-    chmod +x bin/mirrord
+    chmod +x $out/bin/mirrord
   '';
   src = fetchurl {
     url = "https://github.com/metalbear-co/mirrord/releases/download/${version}/mirrord_${plat}";

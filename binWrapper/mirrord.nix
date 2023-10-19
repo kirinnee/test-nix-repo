@@ -14,13 +14,13 @@ let
   archive_fmt = "tar.gz";
 
   sha256 = {
-    x86_64-linux = "sha256-K41XoktPmoMwc3Pt0X1UH1xCJm9jhZun3EkB/j2I/UE=";
-    x86_64-darwin = "sha256-Sgn88ArxktUdvrRNzYA1ruttzaFu5JSbAJ32J7qScsA=";
-    aarch64-linux = "sha256-6xNbr7awl7BaVOpbXJw6t76Gu2hqiAnH6RSmTXV0D3o=";
-    aarch64-darwin = "sha256-Sgn88ArxktUdvrRNzYA1ruttzaFu5JSbAJ32J7qScsA=";
+    x86_64-linux = "sha256-t/DBGXsUaAjNDDAigeexJpxc1+iVJ/1xdoBF3ArH3yk=";
+    x86_64-darwin = "sha256-oVNXRcDDCgfaqhAUOtJbM2A9wDPHFxcElKczVeqUv88=";
+    aarch64-linux = "sha256-7ZnVZYPknw2xolbIRciulUf3FXEWtUjUjGLAxTtkRGQ=";
+    aarch64-darwin = "sha256-oVNXRcDDCgfaqhAUOtJbM2A9wDPHFxcElKczVeqUv88=";
   }.${system} or throwSystem;
 in
-let version = "3.67.0"; in
+let version = "3.72.0"; in
 let
   binary = fetchurl {
     url = "https://github.com/metalbear-co/mirrord/releases/download/${version}/mirrord_${plat}";
@@ -37,7 +37,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   postInstall = ''
-    chmod +x bin/mirrord
+    chmod +x $out/bin/mirrord
   '';
   src = fetchurl {
     url = "https://github.com/metalbear-co/mirrord/releases/download/${version}/mirrord_${plat}";

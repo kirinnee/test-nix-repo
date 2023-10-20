@@ -34,6 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
   installPhase = ''
     mkdir -p $out/bin
     cp ${binary} $out/bin/mirrord
+    chmod +x $out/bin/mirrord
   '';
 
   postInstall = ''

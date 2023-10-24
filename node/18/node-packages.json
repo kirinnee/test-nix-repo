@@ -1,4 +1,6 @@
 [
   "@upstash/cli",
-  "action-docs"
+  "action-docs",
+  "typescript-json-schema",
+  "swagger-typescript-api"
 ]

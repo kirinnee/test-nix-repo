@@ -1,9 +1,11 @@
-{ nixpkgs ? import <nixpkgs>, nixpkgs-unstable ? import <nixpkgs>, fenix }:
+{ nixpkgs, nixpkgs-unstable, fenix }:
+let trivialBuilders = import ./trivial.nix { inherit nixpkgs; }; in
 let
 
-  node18 = import ./node/18/export.nix { inherit nixpkgs; nodejs = nixpkgs.nodejs-18_x; };
+  node18 = import ./node/18/export.nix { inherit nixpkgs; nodejs = nixpkgs-unstable.nodejs_18; };
+  node20 = import ./node/20/export.nix { inherit nixpkgs trivialBuilders; nodejs = nixpkgs-unstable.nodejs_20; };
   # Shell
-  shell = (import ./shellWrapper/default.nix { inherit nixpkgs; });
+  shell = (import ./shellWrapper/default.nix { inherit nixpkgs trivialBuilders; });
 
   # Python
   python = {
@@ -37,4 +39,4 @@ let
 in
 
 # merge
-shell // python // golang // ruby // node18 // bin // rust
+shell // python // golang // ruby // node18 // node20 // bin // rust

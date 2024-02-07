@@ -8,7 +8,7 @@ let
       }
     );
     ac = (
-      with registry.atomi_classic;
+      with registry.atomi;
       {
         inherit sg;
       }
@@ -33,9 +33,7 @@ let
     );
     "nix Unstable 7th Feb 2024" = (
       with registry.dev-nixpkgs-unstable-07-Feb-2024;
-      {
-        node20 = nodejs_20;
-      }
+      { }
     );
   };
 in

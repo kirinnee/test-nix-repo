@@ -9,6 +9,7 @@
     fenix.url = "github:nix-community/fenix";
 
     # dev
+    dev-atomi.url = "github:kirinnee/test-nix-repo/v23.0.0";
     dev-atomi_classic.url = "github:kirinnee/test-nix-repo/classic";
     dev-npkgs.url = "github:nixos/nixpkgs/nixos-23.05";
     dev-npkgs-unstable-05-Oct-2022.url = "nixpkgs/de80d1d04ee691279e1302a1128c082bbda3ab01";
@@ -25,6 +26,7 @@
     , dev-npkgs-unstable-05-Oct-2022
     , dev-npkgs-unstable-11-Dec-2022
     , dev-npkgs-unstable-07-Feb-2024
+    , dev-atomi
     , dev-atomi_classic
     , fenix
     }@inputs:
@@ -39,6 +41,7 @@
           dev-nixpkgs-unstable-11-Dec-2022 = dev-npkgs-unstable-11-Dec-2022.legacyPackages.${system};
           dev-nixpkgs-unstable-07-Feb-2024 = dev-npkgs-unstable-07-Feb-2024.legacyPackages.${system};
           atomi_classic = dev-atomi_classic.packages.${system};
+          atomi = dev-atomi.packages.${system};
           fenixpkgs = fenix.packages.${system};
         in
         rec {
@@ -54,6 +57,7 @@
               shells = import ./nix/shells.nix {
                 registry = {
                   inherit
+                    atomi
                     atomi_classic
                     dev-nixpkgs
                     dev-nixpkgs-unstable-11-Dec-2022

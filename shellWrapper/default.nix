@@ -1,6 +1,5 @@
-{ nixpkgs }:
+{ nixpkgs, trivialBuilders }:
 with nixpkgs;
-let trivialBuilders = import ./trivialBuilders.nix { inherit lib stdenv stdenvNoCC lndir runtimeShell shellcheck; }; in
 with (import ./pls/default.nix { inherit trivialBuilders nixpkgs; });
 {
   inherit pls please;

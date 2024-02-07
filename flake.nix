@@ -13,7 +13,7 @@
     dev-npkgs.url = "github:nixos/nixpkgs/nixos-23.05";
     dev-npkgs-unstable-05-Oct-2022.url = "nixpkgs/de80d1d04ee691279e1302a1128c082bbda3ab01";
     dev-npkgs-unstable-11-Dec-2022.url = "nixpkgs/f82f0ec1b70b2879c3f3d9a1015a05c73a90a17c";
-    dev-npkgs-unstable-20-Sep-2023.url = "nixpkgs/970a59bd19eff3752ce552935687100c46e820a5";
+    dev-npkgs-unstable-07-Feb-2024.url = "nixpkgs/faf912b086576fd1a15fca610166c98d47bc667e";
   };
 
   outputs =
@@ -24,7 +24,7 @@
     , dev-npkgs
     , dev-npkgs-unstable-05-Oct-2022
     , dev-npkgs-unstable-11-Dec-2022
-    , dev-npkgs-unstable-20-Sep-2023
+    , dev-npkgs-unstable-07-Feb-2024
     , dev-atomi_classic
     , fenix
     }@inputs:
@@ -37,7 +37,7 @@
           dev-nixpkgs = dev-npkgs.legacyPackages.${system};
           dev-nixpkgs-unstable-05-Oct-2022 = dev-npkgs-unstable-05-Oct-2022.legacyPackages.${system};
           dev-nixpkgs-unstable-11-Dec-2022 = dev-npkgs-unstable-11-Dec-2022.legacyPackages.${system};
-          dev-nixpkgs-unstable-20-Sep-2023 = dev-npkgs-unstable-20-Sep-2023.legacyPackages.${system};
+          dev-nixpkgs-unstable-07-Feb-2024 = dev-npkgs-unstable-07-Feb-2024.legacyPackages.${system};
           atomi_classic = dev-atomi_classic.packages.${system};
           fenixpkgs = fenix.packages.${system};
         in
@@ -58,7 +58,7 @@
                     dev-nixpkgs
                     dev-nixpkgs-unstable-11-Dec-2022
                     dev-nixpkgs-unstable-05-Oct-2022
-                    dev-nixpkgs-unstable-20-Sep-2023;
+                    dev-nixpkgs-unstable-07-Feb-2024;
                   self = packages;
                 };
               };

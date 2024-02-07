@@ -52,6 +52,21 @@
         "type": "indirect"
       }
     },
+    "dev-npkgs-unstable-07-Feb-2024": {
+      "locked": {
+        "lastModified": 1707092692,
+        "narHash": "sha256-ZbHsm+mGk/izkWtT4xwwqz38fdlwu7nUUKXTOmm4SyE=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "faf912b086576fd1a15fca610166c98d47bc667e",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "rev": "faf912b086576fd1a15fca610166c98d47bc667e",
+        "type": "indirect"
+      }
+    },
     "dev-npkgs-unstable-11-Dec-2022": {
       "locked": {
         "lastModified": 1670681895,
@@ -64,21 +79,6 @@
       "original": {
         "id": "nixpkgs",
         "rev": "f82f0ec1b70b2879c3f3d9a1015a05c73a90a17c",
-        "type": "indirect"
-      }
-    },
-    "dev-npkgs-unstable-20-Sep-2023": {
-      "locked": {
-        "lastModified": 1694959747,
-        "narHash": "sha256-CXQ2MuledDVlVM5dLC4pB41cFlBWxRw4tCBsFrq3cRk=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "970a59bd19eff3752ce552935687100c46e820a5",
-        "type": "github"
-      },
-      "original": {
-        "id": "nixpkgs",
-        "rev": "970a59bd19eff3752ce552935687100c46e820a5",
         "type": "indirect"
       }
     },
@@ -220,8 +220,8 @@
         "dev-atomi_classic": "dev-atomi_classic",
         "dev-npkgs": "dev-npkgs",
         "dev-npkgs-unstable-05-Oct-2022": "dev-npkgs-unstable-05-Oct-2022",
+        "dev-npkgs-unstable-07-Feb-2024": "dev-npkgs-unstable-07-Feb-2024",
         "dev-npkgs-unstable-11-Dec-2022": "dev-npkgs-unstable-11-Dec-2022",
-        "dev-npkgs-unstable-20-Sep-2023": "dev-npkgs-unstable-20-Sep-2023",
         "fenix": "fenix",
         "flake-utils": "flake-utils_2",
         "npkgs": "npkgs",

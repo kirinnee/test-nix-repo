@@ -31,8 +31,8 @@ let
         inherit bundix;
       }
     );
-    "nix Unstable 20th Sep 2023" = (
-      with registry.dev-nixpkgs-unstable-20-Sep-2023;
+    "nix Unstable 7th Feb 2024" = (
+      with registry.dev-nixpkgs-unstable-07-Feb-2024;
       {
         node20 = nodejs_20;
       }
@@ -43,4 +43,4 @@ pkgs.self //
 pkgs.ac //
 pkgs."nix Unstable 5th Oct 2022" //
 pkgs."nix Unstable 11th Dec 2022" //
-pkgs."nix Unstable 20th Sep 2023"
+pkgs."nix Unstable 7th Feb 2024"

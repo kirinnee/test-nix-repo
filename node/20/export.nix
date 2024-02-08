@@ -15,7 +15,6 @@ with n;
     name = "sg";
     version = sg_raw.version;
     text = ''
-      #!${nixpkgs.bash}/bin/bash
       export PATH="${nodejs}/bin:$PATH"
       ${sg_raw}/bin/sg "$@"
     '';

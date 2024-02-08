@@ -49,6 +49,7 @@
             inherit
               nixpkgs
               nixpkgs-unstable
+              dev-nixpkgs-unstable-07-Feb-2024
               ;
             fenix = fenixpkgs;
           };

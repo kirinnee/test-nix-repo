@@ -1,9 +1,9 @@
-{ nixpkgs, nixpkgs-unstable, fenix }:
+{ nixpkgs, nixpkgs-unstable, dev-nixpkgs-unstable-07-Feb-2024, fenix }:
 let trivialBuilders = import ./trivial.nix { inherit nixpkgs; }; in
 let
 
-  node18 = import ./node/18/export.nix { inherit nixpkgs; nodejs = nixpkgs-unstable.nodejs_18; };
-  node20 = import ./node/20/export.nix { inherit nixpkgs trivialBuilders; nodejs = nixpkgs-unstable.nodejs_20; };
+  node18 = import ./node/18/export.nix { inherit nixpkgs; nodejs = dev-nixpkgs-unstable-07-Feb-2024.nodejs_18; };
+  node20 = import ./node/20/export.nix { inherit nixpkgs trivialBuilders; nodejs = dev-nixpkgs-unstable-07-Feb-2024.nodejs_20; };
   # Shell
   shell = (import ./shellWrapper/default.nix { inherit nixpkgs trivialBuilders; });
 

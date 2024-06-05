@@ -3,7 +3,7 @@ on:
   pull_request:
 jobs:
   cache:
-    runs-on: nix
+    runs-on: ubuntu-latest
     steps:
       - name: AtomiCloud CI Environment
         uses: kirinnee/atomici-action@v2.3.1

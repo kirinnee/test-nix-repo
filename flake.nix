@@ -9,12 +9,13 @@
     fenix.url = "github:nix-community/fenix";
 
     # dev
-    dev-atomi.url = "github:kirinnee/test-nix-repo/v23.0.0";
+    dev-atomi.url = "github:kirinnee/test-nix-repo/v23.0.1";
     dev-atomi_classic.url = "github:kirinnee/test-nix-repo/classic";
     dev-npkgs.url = "github:nixos/nixpkgs/nixos-23.05";
     dev-npkgs-unstable-05-Oct-2022.url = "nixpkgs/de80d1d04ee691279e1302a1128c082bbda3ab01";
     dev-npkgs-unstable-11-Dec-2022.url = "nixpkgs/f82f0ec1b70b2879c3f3d9a1015a05c73a90a17c";
     dev-npkgs-unstable-07-Feb-2024.url = "nixpkgs/faf912b086576fd1a15fca610166c98d47bc667e";
+    dev-npkgs-unstable-05-Jun-2024.url = "nixpkgs/57610d2f8f0937f39dbd72251e9614b1561942d8";
   };
 
   outputs =
@@ -26,6 +27,7 @@
     , dev-npkgs-unstable-05-Oct-2022
     , dev-npkgs-unstable-11-Dec-2022
     , dev-npkgs-unstable-07-Feb-2024
+    , dev-npkgs-unstable-05-Jun-2024
     , dev-atomi
     , dev-atomi_classic
     , fenix
@@ -40,6 +42,7 @@
           dev-nixpkgs-unstable-05-Oct-2022 = dev-npkgs-unstable-05-Oct-2022.legacyPackages.${system};
           dev-nixpkgs-unstable-11-Dec-2022 = dev-npkgs-unstable-11-Dec-2022.legacyPackages.${system};
           dev-nixpkgs-unstable-07-Feb-2024 = dev-npkgs-unstable-07-Feb-2024.legacyPackages.${system};
+          dev-nixpkgs-unstable-05-Jun-2024 = dev-npkgs-unstable-05-Jun-2024.legacyPackages.${system};
           atomi_classic = dev-atomi_classic.packages.${system};
           atomi = dev-atomi.packages.${system};
           fenixpkgs = fenix.packages.${system};
@@ -50,6 +53,7 @@
               nixpkgs
               nixpkgs-unstable
               dev-nixpkgs-unstable-07-Feb-2024
+              dev-nixpkgs-unstable-05-Jun-2024
               ;
             fenix = fenixpkgs;
           };
@@ -63,7 +67,8 @@
                     dev-nixpkgs
                     dev-nixpkgs-unstable-11-Dec-2022
                     dev-nixpkgs-unstable-05-Oct-2022
-                    dev-nixpkgs-unstable-07-Feb-2024;
+                    dev-nixpkgs-unstable-07-Feb-2024
+                    dev-nixpkgs-unstable-05-Jun-2024;
                   self = packages;
                 };
               };

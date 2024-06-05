@@ -60,6 +60,13 @@ tasks:
       - task: node:base
         vars:
           NODE_VER: 20
+
+  node:22:
+    desc: Generate Node 22 packages Nix files as CLI binaries
+    cmds:
+      - task: node:base
+        vars:
+          NODE_VER: 22
   node:
     desc: Generate all Node packages
     deps:

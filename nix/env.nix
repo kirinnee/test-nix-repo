@@ -23,6 +23,7 @@ with pkgs;
   ];
   releaser = [
     sg
+    npm
     prettier
   ];
 }

@@ -19,7 +19,7 @@ jobs:
         continue-on-error: true
 
       - name: Run Pre-commit checks
-        run: nix develop .#ci scripts/ci/pre-commit.sh
+        run: nix develop .#ci -c scripts/ci/pre-commit.sh
 
       - name: Esnure builds
         run: nix-build

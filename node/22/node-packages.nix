@@ -4,40 +4,40 @@
 
 let
   sources = {
-    "@babel/code-frame-7.24.6" = {
+    "@babel/code-frame-7.24.7" = {
       name = "_at_babel_slash_code-frame";
       packageName = "@babel/code-frame";
-      version = "7.24.6";
+      version = "7.24.7";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.24.6.tgz";
-        sha512 = "ZJhac6FkEd1yhG2AHOmfcXG4ceoLltoCVJjN5XsWN9BifBQr+cHJbWi0h68HZuSORq+3WtJ2z0hwF2NG1b5kcA==";
+        url = "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.24.7.tgz";
+        sha512 = "BcYH1CVJBO9tvyIZ2jVeXgSIMvGZ2FDRvDdOIVQyuklNKSsx+eppDEBq/g47Ayw+RqNFE+URvOShmf+f/qwAlA==";
       };
     };
-    "@babel/helper-validator-identifier-7.24.6" = {
+    "@babel/helper-validator-identifier-7.24.7" = {
       name = "_at_babel_slash_helper-validator-identifier";
       packageName = "@babel/helper-validator-identifier";
-      version = "7.24.6";
+      version = "7.24.7";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@babel/helper-validator-identifier/-/helper-validator-identifier-7.24.6.tgz";
-        sha512 = "4yA7s865JHaqUdRbnaxarZREuPTHrjpDT+pXoAZ1yhyo6uFnIEpS8VMu16siFOHDpZNKYv5BObhsB//ycbICyw==";
+        url = "https://registry.npmjs.org/@babel/helper-validator-identifier/-/helper-validator-identifier-7.24.7.tgz";
+        sha512 = "rR+PBcQ1SMQDDyF6X0wxtG8QyLCgUB0eRAGguqRLfkCA87l7yAP7ehq8SNj96OOGTO8OBV70KhuFYcIkHXOg0w==";
       };
     };
-    "@babel/highlight-7.24.6" = {
+    "@babel/highlight-7.24.7" = {
       name = "_at_babel_slash_highlight";
       packageName = "@babel/highlight";
-      version = "7.24.6";
+      version = "7.24.7";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@babel/highlight/-/highlight-7.24.6.tgz";
-        sha512 = "2YnuOp4HAk2BsBrJJvYCbItHx0zWscI1C3zgWkz+wDyD9I7GIVrfnLyrR4Y1VR+7p+chAEcrgRQYZAGIKMV7vQ==";
+        url = "https://registry.npmjs.org/@babel/highlight/-/highlight-7.24.7.tgz";
+        sha512 = "EStJpq4OuY8xYfhGVXngigBJRWxftKX9ksiGDnmlY3o7B/V7KIAc9X4oiK87uPJSc/vs5L869bem5fhZa8caZw==";
       };
     };
-    "@babel/runtime-7.24.6" = {
+    "@babel/runtime-7.24.7" = {
       name = "_at_babel_slash_runtime";
       packageName = "@babel/runtime";
-      version = "7.24.6";
+      version = "7.24.7";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@babel/runtime/-/runtime-7.24.6.tgz";
-        sha512 = "Ja18XcETdEl5mzzACGd+DKgaGJzPTCow7EglgwTmHdwokzDFYh/MHua6lU6DV/hjF2IaOJ4oX2nqnjG7RElKOw==";
+        url = "https://registry.npmjs.org/@babel/runtime/-/runtime-7.24.7.tgz";
+        sha512 = "UwgBRMjJP+xv857DCngvqXI3Iq6J4v0wXmwc6sapg+zyhbwmQX67LUEFrkK5tbyJ30jGuG3ZvWpBiB9LCy1kWw==";
       };
     };
     "@hqoss/monads-0.5.0" = {
@@ -2659,6 +2659,15 @@ let
         sha512 = "U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==";
       };
     };
+    "rimraf-3.0.2" = {
+      name = "rimraf";
+      packageName = "rimraf";
+      version = "3.0.2";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/rimraf/-/rimraf-3.0.2.tgz";
+        sha512 = "JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==";
+      };
+    };
     "run-parallel-1.2.0" = {
       name = "run-parallel";
       packageName = "run-parallel";
@@ -3358,15 +3367,15 @@ in
   "@kirinnee/semantic-generator" = nodeEnv.buildNodePackage {
     name = "_at_kirinnee_slash_semantic-generator";
     packageName = "@kirinnee/semantic-generator";
-    version = "0.8.0";
+    version = "0.8.3";
     src = fetchurl {
-      url = "https://registry.npmjs.org/@kirinnee/semantic-generator/-/semantic-generator-0.8.0.tgz";
-      sha512 = "8Grav8hJBOZPQvoSk3ak8Ioj9KwtBDMR8R1LHZJW9E2fe1ooYLAplPaVbOKPWs4JIJW0o+c15gJVA1/sXg/2dA==";
+      url = "https://registry.npmjs.org/@kirinnee/semantic-generator/-/semantic-generator-0.8.3.tgz";
+      sha512 = "JD4t1ZXvrxwBrj7i/rxnomrfEMl+ZUSdM6SJh2mWkYVKYD7iD5VV32EOkyxQ6eUCS/j1pGyoVSRyGy6xgQUEtQ==";
     };
     dependencies = [
-      sources."@babel/code-frame-7.24.6"
-      sources."@babel/helper-validator-identifier-7.24.6"
-      (sources."@babel/highlight-7.24.6" // {
+      sources."@babel/code-frame-7.24.7"
+      sources."@babel/helper-validator-identifier-7.24.7"
+      (sources."@babel/highlight-7.24.7" // {
         dependencies = [
           sources."ansi-styles-3.2.1"
           sources."chalk-2.4.2"
@@ -3376,7 +3385,7 @@ in
           sources."supports-color-5.5.0"
         ];
       })
-      (sources."@babel/runtime-7.24.6" // {
+      (sources."@babel/runtime-7.24.7" // {
         dependencies = [
           sources."regenerator-runtime-0.14.1"
         ];
@@ -3712,6 +3721,7 @@ in
       })
       sources."resolve-1.22.8"
       sources."reusify-1.0.4"
+      sources."rimraf-3.0.2"
       sources."run-parallel-1.2.0"
       sources."safe-buffer-5.2.1"
       sources."safer-buffer-2.1.2"

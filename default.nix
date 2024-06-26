@@ -33,6 +33,7 @@ let
   bin = {
     infisical = import ./binWrapper/infisical.nix { inherit nixpkgs; };
     mirrord = import ./binWrapper/mirrord.nix { inherit nixpkgs; };
+    sdm = import ./binWrapper/sdm.nix { inherit nixpkgs; };
   };
 
   rust = import ./rust/default.nix { inherit nixpkgs fenix; };

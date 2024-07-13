@@ -31,13 +31,13 @@ let
         sha512 = "EStJpq4OuY8xYfhGVXngigBJRWxftKX9ksiGDnmlY3o7B/V7KIAc9X4oiK87uPJSc/vs5L869bem5fhZa8caZw==";
       };
     };
-    "@babel/runtime-7.24.7" = {
+    "@babel/runtime-7.24.8" = {
       name = "_at_babel_slash_runtime";
       packageName = "@babel/runtime";
-      version = "7.24.7";
+      version = "7.24.8";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@babel/runtime/-/runtime-7.24.7.tgz";
-        sha512 = "UwgBRMjJP+xv857DCngvqXI3Iq6J4v0wXmwc6sapg+zyhbwmQX67LUEFrkK5tbyJ30jGuG3ZvWpBiB9LCy1kWw==";
+        url = "https://registry.npmjs.org/@babel/runtime/-/runtime-7.24.8.tgz";
+        sha512 = "5F7SDGs1T72ZczbRwbGO9lQi0NLjQxzl6i4lJxLxfW9U5UluCSyEJeniWvnhl3/euNiqQVbo8zruhsDfid0esA==";
       };
     };
     "@hqoss/monads-0.5.0" = {
@@ -706,6 +706,15 @@ let
         sha512 = "4tYFyifaFfGacoiObjJegolkwSU4xQNGbVgUiNYVUxbQ2x2lUsFvY4hVgVzGiIe6WLOPqycWXA40l+PWsxthUw==";
       };
     };
+    "centra-2.7.0" = {
+      name = "centra";
+      packageName = "centra";
+      version = "2.7.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/centra/-/centra-2.7.0.tgz";
+        sha512 = "PbFMgMSrmgx6uxCdm57RUos9Tc3fclMvhLSATYN39XsDV29B89zZ3KA89jmY0vwSGazyU+uerqwa6t+KaodPcg==";
+      };
+    };
     "chalk-2.4.2" = {
       name = "chalk";
       packageName = "chalk";
@@ -1228,6 +1237,15 @@ let
         sha512 = "PpOwAdQ/YlXQ2vj8a3h8IipDuYRi3wceVQQGYWxNINccq40Anw7BlsEXCMbt1Zt+OLA6Fq9suIpIWD0OsnISlw==";
       };
     };
+    "follow-redirects-1.15.6" = {
+      name = "follow-redirects";
+      packageName = "follow-redirects";
+      version = "1.15.6";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.6.tgz";
+        sha512 = "wWN62YITEaOpSK584EZXJafH1AGpO8RVgElfkuXbTOrPX4fIfOyEpW/CsiNd8JdYrAoOvafRTOEnvsO++qCqFA==";
+      };
+    };
     "forever-agent-0.6.1" = {
       name = "forever-agent";
       packageName = "forever-agent";
@@ -1570,13 +1588,13 @@ let
         sha512 = "eVRqCvVlZbuw3GrM63ovNSNAeA1K16kaR/LRY/92w0zxQ5/1YzwblUX652i4Xs9RwAGjW9d9y6X88t8OaAJfWQ==";
       };
     };
-    "is-core-module-2.13.1" = {
+    "is-core-module-2.14.0" = {
       name = "is-core-module";
       packageName = "is-core-module";
-      version = "2.13.1";
+      version = "2.14.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/is-core-module/-/is-core-module-2.13.1.tgz";
-        sha512 = "hHrIjvZsftOsvKSn2TRYl63zvxsgE0K+0mYMoH6gD4omR5IWB2KynivBQczo3+wF1cCkjzvptnI9Q0sPU66ilw==";
+        url = "https://registry.npmjs.org/is-core-module/-/is-core-module-2.14.0.tgz";
+        sha512 = "a5dFJih5ZLYlRtDc0dZWP7RiKr6xIKzmn/oAYCDvdLThadVgyJwlaoQPmRtMSpz+rk0OGAgIu+TcM9HUF0fk1A==";
       };
     };
     "is-extglob-2.1.1" = {
@@ -1840,13 +1858,13 @@ let
         sha512 = "7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==";
       };
     };
-    "load-bmfont-1.4.1" = {
+    "load-bmfont-1.4.2" = {
       name = "load-bmfont";
       packageName = "load-bmfont";
-      version = "1.4.1";
+      version = "1.4.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/load-bmfont/-/load-bmfont-1.4.1.tgz";
-        sha512 = "8UyQoYmdRDy81Brz6aLAUhfZLwr5zV0L3taTQ4hju7m6biuwiWiJXjPhBJxbUQJA8PrkvJ/7Enqmwk2sM14soA==";
+        url = "https://registry.npmjs.org/load-bmfont/-/load-bmfont-1.4.2.tgz";
+        sha512 = "qElWkmjW9Oq1F9EI5Gt7aD9zcdHb9spJCW1L/dmPf7KzCCEJxq8nhHz5eCgI9aMf7vrG/wyaCqdsI+Iy9ZTlog==";
       };
     };
     "locate-path-5.0.0" = {
@@ -2360,6 +2378,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/phin/-/phin-2.9.3.tgz";
         sha512 = "CzFr90qM24ju5f88quFC/6qohjC144rehe5n6DH900lgXmUe86+xCKc10ev56gRKC4/BkHUoG4uSiQgBiIXwDA==";
+      };
+    };
+    "phin-3.7.1" = {
+      name = "phin";
+      packageName = "phin";
+      version = "3.7.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/phin/-/phin-3.7.1.tgz";
+        sha512 = "GEazpTWwTZaEQ9RhL7Nyz0WwqilbqgLahDM3D0hxWwmVDI52nXEybHqiN6/elwpkJBhcuj+WbBu+QfT0uhPGfQ==";
       };
     };
     "picocolors-1.0.1" = {
@@ -3367,10 +3394,10 @@ in
   "@kirinnee/semantic-generator" = nodeEnv.buildNodePackage {
     name = "_at_kirinnee_slash_semantic-generator";
     packageName = "@kirinnee/semantic-generator";
-    version = "0.8.3";
+    version = "0.8.4";
     src = fetchurl {
-      url = "https://registry.npmjs.org/@kirinnee/semantic-generator/-/semantic-generator-0.8.3.tgz";
-      sha512 = "JD4t1ZXvrxwBrj7i/rxnomrfEMl+ZUSdM6SJh2mWkYVKYD7iD5VV32EOkyxQ6eUCS/j1pGyoVSRyGy6xgQUEtQ==";
+      url = "https://registry.npmjs.org/@kirinnee/semantic-generator/-/semantic-generator-0.8.4.tgz";
+      sha512 = "YepGowAWBk+P+olbKIR+BBl8wIhG2JhvX2kzkIYLCNO3MjIdO/LUQTN/Prvq+yBw/7LB/DdDQfob0nDasqcOCw==";
     };
     dependencies = [
       sources."@babel/code-frame-7.24.7"
@@ -3385,7 +3412,7 @@ in
           sources."supports-color-5.5.0"
         ];
       })
-      (sources."@babel/runtime-7.24.7" // {
+      (sources."@babel/runtime-7.24.8" // {
         dependencies = [
           sources."regenerator-runtime-0.14.1"
         ];
@@ -3471,6 +3498,7 @@ in
       sources."camelcase-5.3.1"
       sources."camelcase-keys-6.2.2"
       sources."caseless-0.12.0"
+      sources."centra-2.7.0"
       sources."chalk-4.1.2"
       sources."chownr-1.1.4"
       sources."clone-2.1.2"
@@ -3543,6 +3571,7 @@ in
       sources."file-type-16.5.4"
       sources."fill-range-7.1.1"
       sources."find-up-4.1.0"
+      sources."follow-redirects-1.15.6"
       sources."forever-agent-0.6.1"
       sources."form-data-2.3.3"
       sources."fs-constants-1.0.0"
@@ -3576,7 +3605,7 @@ in
       sources."ini-1.3.8"
       sources."ip-regex-1.0.3"
       sources."is-arrayish-0.3.2"
-      sources."is-core-module-2.13.1"
+      sources."is-core-module-2.14.0"
       sources."is-extglob-2.1.1"
       sources."is-fullwidth-code-point-1.0.0"
       sources."is-function-1.0.2"
@@ -3603,7 +3632,11 @@ in
       sources."jsprim-1.4.2"
       sources."kind-of-6.0.3"
       sources."lines-and-columns-1.2.4"
-      sources."load-bmfont-1.4.1"
+      (sources."load-bmfont-1.4.2" // {
+        dependencies = [
+          sources."phin-3.7.1"
+        ];
+      })
       sources."locate-path-5.0.0"
       sources."lodash-4.17.21"
       sources."lodash.defaultsdeep-4.6.1"

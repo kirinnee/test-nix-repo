@@ -3394,10 +3394,10 @@ in
   "@kirinnee/semantic-generator" = nodeEnv.buildNodePackage {
     name = "_at_kirinnee_slash_semantic-generator";
     packageName = "@kirinnee/semantic-generator";
-    version = "0.8.4";
+    version = "0.9.0";
     src = fetchurl {
-      url = "https://registry.npmjs.org/@kirinnee/semantic-generator/-/semantic-generator-0.8.4.tgz";
-      sha512 = "YepGowAWBk+P+olbKIR+BBl8wIhG2JhvX2kzkIYLCNO3MjIdO/LUQTN/Prvq+yBw/7LB/DdDQfob0nDasqcOCw==";
+      url = "https://registry.npmjs.org/@kirinnee/semantic-generator/-/semantic-generator-0.9.0.tgz";
+      sha512 = "wdxoYBlG6A/qJkfnCTc4DqcVUyDH9vIG6b1iIuWtQiKHeKWOv3I1M1S4nh9lgZ5C/4MD/580KWL+m05tB2zeMg==";
     };
     dependencies = [
       sources."@babel/code-frame-7.24.7"

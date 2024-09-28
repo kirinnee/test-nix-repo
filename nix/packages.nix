@@ -4,14 +4,13 @@ let
     self = (
       with registry.self;
       {
-        inherit pls;
+        inherit pls
+          sg;
       }
     );
     ac = (
       with registry.atomi;
-      {
-        inherit sg;
-      }
+      { }
     );
     "nix Unstable 5th Oct 2022" = (
       with registry.dev-nixpkgs-unstable-05-Oct-2022;

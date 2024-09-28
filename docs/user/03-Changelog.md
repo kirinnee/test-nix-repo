@@ -3,6 +3,17 @@ id: changelog
 title: Changelog
 ---
 
+## [28.0.0](https://github.com/kirinnee/test-nix-repo/compare/v27.0.0...v28.0.0) (2024-09-28)
+
+### Bug Fixes
+
+- remove documentation ([fe263e5](https://github.com/kirinnee/test-nix-repo/commit/fe263e51d5b1683c94ef13ef7fabf6010ce08ef5))
+- use new sg and versioning ([534f0a2](https://github.com/kirinnee/test-nix-repo/commit/534f0a23d0c8b21a9b36709bb889716691ab2175))
+
+### Packages Updated
+
+- **semantic-generator:** from 0.9.0 to 0.10.1 ([d1bf864](https://github.com/kirinnee/test-nix-repo/commit/d1bf864a732e631b2864045076a2373abf96e6ab))
+
 ## [27.0.0](https://github.com/kirinnee/test-nix-repo/compare/v26.0.0...v27.0.0) (2024-07-13)
 
 ### Packages Updated
